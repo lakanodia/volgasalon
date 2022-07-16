@@ -17,3 +17,4 @@ branch anatomy: type/title
 type: chore | feature | bugfix
 
 pre-development branch is synced to the development branch once a week.
+
