@@ -1,0 +1,19 @@
+.section1 {
+    background-color: $color01;
+    height: 100vh;
+    @include d-flex(flex, center, center);
+
+    .video-container {
+        flex-direction: column;
+        @include d-flex(flex, center, center);
+        width: 500px;
+
+        .start-video {
+            width: 100%;
+            height: auto;
+        }
+        .start-img {
+            width: 50%;
+        }
+    }
+}
