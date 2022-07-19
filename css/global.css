@@ -1,5 +1,6 @@
 *, *:before, *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
@@ -13,6 +14,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
           text-size-adjust: none;
 }
 
@@ -50,15 +52,30 @@ input {
 .section1 {
   background-color: black;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .section1 .video-container {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 500px;
 }
 .section1 .video-container .start-video {
@@ -67,4 +84,12 @@ input {
 }
 .section1 .video-container .start-img {
   width: 50%;
-}/*# sourceMappingURL=global.css.map */
+}
+
+.loader {
+  background: #fff url("/images/PreloadGif.GIF.gif") no-repeat center center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+}
