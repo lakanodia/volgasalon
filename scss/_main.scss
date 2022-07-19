@@ -17,3 +17,12 @@
         }
     }
 }
+
+.loader{
+    background: #fff url('/images/PreloadGif.GIF.gif') no-repeat center center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+}
+
