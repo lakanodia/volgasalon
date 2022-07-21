@@ -176,3 +176,61 @@ input {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+
+.volga-salon-container {
+  width: 100%;
+  position: relative;
+}
+.volga-salon-container .volga-road-img {
+  width: 100%;
+}
+.volga-salon-container .volga-salon-img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+}
+.volga-salon-container .volga-wheel-img {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+.volga-salon-container .volga-blog-img {
+  position: absolute;
+  top: 51%;
+  left: 67%;
+  width: 14%;
+}
+.volga-salon-container .volga-map-img {
+  position: absolute;
+  top: 42%;
+  left: 43%;
+}
+.volga-salon-container .volga-clock-img {
+  position: absolute;
+  top: 53%;
+  left: 60%;
+  width: 5%;
+}
+.volga-salon-container .volga-radio-img {
+  position: absolute;
+  top: 52%;
+  left: 44%;
+  width: 14%;
+}
+.volga-salon-container .volga-mirror-img {
+  position: absolute;
+  top: 10%;
+  left: 44%;
+}
+.volga-salon-container .volga-sticker-img {
+  position: absolute;
+  top: 40%;
+  left: 60%;
+}
+.volga-salon-container .volga-sit-img {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  display: none;
+}
