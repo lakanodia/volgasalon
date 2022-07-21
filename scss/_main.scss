@@ -26,3 +26,101 @@
     z-index: 99;
 }
 
+
+.language-block{
+    max-width: 120px;
+    width: 100%;
+    color: $color01;
+    @include position-property(fixed, 3%, 91%);
+    z-index: 100;
+    .language-div{
+        @include border-shape(0px solid white, 0%, 0px); 
+        @include d-flex(flex, space-between, center);
+        .language{
+            @include border-shape(2px solid white, 0%, 6px);
+            cursor: pointer;
+            transition: 0.3s;
+            background-color: $color03;
+        }
+        .language:hover{
+            background-color: $color04;
+        }
+    }
+    .hide-menu-div{
+        @include border-shape(2px solid white, 0%, 6px);
+        background-color: $color03;
+        text-align: center;
+        margin-top: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .hide-menu-div:hover{
+        background-color: $color04;
+    }
+}
+
+//  navogation bar
+.navigation-block{
+    @include position-property(fixed, 15%, 93%);
+    z-index: 99;
+    .nav-ul{
+        .nav-li{
+            @include border-shape(5px double white, 50%, 20px );
+            @include d-flex(flex, center, center);
+            margin-bottom: 10px;
+            color: $color01;
+            cursor: pointer;
+            background-color: $color03;
+            transform: scale(0.9);
+            transition: 0.3s;
+        }
+        
+        .nav-li:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+// section 2 volga salon
+.volga-salon-container{
+    width: 100%;
+    position: relative;
+
+    .volga-road-img{
+        width: 100%;
+    }
+    .volga-salon-img{
+        @include position-property(absolute, 0%,  0%);
+        width: 100%;
+    }
+    .volga-wheel-img{
+        @include position-property(absolute, 35%, 20%);
+    }
+    .volga-blog-img{
+        @include position-property(absolute, 51%, 67%);
+        width: 14%;
+    }
+    .volga-map-img{
+        @include position-property(absolute, 42%, 43%);
+    }
+    .volga-clock-img{
+        @include position-property(absolute, 53%, 60%);
+        width: 5%;
+    }
+    .volga-radio-img{
+        @include position-property(absolute, 52%, 44%);
+        width: 14%;
+    }
+    .volga-mirror-img{
+        @include position-property(absolute, 10%, 44%);
+    }
+    .volga-sticker-img{
+        @include position-property(absolute, 40%, 60%);
+    }
+    .volga-sit-img{
+        @include position-property(absolute, 0%, 10%);
+        display: none;
+    }
+}
+
+
