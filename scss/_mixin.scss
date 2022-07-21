@@ -3,3 +3,17 @@
     justify-content: $justify;
     align-items: $align;
 }
+// border-shape  1. $border example:  5px (border weight),  double (border shape),  white (border color)-->
+// $radiur example: 50%, or if we dont want to be a rounded border use 0%, padding: 10px, or 0px)
+@mixin border-shape($border, $radius, $padding ) {
+    border: $border;
+    border-radius: $radius;
+    padding: $padding
+}
+
+// positions could be absolute, and we can control top, right left and bottom positions
+@mixin position-property($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
