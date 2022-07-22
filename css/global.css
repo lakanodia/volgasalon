@@ -92,9 +92,6 @@ input {
   width: 100%;
   position: absolute;
   z-index: 99;
-  opacity: 100%;
-  -webkit-transition: opacity 0.8s 0.1s ease;
-  transition: opacity 0.8s 0.1s ease;
 }
 
 .language-block {
@@ -239,5 +236,7 @@ input {
 }
 
 .hidden {
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
   opacity: 0;
 }
