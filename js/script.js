@@ -26,3 +26,28 @@ function toggleFunction() {
         menuBar.innerHTML = "Show Menu";
     }
 }
+
+
+
+document.querySelectorAll('#img').forEach(img => {
+    img.addEventListener('click', () => {
+        let imageValue = img.getAttribute('class' , img.value);
+        switch (imageValue) {
+            case "volga-clock-img":
+              alert("რომელი საათია? რომელი საათია...");
+              break;
+            case "volga-map-img":
+              alert("მე რუკა ვარ");
+              break;
+            case "volga-sticker-img":
+              alert("ვიღაც უცხო ხალხი");
+              break;
+            case "volga-mirror-img":
+              alert("mirror mirror on the wall");
+              break;
+            case "volga-radio-img":
+              alert("მე ვარ რადიო");
+              break;
+          }
+    });
+});
