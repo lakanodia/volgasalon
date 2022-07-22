@@ -1,14 +1,10 @@
 let loader = document.getElementById("loader");
-window.addEventListener("load", function () {
-  loader.style.display = "none";
-});
-
 
 // this function dissapears loader element
-function displayNone() {
-    loader.style.display = 'none';
-  }
-  
+window.addEventListener("load", function () {
+  loader.classList.add("hidden");
+});
+
   
 // this function dissapears menu bar
 let menuBar = document.getElementById('hide-menu-div');
