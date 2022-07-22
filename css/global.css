@@ -49,6 +49,10 @@ input {
   border-radius: 0;
 }
 
+a {
+  all: unset;
+}
+
 .section1 {
   background-color: black;
   height: 100vh;
@@ -150,7 +154,7 @@ input {
   left: 93%;
   z-index: 99;
 }
-.navigation-block .nav-ul .nav-li {
+.navigation-block .nav-ul .nav-li-a {
   border: 5px double white;
   border-radius: 50%;
   padding: 20px;
@@ -172,7 +176,7 @@ input {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.navigation-block .nav-ul .nav-li:hover {
+.navigation-block .nav-ul .nav-li-a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

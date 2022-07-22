@@ -64,7 +64,7 @@
     @include position-property(fixed, 15%, 93%);
     z-index: 99;
     .nav-ul{
-        .nav-li{
+        .nav-li-a{
             @include border-shape(5px double white, 50%, 20px );
             @include d-flex(flex, center, center);
             margin-bottom: 10px;
@@ -75,7 +75,7 @@
             transition: 0.3s;
         }
         
-        .nav-li:hover{
+        .nav-li-a:hover{
             transform: scale(1.1);
         }
     }
