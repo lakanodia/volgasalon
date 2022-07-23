@@ -1,6 +1,8 @@
 html {
     scroll-behavior: smooth;
 }
+
+
 .section1 {
     background-color: $color01;
     height: 100vh;
@@ -77,15 +79,15 @@ html {
             transform: scale(0.8);
             transition: 0.3s;
         }
-    }   
+    }
+}
 // nav-a-tag
         .nav-li-a:hover{
             transform: scale(1.1);
+        }
         .nav-li:hover{
             transform: scale(1);
         }
-    }
-}
 
 
 // height of navigation animations
@@ -147,7 +149,6 @@ html {
         display: none;
     }
 }
-
 .hide{
     display: none;
 }
@@ -198,7 +199,7 @@ html {
             100% {
                 transform:translateY(0);
             }
-            
+
         }
         &-modali{
             padding: 20px 55px;
@@ -257,5 +258,6 @@ html {
             }
         }
     }
-    
 }
+
+
