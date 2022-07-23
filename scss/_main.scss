@@ -1,8 +1,6 @@
 html {
     scroll-behavior: smooth;
 }
-
-
 .section1 {
     background-color: $color01;
     height: 100vh;
@@ -79,8 +77,8 @@ html {
             transform: scale(0.8);
             transition: 0.3s;
         }
-        
-nav-a-tag
+    }   
+// nav-a-tag
         .nav-li-a:hover{
             transform: scale(1.1);
         .nav-li:hover{
@@ -150,4 +148,114 @@ nav-a-tag
     }
 }
 
-
+.hide{
+    display: none;
+}
+.section3{
+    position: relative;
+    .pointer{
+        animation:pointer 1.5s linear infinite;
+        position: absolute;
+        cursor: pointer;
+    }
+    .volga-map{
+        &-wrapper{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        &-zugdidi-img{
+            top:23.8%;
+            left:31.5%;
+        }
+        &-batumi-img{
+            top:45%;
+            left:25.4%;
+        }&-muxrani-img{
+            top:41%;
+            left:60.3%;
+        }&-tbilisi-img{
+            top:48.2%;
+            left:62%;
+        }&-rustavi-img{
+            top:54%;
+            left:64.7%;
+        }
+        &-background-img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        @keyframes pointer {
+            0%{
+                transform:translateY(0);
+              }
+            50% {
+                transform:translateY(-10%);
+              }
+            100% {
+                transform:translateY(0);
+            }
+            
+        }
+        &-modali{
+            padding: 20px 55px;
+            background: white;
+            z-index: 5;
+        }
+        &-modal{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            &-header{
+                display: flex;
+                z-index: 3;
+                &-items{
+                    padding: 12px 30px;
+                    margin-right: 2px;
+                    font-size:1.15rem;
+                    background: #889ca4;
+                    cursor: pointer;
+                    &-active{
+                        background: white;
+                    }
+                }
+                img{
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                    cursor: pointer;
+                }
+            }
+            video{
+                width: 650px;
+                height: 350px;
+                background: black;
+            }
+            p{
+                padding: 10px 0;
+                width: 650px;
+                font-size:0.95em;
+            }
+            &-zugdidi-pictures{
+                .pictures-slider{
+                    display: flex;
+                    img{
+                        width: 220px;
+                        height: 190px;
+                        margin:0 10px
+                    }
+                }
+                p{
+                    max-width: 100%;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+}

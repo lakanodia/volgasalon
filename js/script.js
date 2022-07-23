@@ -49,3 +49,22 @@ item.forEach(img => {
           }
     });
 });
+
+// pointer modal click
+let pointers = document.querySelectorAll(".pointer");
+let modal = document.getElementById("modal");
+pointers.forEach((pointer)=>{
+  pointer.addEventListener("click",(item)=>{
+    modal.classList.toggle("hide");
+  })
+})
+
+
+// modal close button
+let closeBtn = document.getElementById("close");
+closeBtn.addEventListener("click",()=>{
+  modal.classList.add("hide");
+})
+
+
+// in modal pages
