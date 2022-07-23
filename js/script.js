@@ -29,7 +29,8 @@ function toggleFunction() {
 
 
 
-document.querySelectorAll('#img').forEach(img => {
+let item = document.getElementById('volga-salon-container').childNodes
+item.forEach(img => {
     img.addEventListener('click', () => {
         let imageValue = img.getAttribute('class' , img.value);
         switch (imageValue) {
