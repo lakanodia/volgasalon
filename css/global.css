@@ -49,10 +49,10 @@ input {
   border-radius: 0;
 }
 
-nav-a-tag
 a {
   all: unset;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -92,6 +92,10 @@ html {
 }
 .section1 .video-container .start-img {
   width: 100%;
+}
+.section1 .video-container .start-img-a {
+  cursor: pointer;
+  z-index: 100;
 }
 
 .loader {
@@ -181,26 +185,21 @@ html {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-nav-a-tag
 .navigation-block .nav-ul .nav-li-a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-.navigation-block .nav-ul .nav-li:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
 .nav-hide {
-  -webkit-animation: heigh-reduse 3s;
-          animation: heigh-reduse 3s;
+  -webkit-animation: heigh-reduse 1.5s;
+          animation: heigh-reduse 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .nav-show {
-  -webkit-animation: heigh-increase 3s;
-          animation: heigh-increase 3s;
+  -webkit-animation: heigh-increase 1.5s;
+          animation: heigh-increase 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -238,6 +237,14 @@ nav-a-tag
     height: 100%;
   }
 }
+.block-active {
+  display: block;
+}
+
+.block-none {
+  display: none;
+}
+
 .volga-salon-container {
   width: 100%;
   position: relative;
@@ -255,6 +262,7 @@ nav-a-tag
   position: absolute;
   top: 35%;
   left: 20%;
+  width: 20%;
 }
 .volga-salon-container .volga-blog-img {
   position: absolute;
@@ -264,13 +272,14 @@ nav-a-tag
 }
 .volga-salon-container .volga-map-img {
   position: absolute;
-  top: 42%;
+  top: 41%;
   left: 43%;
+  width: 10%;
 }
 .volga-salon-container .volga-clock-img {
   position: absolute;
-  top: 53%;
-  left: 60%;
+  top: 52.6%;
+  left: 59.9%;
   width: 5%;
 }
 .volga-salon-container .volga-radio-img {
@@ -281,19 +290,21 @@ nav-a-tag
 }
 .volga-salon-container .volga-mirror-img {
   position: absolute;
-  top: 10%;
-  left: 44%;
+  top: 12%;
+  left: 42%;
+  width: 12%;
 }
 .volga-salon-container .volga-sticker-img {
   position: absolute;
   top: 40%;
   left: 60%;
+  width: 20%;
 }
 .volga-salon-container .volga-sit-img {
   position: absolute;
-  top: 0%;
-  left: 10%;
-  display: none;
+  top: 79%;
+  left: 0%;
+  width: 100%;
 }
 
 .hidden {
