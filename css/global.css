@@ -52,6 +52,7 @@ input {
 nav-a-tag
 a {
   all: unset;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -180,10 +181,12 @@ html {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 nav-a-tag
 .navigation-block .nav-ul .nav-li-a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
 .navigation-block .nav-ul .nav-li:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
