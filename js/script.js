@@ -1,21 +1,12 @@
 let loader = document.getElementById("loader");
-window.addEventListener("load", function () {
-    loader.style.opacity = '0';
-    setTimeout(displayNone, 500);
-});
-
-
 // this function dissapears loader element
-function displayNone() {
-    loader.style.display = 'none';
-  }
-  
-
+window.addEventListener("load", function () {
+  loader.classList.add("hidden");
+});
 // this function dissapears menu bar
 let menuBar = document.getElementById('hide-menu-div');
 let navBar = document.getElementById('navigation-block');
 menuBar.addEventListener('click', toggleMenuFunction);
-
 // menu show hide toggle function
 function toggleMenuFunction() {
     if (navBar.style.display === "none") {
