@@ -191,12 +191,12 @@ html {
   transition: 0.3s;
 }
 
-.nav-li-a:hover {
+.navigation-block .nav-li-a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.nav-li-a:hover .nav-li:hover {
+.navigation-block .nav-li-a:hover .nav-li:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }

@@ -80,16 +80,15 @@ html {
             transition: 0.3s;
         }
     }
-}
+
 // nav-a-tag
         .nav-li-a:hover{
             transform: scale(1.1);
-        
         .nav-li:hover{
             transform: scale(1);
         }
     }
-
+}
 // height of navigation animations
 .nav-hide {
     animation: heigh-reduse 3s;
