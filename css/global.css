@@ -49,13 +49,10 @@ input {
   border-radius: 0;
 }
 
-<<<<<<< Updated upstream
-=======
 nav-a-tag
 a {
   all: unset;
 }
->>>>>>> Stashed changes
 html {
   scroll-behavior: smooth;
 }
@@ -184,14 +181,12 @@ html {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-<<<<<<< Updated upstream
-=======
+
 nav-a-tag
 .navigation-block .nav-ul .nav-li-a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
->>>>>>> Stashed changes
 .navigation-block .nav-ul .nav-li:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
