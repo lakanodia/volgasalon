@@ -159,7 +159,7 @@ html {
   z-index: 99;
   overflow: hidden;
 }
-.navigation-block .nav-ul .nav-li {
+.navigation-block .nav-ul .nav-li-a {
   border: 5px double white;
   border-radius: 50%;
   padding: 20px;
@@ -295,4 +295,10 @@ nav-a-tag
   top: 0%;
   left: 10%;
   display: none;
+}
+
+.hidden {
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
 }

@@ -31,7 +31,6 @@ html {
     z-index: 99;
 }
 
-
 .language-block{
     max-width: 120px;
     width: 100%;
@@ -70,7 +69,7 @@ html {
     z-index: 99;
     overflow: hidden;
     .nav-ul{
-        .nav-li{
+        .nav-li-a{
             @include border-shape(5px double white, 50%, 20px );
             @include d-flex(flex, center, center);
             margin-bottom: 10px;
@@ -81,6 +80,9 @@ html {
             transition: 0.3s;
         }
         
+nav-a-tag
+        .nav-li-a:hover{
+            transform: scale(1.1);
         .nav-li:hover{
             transform: scale(1);
         }
