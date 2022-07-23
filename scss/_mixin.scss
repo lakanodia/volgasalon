@@ -17,3 +17,12 @@
     top: $top;
     left: $left;
 }
+
+// kframe mixins for menu hide and show animations
+@mixin animation-mixin($name, $from, $to) {
+    @keyframes #{$name} {
+        0% {height:  $from;}
+        100% {height:  $to;}
+    }
+}
+  
