@@ -196,7 +196,7 @@ html {
           transform: scale(1.1);
 }
 
-.nav-li:hover {
+.nav-li-a:hover .nav-li:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
