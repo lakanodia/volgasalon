@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 .section1 {
     background-color: $color01;
     height: 100vh;
@@ -13,7 +18,7 @@
             height: auto;
         }
         .start-img {
-            width: 50%;
+            width: 100%;
         }
     }
 }
@@ -25,7 +30,6 @@
     position: absolute;
     z-index: 99;
 }
-
 
 .language-block{
     max-width: 120px;
@@ -63,23 +67,46 @@
 .navigation-block{
     @include position-property(fixed, 15%, 93%);
     z-index: 99;
+    overflow: hidden;
     .nav-ul{
-        .nav-li{
+        .nav-li-a{
             @include border-shape(5px double white, 50%, 20px );
             @include d-flex(flex, center, center);
             margin-bottom: 10px;
             color: $color01;
             cursor: pointer;
             background-color: $color03;
-            transform: scale(0.9);
+            transform: scale(0.8);
             transition: 0.3s;
         }
         
-        .nav-li:hover{
+nav-a-tag
+        .nav-li-a:hover{
             transform: scale(1.1);
+        .nav-li:hover{
+            transform: scale(1);
         }
     }
 }
+
+
+// height of navigation animations
+.nav-hide {
+    animation: heigh-reduse 3s;
+    animation-fill-mode: forwards;
+}
+.nav-show {
+    animation: heigh-increase 3s;
+    animation-fill-mode: forwards;
+}
+
+@include animation-mixin(heigh-reduse, 100%, 0%);
+
+@include animation-mixin(heigh-increase, 0%, 100%);
+  
+
+
+
 
 // section 2 volga salon
 .volga-salon-container{
