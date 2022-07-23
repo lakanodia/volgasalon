@@ -78,12 +78,10 @@ html {
             background-color: $color03;
             transform: scale(0.8);
             transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
-    }
-
-// nav-a-tag
-        .nav-li-a:hover{
-            transform: scale(1.1);
         .nav-li:hover{
             transform: scale(1);
         }
