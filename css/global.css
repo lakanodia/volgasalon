@@ -35,7 +35,7 @@ blockquote, q {
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -70,6 +70,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .section1 .video-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -86,10 +87,12 @@ html {
           align-items: center;
   width: 500px;
 }
+
 .section1 .video-container .start-video {
   width: 100%;
   height: auto;
 }
+
 .section1 .video-container .start-img {
   width: 100%;
 }
@@ -115,6 +118,7 @@ html {
   left: 91%;
   z-index: 100;
 }
+
 .language-block .language-div {
   border: 0px solid white;
   border-radius: 0%;
@@ -129,6 +133,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .language-block .language-div .language {
   border: 2px solid white;
   border-radius: 0%;
@@ -136,24 +141,27 @@ html {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: rgb(193, 182, 154);
+  background-color: #c1b69a;
 }
+
 .language-block .language-div .language:hover {
-  background-color: rgb(220, 213, 195);
+  background-color: #dcd5c3;
 }
+
 .language-block .hide-menu-div {
   border: 2px solid white;
   border-radius: 0%;
   padding: 6px;
-  background-color: rgb(193, 182, 154);
+  background-color: #c1b69a;
   text-align: center;
   margin-top: 4px;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .language-block .hide-menu-div:hover {
-  background-color: rgb(220, 213, 195);
+  background-color: #dcd5c3;
 }
 
 .navigation-block {
@@ -163,6 +171,7 @@ html {
   z-index: 99;
   overflow: hidden;
 }
+
 .navigation-block .nav-ul .nav-li-a {
   border: 5px double white;
   border-radius: 50%;
@@ -179,7 +188,7 @@ html {
   margin-bottom: 10px;
   color: black;
   cursor: pointer;
-  background-color: rgb(193, 182, 154);
+  background-color: #c1b69a;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   -webkit-transition: 0.3s;
@@ -221,6 +230,7 @@ html {
     height: 0%;
   }
 }
+
 @-webkit-keyframes heigh-increase {
   0% {
     height: 0%;
@@ -229,6 +239,7 @@ html {
     height: 100%;
   }
 }
+
 @keyframes heigh-increase {
   0% {
     height: 0%;
@@ -237,6 +248,7 @@ html {
     height: 100%;
   }
 }
+
 .block-active {
   display: block;
 }
@@ -249,62 +261,228 @@ html {
   width: 100%;
   position: relative;
 }
+
 .volga-salon-container .volga-road-img {
   width: 100%;
 }
+
 .volga-salon-container .volga-salon-img {
   position: absolute;
   top: 0%;
   left: 0%;
   width: 100%;
 }
+
 .volga-salon-container .volga-wheel-img {
   position: absolute;
   top: 35%;
   left: 20%;
   width: 20%;
 }
+
 .volga-salon-container .volga-blog-img {
   position: absolute;
   top: 51%;
   left: 67%;
   width: 14%;
 }
+
 .volga-salon-container .volga-map-img {
   position: absolute;
   top: 41%;
   left: 43%;
   width: 10%;
 }
+
 .volga-salon-container .volga-clock-img {
   position: absolute;
   top: 52.6%;
   left: 59.9%;
   width: 5%;
 }
+
 .volga-salon-container .volga-radio-img {
   position: absolute;
   top: 52%;
   left: 44%;
   width: 14%;
 }
+
 .volga-salon-container .volga-mirror-img {
   position: absolute;
   top: 12%;
   left: 42%;
   width: 12%;
 }
+
 .volga-salon-container .volga-sticker-img {
   position: absolute;
   top: 40%;
   left: 60%;
   width: 20%;
 }
+
 .volga-salon-container .volga-sit-img {
   position: absolute;
   top: 79%;
   left: 0%;
   width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.section3 {
+  position: relative;
+}
+
+.section3 .pointer {
+  -webkit-animation: pointer 1.5s linear infinite;
+          animation: pointer 1.5s linear infinite;
+  position: absolute;
+  cursor: pointer;
+}
+
+.section3 .volga-map-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.section3 .volga-map-zugdidi-img {
+  top: 23.8%;
+  left: 31.5%;
+}
+
+.section3 .volga-map-batumi-img {
+  top: 45%;
+  left: 25.4%;
+}
+
+.section3 .volga-map-muxrani-img {
+  top: 41%;
+  left: 60.3%;
+}
+
+.section3 .volga-map-tbilisi-img {
+  top: 48.2%;
+  left: 62%;
+}
+
+.section3 .volga-map-rustavi-img {
+  top: 54%;
+  left: 64.7%;
+}
+
+.section3 .volga-map-background-img {
+  width: 100%;
+}
+
+.section3 .volga-map-background-img img {
+  width: 100%;
+}
+
+@-webkit-keyframes pointer {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes pointer {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.section3 .volga-map-modali {
+  padding: 20px 55px;
+  background: white;
+  z-index: 5;
+}
+
+.section3 .volga-map-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.section3 .volga-map-modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 3;
+}
+
+.section3 .volga-map-modal-header-items {
+  padding: 12px 30px;
+  margin-right: 2px;
+  font-size: 1.15rem;
+  background: #889ca4;
+  cursor: pointer;
+}
+
+.section3 .volga-map-modal-header-items-active {
+  background: white;
+}
+
+.section3 .volga-map-modal-header img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.section3 .volga-map-modal video {
+  width: 650px;
+  height: 350px;
+  background: black;
+}
+
+.section3 .volga-map-modal p {
+  padding: 10px 0;
+  width: 650px;
+  font-size: 0.95em;
+}
+
+.section3 .volga-map-modal-zugdidi-pictures .pictures-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section3 .volga-map-modal-zugdidi-pictures .pictures-slider img {
+  width: 220px;
+  height: 190px;
+  margin: 0 10px;
+}
+
+.section3 .volga-map-modal-zugdidi-pictures p {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .hidden {
