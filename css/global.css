@@ -96,6 +96,10 @@ html {
 .section1 .video-container .start-img {
   width: 100%;
 }
+.section1 .video-container .start-img-a {
+  cursor: pointer;
+  z-index: 100;
+}
 
 .loader {
   background: #fff url("/images/PreloadGif.GIF.gif") no-repeat center center;
@@ -190,32 +194,21 @@ html {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* <<<<<<< Updated upstream */
-/* nav-a-tag */
-/* .navigation-block .nav-ul .nav-li-a:hover { */
-/* ======= */
-
-.navigation-block .nav-li-a:hover {
-/* >>>>>>> Stashed changes */
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.navigation-block .nav-li-a:hover .nav-li:hover {
+.navigation-block .nav-ul .nav-li-a:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
 .nav-hide {
-  -webkit-animation: heigh-reduse 3s;
-          animation: heigh-reduse 3s;
+  -webkit-animation: heigh-reduse 1.5s;
+          animation: heigh-reduse 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .nav-show {
-  -webkit-animation: heigh-increase 3s;
-          animation: heigh-increase 3s;
+  -webkit-animation: heigh-increase 1.5s;
+          animation: heigh-increase 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -256,6 +249,14 @@ html {
   }
 }
 
+.block-active {
+  display: block;
+}
+
+.block-none {
+  display: none;
+}
+
 .volga-salon-container {
   width: 100%;
   position: relative;
@@ -276,6 +277,7 @@ html {
   position: absolute;
   top: 35%;
   left: 20%;
+  width: 20%;
 }
 
 .volga-salon-container .volga-blog-img {
@@ -287,14 +289,15 @@ html {
 
 .volga-salon-container .volga-map-img {
   position: absolute;
-  top: 42%;
+  top: 41%;
   left: 43%;
+  width: 10%;
 }
 
 .volga-salon-container .volga-clock-img {
   position: absolute;
-  top: 53%;
-  left: 60%;
+  top: 52.6%;
+  left: 59.9%;
   width: 5%;
 }
 
@@ -307,21 +310,23 @@ html {
 
 .volga-salon-container .volga-mirror-img {
   position: absolute;
-  top: 10%;
-  left: 44%;
+  top: 12%;
+  left: 42%;
+  width: 12%;
 }
 
 .volga-salon-container .volga-sticker-img {
   position: absolute;
   top: 40%;
   left: 60%;
+  width: 20%;
 }
 
 .volga-salon-container .volga-sit-img {
   position: absolute;
-  top: 0%;
-  left: 10%;
-  display: none;
+  top: 79%;
+  left: 0%;
+  width: 100%;
 }
 
 .hide {
