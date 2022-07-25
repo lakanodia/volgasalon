@@ -53,6 +53,10 @@ a {
   all: unset;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -449,7 +453,6 @@ html {
 .hide {
   display: none;
 }
-
 .section3 {
   position: relative;
 }
@@ -570,6 +573,7 @@ html {
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
   opacity: 0;
+
 }
 
 .floating {
@@ -597,4 +601,3 @@ html {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-}
