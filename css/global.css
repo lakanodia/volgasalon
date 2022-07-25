@@ -100,6 +100,7 @@ html {
 .section1 .video-container .start-img-a {
   cursor: pointer;
   z-index: 100;
+  margin-top: 2rem;
 }
 
 .loader {
@@ -452,7 +453,6 @@ html {
 .hide {
   display: none;
 }
-
 .section3 {
   position: relative;
 }
@@ -573,4 +573,31 @@ html {
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
   opacity: 0;
+
 }
+
+.floating {
+  -webkit-animation: floating 1.1s ease-in-out infinite;
+          animation: floating 1.1s ease-in-out infinite;
+}
+
+@-webkit-keyframes floating {
+  0%, 100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }

@@ -2,3 +2,11 @@
     transition: opacity 1s ease-in-out;
     opacity: 0;
 }
+
+.floating {
+    animation: floating 1.1s ease-in-out infinite;
+}
+@keyframes floating {
+    0%, 100% { transform: translateY(-20px); }
+    50% { transform: translateY(0); }
+  }
