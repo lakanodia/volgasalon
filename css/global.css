@@ -401,6 +401,27 @@ html {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  overflow: hidden;
+  -webkit-animation: videoCard 0.4s;
+          animation: videoCard 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes videoCard {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes videoCard {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 50%;
+  }
 }
 .section3 .volga-map-modal-header {
   display: -webkit-box;
@@ -449,6 +470,7 @@ html {
   padding: 0;
   margin: 0;
 }
+
 
 .hide {
   display: none;
@@ -548,6 +570,12 @@ html {
   height: 350px;
   background: black;
 }
+.section3 .volga-map-modal .video-post {
+  max-width: 650px;
+  width: 100%;
+  height: 400px;
+}
+
 .section3 .volga-map-modal p {
   padding: 10px 0;
   width: 650px;
@@ -600,4 +628,3 @@ html {
   50% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
