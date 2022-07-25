@@ -194,7 +194,6 @@ html {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .navigation-block .nav-ul .nav-li-a:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
