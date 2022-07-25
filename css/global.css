@@ -398,7 +398,6 @@ html {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-
 .section3 .volga-map-modal-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,7 +414,6 @@ html {
 .section3 .volga-map-modal-header-items-active {
   background: white;
 }
-
 .section3 .volga-map-modal-header img {
   position: absolute;
   top: 0;
@@ -437,13 +435,124 @@ html {
   display: -ms-flexbox;
   display: flex;
 }
-
 .section3 .volga-map-modal-zugdidi-pictures .pictures-slider img {
   width: 220px;
   height: 190px;
   margin: 0 10px;
 }
+.section3 .volga-map-modal-zugdidi-pictures p {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
+.hide {
+  display: none;
+}
+
+.section3 {
+  position: relative;
+}
+.section3 .pointer {
+  -webkit-animation: pointer 1.5s linear infinite;
+          animation: pointer 1.5s linear infinite;
+  position: absolute;
+  cursor: pointer;
+}
+.section3 .volga-map-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.section3 .volga-map-zugdidi-img {
+  top: 23.8%;
+  left: 31.5%;
+}
+.section3 .volga-map-batumi-img {
+  top: 45%;
+  left: 25.4%;
+}
+.section3 .volga-map-muxrani-img {
+  top: 41%;
+  left: 60.3%;
+}
+.section3 .volga-map-tbilisi-img {
+  top: 48.2%;
+  left: 62%;
+}
+.section3 .volga-map-rustavi-img {
+  top: 54%;
+  left: 64.7%;
+}
+.section3 .volga-map-background-img {
+  width: 100%;
+}
+.section3 .volga-map-background-img img {
+  width: 100%;
+}
+@keyframes pointer {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.section3 .volga-map-modali {
+  padding: 20px 55px;
+  background: white;
+  z-index: 5;
+}
+.section3 .volga-map-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.section3 .volga-map-modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 3;
+}
+.section3 .volga-map-modal-header-items {
+  padding: 12px 30px;
+  margin-right: 2px;
+  font-size: 1.15rem;
+  background: #889ca4;
+  cursor: pointer;
+}
+.section3 .volga-map-modal-header-items-active {
+  background: white;
+}
+.section3 .volga-map-modal-header img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.section3 .volga-map-modal video {
+  width: 650px;
+  height: 350px;
+  background: black;
+}
+.section3 .volga-map-modal p {
+  padding: 10px 0;
+  width: 650px;
+  font-size: 0.95em;
+}
+.section3 .volga-map-modal-zugdidi-pictures .pictures-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .section3 .volga-map-modal-zugdidi-pictures .pictures-slider img {
