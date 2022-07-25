@@ -3,6 +3,7 @@ let loader = document.getElementById("loader");
 window.addEventListener("load", function () {
   loader.classList.add("hidden");
 });
+
 // this function dissapears menu bar
 let menuBar = document.getElementById('hide-menu-div');
 let navBar = document.getElementById('navigation-block');
@@ -19,12 +20,10 @@ function toggleMenuFunction() {
         navBar.classList.remove('nav-show');
         setTimeout(() => {
             navBar.style.display = "none";
-        }, 3000);
+        }, 1499);
         menuBar.innerHTML ='Show Menu';
     }
 }
-
-
 
 let item = document.getElementById('volga-salon-container').childNodes
 item.forEach(img => {
@@ -46,6 +45,31 @@ item.forEach(img => {
             case "volga-radio-img":
               alert("მე ვარ რადიო");
               break;
+            case "volga-wheel-img":
+              alert("მე ვარ საჭე");
+              break;
+            case "volga-blog-img":
+              alert("უუპს");
+              break;
           }
     });
 });
+
+// pointer modal click
+let pointers = document.querySelectorAll(".pointer");
+let modal = document.getElementById("modal");
+pointers.forEach((pointer)=>{
+  pointer.addEventListener("click",(item)=>{
+    modal.classList.toggle("hide");
+  })
+})
+
+
+// modal close button
+let closeBtn = document.getElementById("close");
+closeBtn.addEventListener("click",()=>{
+  modal.classList.add("hide");
+})
+
+
+// in modal pages

@@ -26,7 +26,7 @@
         <nav class="navigation-block" id="navigation-block">
             <ul class="nav-ul">
                 <li><a class="nav-li-a active" href="#section2"> <i class="fa-solid fa-car-side"></i> </a> </li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-location-dot"></i></a></li>
+                <li><a class="nav-li-a" href="#section3"><i class="fa-solid fa-location-dot"></i></a></li>
                 <li><a class="nav-li-a" href="#"><i class="fa-solid fa-clock"></i></a></li>
                 <li><a class="nav-li-a" href="#"><i class="fa-solid fa-signal"></i></a></li>
                 <li><a class="nav-li-a" href="#"><i class="fa-solid fa-pen"></i> </a></li>
@@ -39,7 +39,7 @@
     <section class="section1">
         <div class="video-container">
             <video autoplay muted loop class="start-video" src="video/Intro_Video_HD_02.mp4"></video>
-            <a href="#section2"> <img class="start-img" src="images/start.png" alt="lets go"> </a>  
+            <a class="start-img-a" href="#section2"> <img class="start-img" src="images/start.png" alt="lets go"> </a>  
         </div>
     </section>
  
@@ -55,6 +55,40 @@
             <img class="volga-radio-img" src="images/interior/radio.png" alt="radio-img">
             <img class="volga-sit-img" src="images/interior/sit.png" alt="sit-img">
             <img class="volga-sticker-img" src="images/interior/sticker.png" alt="sticker-img">
+        </div>
+    </section>
+    
+    <section class="section3" id="section3">
+        <img class="volga-map-background-img" src="images/map/map_background.jpg" alt="backgorund-img">
+        <div class="volga-map-wrapper">
+            <img class="volga-map-img" src="images/map/map_big.png" alt="map-img">
+            <img class="volga-map-zugdidi-img pointer" src="images/map/point.png" alt="map-zugdidi-img">
+            <img class="volga-map-batumi-img pointer" src="images/map/point.png" alt="map-batumi-img">
+            <img class="volga-map-muxrani-img pointer" src="images/map/point.png" alt="map-muxrani-img">
+            <img class="volga-map-tbilisi-img pointer" src="images/map/point.png" alt="map-tbilisi-img">
+            <img class="volga-map-rustavi-img pointer" src="images/map/point.png" alt="map-rustavi-img">
+        </div>
+        <div class="volga-map-modal hide" id="modal">
+            <div class="volga-map-modal-header">
+                <div class="volga-map-modal-header-items volga-map-modal-header-items-active" id="videos-click">Videos</div>
+                <div class="volga-map-modal-header-items" id="pictures-click">Pictures</div>
+                <img src="images/map/close.png" alt="close" id="close">
+            </div>
+            <div class="volga-map-modali volga-map-modal-zugdidi">
+                <div class="volga-map-modal-zugdidi-videos" id="videos">
+                    <video src="#"></video>
+                <p>Maka Samuschia: Die 25-jährige Journalistin arbeitet für das mengrelische Fernsehen „Odischi“.Während des russisch-georgischen Krieges 2008, als russische Truppen große Teile Westgeorgiens besetzten, erlebte sie Zugdidi als „Geisterstadt“. Mit ihrer Kollegin Tamar Lataria arbeitet sie an einer mehrteiligen Fernsehreihe über die EU-Mission in Georgien.</p>
+                </div>
+                <div class="volga-map-modal-zugdidi-pictures hide" id="pictures">
+                    <div class="pictures-slider">
+                        <img src="images/map/zugdidi/bigimg1.jpg" alt="img1">
+                        <img src="images/map/zugdidi/bigimg2.jpg" alt="img2">
+                        <img src="images/map/zugdidi/bigimg3.jpg" alt="img3">
+                    </div>
+                    <p>
+                        Die Hauptstadt der Region Mengrelien-Oberswanetien ist die georgische Stadt, die der de facto-Grenze mit der abtrünnigen Teilrepublik Abchasien am nächsten liegt. Über die Inguri-Brücke am Rande Sugdidis wird der eingeschränkte Grenzverkehr abgewickelt. Im Schloss Dadiani, dem früheren Sitz der Prinzessin von Mengrelien, sind heute die Todesmaske Napoleons und ein Grabtuch der Gottesmutter Maria zu sehen. Junge Menschen aus der Region nehmen oft an Workshops und friedensstiftenden Programmen teil, die von internationalen NGOs organisiert werden. Dank der sozialen Medien ist ein neues Kommunikationsnetzwerk enstanden, mit dessen Hilfe aktiv über die Zukunft der vom Konflikt geprägten Region diskutiert wird.</p>
+                </div>
+            </div>
         </div>
     </section>
     <script src="js/script.js"></script>
