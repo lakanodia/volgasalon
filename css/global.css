@@ -257,6 +257,7 @@ html {
 .volga-salon-container {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .volga-salon-container .volga-road-img {
   width: 100%;
@@ -471,10 +472,10 @@ html {
   margin: 0;
 }
 
-
 .hide {
   display: none;
 }
+
 .section3 {
   position: relative;
 }
@@ -575,7 +576,6 @@ html {
   width: 100%;
   height: 400px;
 }
-
 .section3 .volga-map-modal p {
   padding: 10px 0;
   width: 650px;
@@ -601,7 +601,6 @@ html {
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
   opacity: 0;
-
 }
 
 .floating {
@@ -628,3 +627,5 @@ html {
   50% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}

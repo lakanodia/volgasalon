@@ -128,3 +128,21 @@ pointers.forEach(img => {
       openCard(imageValue);
   });
 });
+
+// scroll aniamtions 
+window.onscroll = function () {
+  scrollRotate();
+  scrolZoom();
+};
+
+function scrollRotate() {
+  let image = document.getElementById("volga-wheel-img");
+  let offset = window.pageYOffset/2;
+  image.style.transform = "rotate(" + offset + "deg)";
+}
+
+function scrolZoom() {
+  let road = document.getElementById("volga-road-img");
+  let scroll = scrollY;
+  road.style.transform = 'scale(1.' + scroll + ')';
+}
