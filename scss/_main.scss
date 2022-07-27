@@ -178,6 +178,9 @@ body {
         position: absolute;
         cursor: pointer;
     }
+    .pointer:nth-child(odd) { 
+        animation-delay: 0.7s;
+    }
     .volga-map{
         &-wrapper{
             position: absolute;
@@ -291,7 +294,11 @@ body {
     display: none;
 }
 .section3{
+    height: 100vh;
     position: relative;
+    background-image: url(../images/map/map_background.jpg);
+    background-position: center;
+    background-size: cover;
     .pointer{
         animation:pointer 1.5s linear infinite;
         position: absolute;
@@ -320,12 +327,6 @@ body {
         }&-rustavi-img{
             top:54%;
             left:64.7%;
-        }
-        &-background-img{
-            width: 100%;
-            img{
-                width: 100%;
-            }
         }
         @keyframes pointer {
             0%{
