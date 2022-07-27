@@ -61,6 +61,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Roboto Slab", serif;
+  line-height: 1.5;
+}
+
 .section1 {
   background-color: black;
   height: 100vh;
@@ -595,6 +600,111 @@ html {
   max-width: 100%;
   padding: 0;
   margin: 0;
+}
+
+.section4 {
+  height: 100vh;
+  background-image: url(../images/Timeline/timeline_background.jpg);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section4 .timelineFold {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.section4 .timelineFold .timelineContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.5rem;
+  background-color: black;
+  opacity: 0.8;
+  padding: 1.25rem 1.75rem;
+}
+.section4 .timelineFold .timelineContainer .timelineText {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.7;
+  height: 150px;
+  width: 700px;
+  color: black;
+  padding: 1.5rem;
+}
+.section4 .timelineFold .timelineContainer .timelineText p {
+  display: none;
+  font-family: "Gentium Book Basic", serif;
+}
+.section4 .timelineFold .timelineContainer .timelineText p:last-child {
+  display: block;
+}
+.section4 .timelineFold .timelineCar {
+  background-color: rgb(255, 255, 255);
+  width: 700px;
+  height: auto;
+  margin-top: 1.5rem;
+  opacity: 0.6;
+  padding: 0.5rem 0;
+}
+.section4 .timelineFold .timelineCar #car {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-left: 50px;
+  background-image: url(../images/Timeline/min_volga1.png);
+}
+.section4 .timelineFold .timelineCar #line {
+  height: 10px;
+  background-color: #334D51;
+  margin: 50px 50px 20px 50px;
+}
+.section4 .timelineFold .timelineCar #line .butt {
+  width: 15px;
+  height: 20px;
+  float: left;
+  position: relative;
+  background-color: #6AC5C1;
+  margin-left: 50px;
+}
+.section4 .timelineFold .timelineCar #line .butt:nth-child(1) {
+  margin-left: 30px;
+}
+.section4 .timelineFold .timelineCar .yearContainer span {
+  display: none;
+  width: 15px;
+  height: 20px;
+  float: left;
+  position: relative;
+  font-size: 14px;
+  margin-left: 50px;
+}
+.section4 .timelineFold .timelineCar .yearContainer span:first-child {
+  display: block;
+  margin-left: 73px;
 }
 
 .hidden {
