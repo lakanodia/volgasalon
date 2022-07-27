@@ -6,6 +6,10 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    font-family: $roboto;
+    line-height: 1.5;
+}
 .section1 {
     background-color: $color01;
     height: 100vh;
@@ -399,4 +403,84 @@ html {
         }
     }
     
+}
+
+.section4 {
+    height: 100vh;
+    background-image: url(../images/Timeline/timeline_background.jpg);
+    background-position: center;
+    background-size: cover;
+    @include d-flex(flex, center, center);
+    .timelineFold  {
+        @include d-flex(flex, center, center);
+        flex-direction: column;
+        .timelineContainer {
+            @include d-flex(flex, space-between, center);
+            gap: 2.5rem;
+            background-color: $color01;
+            opacity: 0.8;
+            padding: 1.25rem 1.75rem;
+            .timelineText {
+                background-color: $color02;
+                opacity: 0.7;
+                height: 150px;
+                width: 700px;
+                color: $color01;
+                padding: 1.5rem;
+                p {
+                    display: none;
+                    font-family: $gentium;
+                }
+                p:last-child {
+                    display: block;
+                }
+            }
+        }
+        .timelineCar {
+            background-color: $color02;
+            width: 700px;
+            height: auto;
+            margin-top: 1.5rem;
+            opacity: 0.6;
+            padding: 0.5rem 0;
+            #car {
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                margin-left: 50px;
+                background-image: url(../images/Timeline/min_volga1.png);
+            }
+            #line {
+                height: 10px;
+                background-color: #334D51;
+                margin: 50px 50px 20px 50px;
+                .butt {
+                    width: 15px;
+                    height: 20px;
+                    float: left;
+                    position: relative;
+                    background-color: #6AC5C1;
+                    margin-left: 50px;
+                }
+                .butt:nth-child(1){
+                    margin-left: 30px;
+                }
+            }
+            .yearContainer {
+                span {
+                    display: none;
+                    width: 15px;
+                    height: 20px;
+                    float: left;
+                    position: relative;
+                    font-size: 14px;
+                    margin-left: 50px;
+                }
+                span:first-child {
+                    display: block;
+                    margin-left: 73px;
+                }
+            }
+        }
+    }
 }
