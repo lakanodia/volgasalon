@@ -146,3 +146,127 @@ function scrolZoom() {
   let scroll = scrollY;
   road.style.transform = 'scale(1.' + scroll + ')';
 }
+
+
+
+// Timeline - section 4
+let data = [
+  {
+    id: 0,
+    text: "Du 3 au 9 mars Tbilissi est secouée par une vague de manifestations en la mémoire du dictateur Staline, elles cristallisent le sentiment antisoviétique.Le mouvement est réprimé dans un bain de sang. Plus d’une centaine de jeunes sont tués par les forces spéciales soviétiques.",
+    year: "1956"
+  },
+  {
+    id: 1,
+    text: "Visite à Tbilissi de Nikita Khrouchtchev, le premier secrétaire du Comité central du Parti communiste et chef du gouvernement de l’Union soviétique. Période de dégel dans les relations Est/Ouest.",
+    year: "1960"
+  },
+  {
+    id: 2,
+    text: "Le Dynamo Tbilissi est champion de football d’Union soviétique. Après le Dynamo Kiev en 1960, c’est la deuxième équipe non russe à remporter le titre.",
+    year: "1964"
+  },
+  {
+    id: 3,
+    text: "Le 21 août, les troupes soviétiques entrent dans Prague, mettant une fin brutale au « Printemps de Prague ».",
+    year: "1968"
+  },
+  {
+    id: 4,
+    text: "Démission de Vassili Mzhavanadze, premier secrétaire du Comité central du Parti communiste géorgien. Edouard Chevardnadze est élu à sa succession.",
+    year: "1972"
+  },  
+  {
+    id: 5,
+    text: "La première organisation géorgienne des droits de l’homme, le « Groupe Helsinki géorgien », est fondée par Merab Kostava, Zviad Gamsakhourdia et Viktor Rzchiladze.",
+    year: "1976"
+  },
+  {
+    id: 6,
+    text: "Du 8 au 16 mars se déroule à Tbilissi le premier festival rock d’Union soviétique, « Le rythme du printemps ». Quelques mois plus tôt, l’Armée rouge envahissait l’Afghanistan.",
+    year: "1980"
+  },
+  {
+    id: 7,
+    text: "1984 - Le patriarche de Géorgie, Elie II, visite le monastère Sainte –Catherine du Mont Sinaï. La bibliothèque du monastère conserve plus de 3500 volumes manuscrits, dont de nombreux en géorgien.",
+    year: "1984"
+  },
+  {
+    id: 8,
+    text: "1988 – Manifestations de masse à Tbilissi avec pour principale revendication la sortie de la Géorgie de l’Union soviétique. Le 9 avril 1989, le mouvement est réprimé dans le sang par les troupes soviétiques.",
+    year: "1988"
+  } 
+]
+
+let texts = document.getElementById('timelineText').children
+let arrowLeft = document.getElementById('arrow-left');
+let arrowRight = document.getElementById('arrow-right');
+let carDiv = document.getElementById('car');
+let textDiv = document.getElementById('text');
+let year = document.getElementById('year');
+
+let sliderIndex = 0;
+// change index and move carDiv
+function arrowRightClick () { 
+  if(sliderIndex == data.length-1) {
+      sliderIndex = -1;
+  }
+  sliderIndex++;
+  carDiv.style.transform = `translateX(${sliderIndex*65}px)`;
+  year.style.transform = `translateX(${sliderIndex*65}px)`;
+
+  setSlider();
+}
+
+function arrowLeftClick () {
+  if (sliderIndex == 0) {
+      sliderIndex = data.length;
+   }
+  sliderIndex--;
+  carDiv.style.transform = 'translateX(' + (585-(data.length-sliderIndex) * 65)+ 'px)';
+  year.style.transform = `translateX(${sliderIndex*65}px)`;
+  setSlider();
+}
+
+function setSlider() {
+  textDiv.innerText = '';
+  year.innerText = '';
+  carDiv.style.backgroundImage = `url("images/Timeline/min-volga${sliderIndex+1}.png")`;
+  textDiv.append(data[sliderIndex].text);  
+  year.append(data[sliderIndex].year);
+}
+
+
+function createButts() {
+  let line = document.getElementById("line");
+  
+  data.forEach((element) => {
+    let butt = document.createElement("div");
+    butt.classList.add("butt");
+    butt.setAttribute("data-id", element.id);
+
+    butt.onclick = () => {
+      let id = event.target.getAttribute("data-id");
+      sliderIndex = id *1;
+      setSlider();
+      carDiv.style.transform = `translateX(${sliderIndex*65}px)`;
+      year.style.transform = `translateX(${sliderIndex*65}px)`;
+  }
+  line.appendChild(butt);
+})
+return line;
+}
+createButts();
+
+// arrow click event
+arrowRight.addEventListener('click', arrowRightClick);
+arrowLeft.addEventListener('click', arrowLeftClick);
+
+// keydown event
+document.addEventListener('keydown', function(event) {
+  if (event.keyCode == 37) {
+      arrowLeftClick();
+  } else if (event.keyCode == 39) {
+      arrowRightClick();
+  }
+})

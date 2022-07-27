@@ -66,6 +66,10 @@ body {
   line-height: 1.5;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .section1 {
   background-color: black;
   height: 100vh;
@@ -649,9 +653,15 @@ body {
   opacity: 0.8;
   padding: 1.25rem 1.75rem;
 }
+.section4 .timelineFold .timelineContainer .prev:active, .section4 .timelineFold .timelineContainer .next:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
 .section4 .timelineFold .timelineContainer .timelineText {
+  -webkit-box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+          box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   background-color: rgb(255, 255, 255);
-  opacity: 0.7;
+  opacity: 0.8;
   height: 150px;
   width: 700px;
   color: black;
@@ -669,7 +679,7 @@ body {
   width: 700px;
   height: auto;
   margin-top: 1.5rem;
-  opacity: 0.6;
+  opacity: 0.8;
   padding: 0.5rem 0;
 }
 .section4 .timelineFold .timelineCar #car {
@@ -677,7 +687,7 @@ body {
   width: 70px;
   height: 70px;
   margin-left: 50px;
-  background-image: url(../images/Timeline/min_volga1.png);
+  background-image: url(../images/Timeline/min-volga1.png);
 }
 .section4 .timelineFold .timelineCar #line {
   height: 10px;
@@ -691,9 +701,17 @@ body {
   position: relative;
   background-color: #6AC5C1;
   margin-left: 50px;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
 }
 .section4 .timelineFold .timelineCar #line .butt:nth-child(1) {
   margin-left: 30px;
+}
+.section4 .timelineFold .timelineCar #line .butt:hover {
+  cursor: pointer;
+  height: 30px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .section4 .timelineFold .timelineCar .yearContainer span {
   display: none;
