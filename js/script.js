@@ -365,7 +365,7 @@ const arrowRightClick = () => {
   if(sliderIndex == data.length-1) {
     sliderIndex = -1;
   }
-  sliderIndex++;
+  sliderIndex= sliderIndex+1;
   carDiv.style.transform = `translateX(${sliderIndex*65}px)`;
   year.style.transform = `translateX(${sliderIndex*65}px)`;
 
@@ -376,7 +376,7 @@ const arrowLeftClick = () => {
   if (sliderIndex == 0) {
     sliderIndex = data.length;
   }
-  sliderIndex--;
+  sliderIndex=sliderIndex-1;
   carDiv.style.transform = 'translateX(' + (585-(data.length-sliderIndex) * 65)+ 'px)';
   year.style.transform = `translateX(${sliderIndex*65}px)`;
   setSlider();
