@@ -55,6 +55,24 @@ item.forEach(img => {
     });
 });
 
+// scroll aniamtions 
+window.onscroll = function () {
+  scrollRotate();
+  scrolZoom();
+};
+
+function scrollRotate() {
+  let image = document.getElementById("volga-wheel-img");
+  let offset = window.pageYOffset/2;
+  image.style.transform = "rotate(" + offset + "deg)";
+}
+
+function scrolZoom() {
+  let road = document.getElementById("volga-road-img");
+  let scroll = scrollY;
+  road.style.transform = 'scale(1.' + scroll + ')';
+}
+
 // pointer modal click
 let pointers = document.querySelectorAll(".pointer");
 let modal = document.getElementById("modal");
@@ -69,6 +87,9 @@ pointers.forEach((pointer)=>{
 let closeBtn = document.getElementById("close");
 closeBtn.addEventListener("click",()=>{
   modal.classList.add("hide");
+  arrowIconOne.classList.add('hide');
+  arrowIconTwo.classList.add('hide');
+  headerVideoClick();
 })
 
 
@@ -103,7 +124,7 @@ let videoData = [
 ];
 
 
-let videoContent = document.getElementById('video-content');
+let videoContent = document.getElementById('videos');
 
 function openCard(id){
   cardInfo(id);
@@ -129,23 +150,148 @@ pointers.forEach(img => {
   });
 });
 
-// scroll aniamtions 
-window.onscroll = function () {
-  scrollRotate();
-  scrolZoom();
+
+// section 3 picture content
+let headerPictureItem = document.getElementById('pictures-click');
+let pictureContent = document.getElementById('pictures');
+let headerVideoItem =document.getElementById('videos-click');
+let arrowIconOne = document.getElementById('previous');
+let arrowIconTwo = document.getElementById('next');
+
+headerPictureItem.addEventListener('click' , headerPictureClick);
+
+function headerPictureClick() {
+  headerPictureItem.classList.add('volga-map-modal-header-items-active');
+  headerVideoItem.classList.remove('volga-map-modal-header-items-active');
+  pictureContent.classList.remove('hide');
+  videoContent.classList.add('hide');
+  arrowIconOne.classList.remove('hide');
+  arrowIconTwo.classList.remove('hide');
+
+}
+
+headerVideoItem.addEventListener('click', headerVideoClick );
+
+function headerVideoClick() {
+  headerPictureItem.classList.remove('volga-map-modal-header-items-active');
+  headerVideoItem.classList.add('volga-map-modal-header-items-active');
+  pictureContent.classList.add('hide');
+  videoContent.classList.remove('hide');
+  arrowIconOne.classList.add('hide');
+  arrowIconTwo.classList.add('hide');
+}
+
+
+
+// section three pictures data and swiper
+let pictureData = [
+  {
+      id: 1,
+      imageUrl1: 'images/map/zugdidi/zugdidi01.jpg',
+      imageUrl2: 'images/map/zugdidi/zugdidi02.jpg',
+      imageUrl3: 'images/map/zugdidi/zugdidi03.jpg',
+      imageUrl4: 'images/map/zugdidi/zugdidi04.jpg',
+      imageUrl5: 'images/map/zugdidi/zugdidi05.jpg',
+      imageUrl6: 'images/map/zugdidi/zugdidi06.jpg',
+      description:"La capitale de la Mingrélie-et-Haute-Svanétie (Samegrelo-Zemo Svaneti) est la ville géorgienne qui marque de fait la ligne de séparation avec la république d’Abkhazie, dont le statut est disputé. Le passage de la frontière se fait sur le pont Inguri, tout proche de Zougdidi. Le château Dadiani, ancienne résidence de la princesse de Mingrélie, abrite les masques mortuaires de Napoléon et un suaire de la Sainte Vierge. Les jeunes de la région participent volontiers aux ateliers et aux programmes en faveur de la paix organisés par des ONG internationales. Grâce aux médias sociaux, un nouveau réseau de communication a vu le jour, qui leur permet de participer activement au débat sur l’avenir de leur région marquée par la guerre."
+  },
+  {
+      id: 2,
+      imageUrl1: 'images/map/batumi/batumi01.jpg',
+      imageUrl2: 'images/map/batumi/batumi02.jpg',
+      imageUrl3: 'images/map/batumi/batumi03.jpg',
+      imageUrl4: 'images/map/batumi/batumi04.jpg',
+      imageUrl5: 'images/map/batumi/batumi05.jpg',
+      imageUrl6: 'images/map/batumi/batumi06.jpg',
+      description: "Le port géorgien a été bâti dans l’Antiquité par les Grecs qui l’ont baptisé Batis. La silhouette de la ville n’a cessé de changer et les faubourgs, avec leurs petites rangées de maisons en bois et leurs barres d’immeubles soviétiques, s’avancent loin dans la chaîne montagneuse du Petit Caucase. Les bâtiments érigés ces dernières années, notamment la tour Alphabet, l’université technique, le Hall du service public, les complexes hôteliers et restaurants futuristes ont radicalement changé le visage de cette ville. Face à l’afflux de touristes et d’investisseurs étrangers, nombreux sont les habitants qui craignent de ne plus se sentir chez eux. Ils espèrent retrouver un jour une place importante dans la vie de leur ville."
+  },
+
+  {
+    id: 3,
+    imageUrl1: 'images/map/muxrani/mukhrani1.jpg',
+    imageUrl2: 'images/map/muxrani/mukhrani2.jpg',
+    imageUrl3: 'images/map/muxrani/mukhrani3.jpg',
+    imageUrl4: 'images/map/muxrani/mukhrani4.jpg',
+    imageUrl5: 'images/map/muxrani/mukhrani5.jpg',
+    imageUrl6: 'images/map/muxrani/mukhrani6.jpg',
+    description: "Le petit village et la région éponyme situés en Géorgie orientale tiennent leur nom historique – Samuchranbatono – d’une branche de la famille royale géorgienne, les Moukhran-Batonis. Le château de Moukhran a été construit en 1873 par le prince Ivane Bagration de Moukhran, général dans l’armée russe impériale – et viticulteur réputé. Le château, abandonné pendant la période soviétique, se dégradait de plus en plus ; il a été rénové depuis et les crus « Château Moukhran » comptent parmi les plus grands vignobles du pays."
+},
+
+{
+    id: 4,
+    imageUrl1: 'images/map/tbilisi/tbilisi01.jpg',
+    imageUrl2: 'images/map/tbilisi/tbilisi02.jpg',
+    imageUrl3: 'images/map/tbilisi/tbilisi03.jpg',
+    imageUrl4: 'images/map/tbilisi/tbilisi04.jpg',
+    imageUrl5: 'images/map/tbilisi/tbilisi05.jpg',
+    imageUrl6: 'images/map/tbilisi/tbilisi06.jpg',
+    description: "La capitale géorgienne porte depuis 1936 le nom de Tbilissi en raison de ses sources chaudes d’eau sulfureuse (« tbili » signifie « chaud » en géorgien). Avec 1,5 million d’habitants, c’est la seule grande ville du pays. Les restes des « premiers Européens », Seswa et Msia, mis au jour lors de fouilles archéologiques réalisées en 2000, sont conservés au musée Janachia, en plein centre-ville. Depuis quelques années, de nouvelles constructions pas toujours heureuses défigurent la ville. Aujourd’hui, de plus en plus d’habitants font entendre leur voix pour empêcher la destruction des vieilles bâtisses et des places traditionnelles de Tbilissi. Les étudiants et les jeunes scientifiques qui ont étudié à l’étranger jouent un rôle de premier plan dans cette protestation citoyenne."
+},
+{
+    id: 5,
+    imageUrl1: 'images/map/rustavi/rustavi_01.jpg',
+    imageUrl2: 'images/map/rustavi/rustavi_02.jpg',
+    imageUrl3: 'images/map/rustavi/rustavi_03.jpg',
+    imageUrl4: 'images/map/rustavi/rustavi_04.jpg',
+    imageUrl5: 'images/map/rustavi/rustavi_05.jpg',
+    imageUrl6: 'images/map/rustavi/rustavi_06.jpg',
+    description: "Roustavi est la plus ancienne ville de Géorgie ; presque entièrement détruite par les Mongols au XIIIe siècle, elle n’a été reconstruite qu’à l’ère soviétique, pour devenir le centre de l’industrie lourde. Sur ordre de Staline, le plus grand complexe sidérurgique du Caucase y a vu le jour dans les années 1940 – plus de 120 unités de production y étaient installées. La ville ne s’est jamais vraiment remise de l’effondrement de l’URSS. Roustavi n’est plus que friches industrielles et cités-dortoirs. Beaucoup de jeunes aspirant au mode de vie occidental se tournent vers les organisations non-gouvernementales ou vont travailler à Tbilissi, à seulement 25 km de Roustavi."
+  }
+];
+
+function pictureCardInfo(item){
+  let picturesDiv = document.createElement('div');
+  picturesDiv.classList.add('pictures-wrapper');
+
+  let pictureDescription = document.createElement('p');
+  pictureDescription.classList.add('post-descr');
+  pictureDescription.innerHTML = pictureData[item].description; 
+
+  let pictureSlideOne = document.createElement('img');
+  pictureSlideOne.classList.add('img');
+  pictureSlideOne.setAttribute("src", pictureData[item].imageUrl1);
+
+  let pictureSlideTwo = document.createElement('img');
+  pictureSlideTwo.classList.add('img');
+  pictureSlideTwo.setAttribute("src", pictureData[item].imageUrl2);
+
+  let pictureSlideTree = document.createElement('img');
+  pictureSlideTree.classList.add('img');
+  pictureSlideTree.setAttribute("src", pictureData[item].imageUrl3);
+
+  let pictureSlideFour = document.createElement('img');
+  pictureSlideFour.classList.add('img');
+  pictureSlideFour.setAttribute("src", pictureData[item].imageUrl4);
+
+  let pictureSlideFive = document.createElement('img');
+  pictureSlideFive.classList.add('img');
+  pictureSlideFive.setAttribute("src", pictureData[item].imageUrl5);
+
+  let pictureSlideSix = document.createElement('img');
+  pictureSlideSix.classList.add('img');
+  pictureSlideSix.setAttribute("src", pictureData[item].imageUrl6);
+
+  picturesDiv.appendChild(pictureSlideOne);
+  picturesDiv.appendChild(pictureSlideTwo);
+  picturesDiv.appendChild(pictureSlideFour);
+  picturesDiv.appendChild(pictureSlideFive);
+  picturesDiv.appendChild(pictureSlideSix);
+  pictureContent.appendChild(picturesDiv);
+  pictureContent.appendChild(pictureDescription);
+}
+
+pointers.forEach(img => {
+  img.addEventListener('click', () => {
+    pictureContent.innerHTML = '';
+      let imageValue = img.getAttribute('data-id' , img.value);
+      openPictureCard(imageValue);
+  });
+});
+
+function openPictureCard(id){
+  pictureCardInfo(id);
 };
 
-function scrollRotate() {
-  let image = document.getElementById("volga-wheel-img");
-  let offset = window.pageYOffset/2;
-  image.style.transform = "rotate(" + offset + "deg)";
-}
-
-function scrolZoom() {
-  let road = document.getElementById("volga-road-img");
-  let scroll = scrollY;
-  road.style.transform = 'scale(1.' + scroll + ')';
-}
 
 
 
