@@ -321,7 +321,7 @@ body {
 }
 .volga-salon-container .volga-sit-img {
   position: absolute;
-  top: 79%;
+  top: 80%;
   left: 0%;
   width: 100%;
 }
@@ -502,6 +502,14 @@ body {
   position: absolute;
   cursor: pointer;
 }
+.section3 .img {
+  cursor: pointer;
+  width: 210px;
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 6px;
+}
 .section3 .volga-map-wrapper {
   position: absolute;
   top: 50%;
@@ -606,6 +614,24 @@ body {
   max-width: 100%;
   padding: 0;
   margin: 0;
+}
+
+.previous {
+  max-width: 50px;
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  cursor: pointer;
+}
+
+.next {
+  max-width: 50px;
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  right: 15%;
+  cursor: pointer;
 }
 
 .section4 {

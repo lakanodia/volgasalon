@@ -124,7 +124,6 @@ body {
     display: none;
 }
 
-
 // section 2 volga salon
 .volga-salon-container{
     width: 100%;
@@ -167,7 +166,7 @@ body {
         width: 20%;
     }
     .volga-sit-img{
-        @include position-property(absolute, 79%, 0%);
+        @include position-property(absolute, 80%, 0%);
         width: 100%;
     }
 }
@@ -214,6 +213,8 @@ body {
                 width: 100%;
             }
         }
+    
+    
         @keyframes pointer {
             0%{
                 transform:translateY(0);
@@ -306,6 +307,13 @@ body {
         animation:pointer 1.5s linear infinite;
         position: absolute;
         cursor: pointer;
+    }
+    .img{
+        cursor: pointer;
+        width: 210px;
+        height: 190px;
+        object-fit: cover;
+        margin-left: 6px;
     }
     .volga-map{
         &-wrapper{
@@ -407,6 +415,24 @@ body {
     }
     
 }
+
+.previous{
+    max-width: 50px;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    cursor: pointer;
+}
+.next{
+    max-width: 50px;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    cursor: pointer;
+}
+
 
 .section4 {
     height: 100vh;
