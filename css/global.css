@@ -66,7 +66,7 @@ body {
   line-height: 1.5;
 }
 
-.pointer {
+.pointerCursor {
   cursor: pointer;
 }
 
@@ -679,7 +679,7 @@ body {
   opacity: 0.8;
   padding: 1.25rem 1.75rem;
 }
-.section4 .timelineFold .timelineContainer .prev:active, .section4 .timelineFold .timelineContainer .next:active {
+.section4 .timelineFold .timelineContainer .prev:active, .section4 .timelineFold .timelineContainer .next1:active {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
 }

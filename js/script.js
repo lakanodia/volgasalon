@@ -352,29 +352,8 @@ let textDiv = document.getElementById('text');
 let year = document.getElementById('year');
 
 let sliderIndex = 0;
-// change index and move carDiv
-function arrowRightClick () { 
-  if(sliderIndex == data.length-1) {
-      sliderIndex = -1;
-  }
-  sliderIndex++;
-  carDiv.style.transform = `translateX(${sliderIndex*65}px)`;
-  year.style.transform = `translateX(${sliderIndex*65}px)`;
 
-  setSlider();
-}
-
-function arrowLeftClick () {
-  if (sliderIndex == 0) {
-      sliderIndex = data.length;
-   }
-  sliderIndex--;
-  carDiv.style.transform = 'translateX(' + (585-(data.length-sliderIndex) * 65)+ 'px)';
-  year.style.transform = `translateX(${sliderIndex*65}px)`;
-  setSlider();
-}
-
-function setSlider() {
+const setSlider = () => {
   textDiv.innerText = '';
   year.innerText = '';
   carDiv.style.backgroundImage = `url("images/Timeline/min-volga${sliderIndex+1}.png")`;
@@ -382,11 +361,29 @@ function setSlider() {
   year.append(data[sliderIndex].year);
 }
 
+const arrowRightClick = () => {
+  if(sliderIndex == data.length-1) {
+    sliderIndex = -1;
+  }
+  sliderIndex= sliderIndex+1;
+  carDiv.style.transform = `translateX(${sliderIndex*65}px)`;
+  year.style.transform = `translateX(${sliderIndex*65}px)`;
 
-function createButts() {
-  let line = document.getElementById("line");
-  
-  data.forEach((element) => {
+  setSlider();
+}
+
+const arrowLeftClick = () => {
+  if (sliderIndex == 0) {
+    sliderIndex = data.length;
+  }
+  sliderIndex=sliderIndex-1;
+  carDiv.style.transform = 'translateX(' + (585-(data.length-sliderIndex) * 65)+ 'px)';
+  year.style.transform = `translateX(${sliderIndex*65}px)`;
+  setSlider();
+}
+
+const createButts = () => {
+    data.forEach((element) => {
     let butt = document.createElement("div");
     butt.classList.add("butt");
     butt.setAttribute("data-id", element.id);
@@ -397,22 +394,25 @@ function createButts() {
       setSlider();
       carDiv.style.transform = `translateX(${sliderIndex*65}px)`;
       year.style.transform = `translateX(${sliderIndex*65}px)`;
-  }
-  line.appendChild(butt);
-})
-return line;
+    }
+    line.appendChild(butt);
+  })
+  return line;
 }
-createButts();
 
-// arrow click event
-arrowRight.addEventListener('click', arrowRightClick);
-arrowLeft.addEventListener('click', arrowLeftClick);
+const slider = () => {
+  createButts();
+    // arrow click event
+  arrowRight.addEventListener('click', arrowRightClick);
+  arrowLeft.addEventListener('click', arrowLeftClick);
 
-// keydown event
-document.addEventListener('keydown', function(event) {
-  if (event.keyCode == 37) {
-      arrowLeftClick();
-  } else if (event.keyCode == 39) {
-      arrowRightClick();
-  }
-})
+  // keydown event
+  document.addEventListener('keydown', function(event) {
+    if (event.keyCode == 37) {
+        arrowLeftClick();
+    } else if (event.keyCode == 39) {
+        arrowRightClick();
+    }
+  })
+}
+slider();
