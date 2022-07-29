@@ -227,8 +227,9 @@ body {
             }
 
         }
+
         &-modali{
-            padding: 20px 55px;
+            padding: 30px 55px;
             background: white;
             z-index: 5;
         }
@@ -303,6 +304,8 @@ body {
     background-image: url(../images/map/map_background.jpg);
     background-position: center;
     background-size: cover;
+
+
     .pointer{
         animation:pointer 1.5s linear infinite;
         position: absolute;
@@ -396,7 +399,21 @@ body {
                 width: 650px;
                 font-size:0.95em;
             }
-            &-zugdidi-pictures{
+            &-pictures{
+                padding: 20px;
+                .pictures-wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 654px;
+                    overflow-x: auto;
+                    scroll-behavior: smooth;
+                    padding-top: 40px;
+                    padding-bottom: 48px;
+                }
+                .post-descr{
+                    font-size: 15px;
+                    margin-bottom: 50px;
+                }
                 .pictures-slider{
                     display: flex;
                     img{
@@ -413,7 +430,14 @@ body {
             }
         }
     }
+   
     
+}
+
+
+
+.post-descr{
+   margin: 20px;
 }
 
 .previous{
