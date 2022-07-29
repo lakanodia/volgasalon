@@ -753,6 +753,139 @@ body {
   margin-left: 73px;
 }
 
+.section5 {
+  height: 100vh;
+  background-image: url(../images/Radio/Radio.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.section5 .background-radio {
+  height: 630px;
+  width: 1000px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  background-image: url(../images/Radio/radio_big.png);
+}
+.section5 .backround-blur-cont {
+  width: 1191px;
+  height: 658px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+.section5 .backround-blur-cont .background-radio-blur {
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  height: 658px;
+  width: 1050px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.section5 .backround-blur-cont .radio-buttons {
+  height: 200px;
+  width: 70px;
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
+.section5 .backround-blur-cont .radio-previous {
+  background-image: url(../images/Radio/previous.png);
+  left: 0;
+}
+.section5 .backround-blur-cont .radio-next {
+  background-image: url(../images/Radio/next.png);
+  right: 1px;
+}
+.section5 .backround-blur-cont .background-white-blur {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 366px;
+  width: 952px;
+  background-color: white;
+  opacity: 0.6;
+}
+.section5 .radio-singer-info {
+  padding: 5px 40px;
+  height: 340px;
+  width: 770px;
+  background-color: white;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 1;
+  top: 39%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Gentium Book Basic", serif;
+}
+.section5 .radio-singer-info .radio-singer-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 216px;
+}
+.section5 .radio-singer-info .radio-singer-upper .singer-image {
+  background-image: url(../images/Radio/singer_big/1.jpg);
+  height: 200px;
+  width: 170px;
+  float: left;
+  margin: 10px 15px 0 0;
+}
+.section5 .radio-singer-info .radio-singer-upper .singer-about {
+  width: 550px;
+}
+.section5 .radio-singer-info .radio-singer-upper .singer-about .singer-name {
+  font-size: 31px;
+  color: #394f5a;
+}
+.section5 .radio-singer-info .radio-singer-upper .singer-about .singer-info {
+  font-size: 16px;
+  color: #394f5a;
+}
+.section5 .radio-singer-info .radio-singer-lower {
+  margin-top: 20px;
+}
+.section5 .radio-singer-info .radio-singer-lower .radio-music {
+  width: 688px;
+  height: 28px;
+  margin-bottom: 3px;
+  background-color: #819CA5;
+  padding-left: 7px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.section5 .radio-player-wrapper {
+  font-family: "Gentium Book Basic", serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 70px;
+  width: 300px;
+  background-color: white;
+  z-index: 2;
+  font-size: 13px;
+  color: #394f5a;
+}
+
 .hidden {
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
