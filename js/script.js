@@ -416,3 +416,116 @@ const slider = () => {
   })
 }
 slider();
+
+
+
+
+
+// section 5 - radio 
+
+
+let radioData = [
+  {
+    id: 0,
+    name: '33a',
+    text: 'Niaz Diasamidze est le chanteur et leader de 33a, un groupe de folk rock géorgien fondé en 1994 à Tbilissi. 33a livre un métissage du folk français et géorgien avec des éléments pop et reggae, sur des textes principalement en géorgien parfois en français. Le nom du groupe fait référence au numéro de l’immeuble de la rue Paliachvili à Tbilissi où habite Niaz Diasamidze.',
+    song1: '33a - Galaktioni',
+    song2: '33a - Me Vzivar Navshi',
+    song3: '33a - Saperavi Ampelography'
+  },
+  {
+    id: 1,
+    name: 'Gacha',
+    text: 'Gacha est un jeune artiste géorgien plein d’avenir qui crée son propre son en s’appropriant différents styles électro. Voici un premier album parfait pour se détendre. Ce paysage sonore a toute sa place chez Apollo Records, filiale du label belge R&S Records (Renaat Vandepapeliere).',
+    song1: 'Gacha - Burning',
+    song2: 'Gacha - Love You Down',
+    song3: 'Gacha - Open Chords'
+  },
+  {
+    id: 2,
+    name: 'Soft Eject',
+    text: 'Soft Eject, c’est une perle du folk rock made in Caucase. Fondé en 1989, le groupe géorgien mêle influences folk européennes et géorgiennes avec des sonorités psychédéliques et rock. La plupart des paroles sont en anglais. Actuellement, le groupe se compose de six membres - Vaho Babunashvili (basse, voc.), Nodar Manchkhashvili (percussions), Giorgi Kobakhidze (guitare, voc.), Sandro Nikoladze (flûte, lyre), Emzar Burduli (cor d’harmonie, voc.) et Anna Sikharulidze (accordéon, clavier).',
+    song1: 'Soft Eject - A Dozing Day',
+    song2: `Soft Eject - I'm On My Way`,
+    song3: 'Soft Eject - Please Just Carry On'
+  },
+  {
+    id: 3,
+    name: 'Kung Fu Junkie',
+    text: 'Fondé en 2009 par le jeune poète Zura Jishkariani, le groupe Kung Fu Junkie joue de la pop électro. Il est composé de Chring et Zura Jishkariani au chant, Linda Folio à la guitare, et de MC CutDaKill et Max Machiadze. Les textes de Kung Fu Junkie sont en géorgien et en anglais. Sur sa page Facebook, le groupe explique qu’il s’inspire du communisme chinois et du poète William Burroughs.',
+    song1: 'Kung Fu Junkie - ANY',
+    song2: 'Kung Fu Junkie - BioRobot(acoustic)',
+    song3: 'Kung Fu Junkie - Flowerz In My Brain'
+  },
+  {
+    id: 4,
+    name: 'Shuki Movida',
+    text: 'Shuqi movida (ou Chouki movida) est un groupe de punk franco-géorgien fondé en 2000 par le chanteur et guitariste français Frédéric Payen. Dans ses trois albums, la plupart des titres évoquent les problèmes sociaux et la société géorgienne à une époque où les coupures de courant étaient encore quotidiennes. D’où le nom du groupe, qui signifie « L’électricité est revenue ».',
+    song1: 'Shuqi Movida - Chouki Movida',
+    song2: 'Shuqi Movida - Jigoulis Kaci',
+    song3: 'Shuqi Movida - Minibusis Zaza'
+  },
+  {
+    id: 5,
+    name: 'Nikakoi',
+    text: `Le Géorgien Nika Machaidze est réalisateur de films et musicien électro. Membre du collectif « Goslab », il a produit la bande originale de la pièce « Le parc » de l'auteur dramatique allemand Botho Strauss. Il met aussi en musique des défilés de mode et des productions télévisées.`,
+    song1: 'Erast - Argentina',
+    song2: 'Erast - Cyberpunk',
+    song3: 'Nikakoi - Dzzenn'
+  }
+]
+
+const radioPrevious = document.getElementById('prev-radio');
+const redioNext = document.getElementById('next-radio');
+const singerImage = document.getElementById('singer-image');
+const singerName = document.getElementById('singer-name');
+const singerInfo = document.getElementById('singer-info');
+const firstMusic = document.getElementById('first-music');
+const secondMusic = document.getElementById('second-music');
+const thirdMusic = document.getElementById('third-music');
+const playerSinger = document.getElementById('player-singer');
+
+let radioSliderIndex = 0;
+
+
+function setRadioSwiper(){
+  singerImage.style.backgroundImage = `url("images/Radio/singer_big/${radioSliderIndex+1}.jpg")`;
+  singerName.innerHTML = '';
+  singerInfo.innerHTML = '';
+  firstMusic.innerHTML = '';
+  secondMusic.innerHTML = '';
+  thirdMusic.innerHTML = '';
+  playerSinger.innerHTML = '';
+
+  singerName.append(radioData[radioSliderIndex].name);  
+  singerInfo.append(radioData[radioSliderIndex].text);  
+  firstMusic.append(radioData[radioSliderIndex].song1);  
+  secondMusic.append(radioData[radioSliderIndex].song2);  
+  thirdMusic.append(radioData[radioSliderIndex].song3);  
+  playerSinger.append(radioData[radioSliderIndex].name);  
+}
+
+function radioArrowRightClick(){
+  if(radioSliderIndex == radioData.length-1){
+    radioSliderIndex = -1;
+  }
+  radioSliderIndex++;
+  setRadioSwiper();
+}
+
+function radioArrowLeftClick(){
+  if(radioSliderIndex == 0){
+    radioSliderIndex = radioData.length;
+  }
+  radioSliderIndex--;
+  setRadioSwiper();
+}
+
+function radioSwiperAction(){
+  redioNext.addEventListener('click', radioArrowRightClick);
+  radioPrevious.addEventListener('click', radioArrowLeftClick);
+}
+
+radioSwiperAction();
+
+// end of section 5 - radio 
