@@ -1,8 +1,18 @@
+// invisible-scrollbar
+::-webkit-scrollbar {
+    display: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
-
-
+body {
+    font-family: $roboto;
+    line-height: 1.5;
+}
+.pointerCursor {
+    cursor: pointer;
+}
 .section1 {
     background-color: $color01;
     height: 100vh;
@@ -19,6 +29,11 @@ html {
         }
         .start-img {
             width: 100%;
+        }
+        .start-img-a{
+            cursor: pointer;
+            z-index: 100;
+            margin-top: 2rem;
         }
     }
 }
@@ -78,25 +93,22 @@ html {
             background-color: $color03;
             transform: scale(0.8);
             transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
-        
-nav-a-tag
         .nav-li-a:hover{
-            transform: scale(1.1);
-        .nav-li:hover{
             transform: scale(1);
         }
     }
 }
-
-
 // height of navigation animations
 .nav-hide {
-    animation: heigh-reduse 3s;
+    animation: heigh-reduse 1.5s;
     animation-fill-mode: forwards;
 }
 .nav-show {
-    animation: heigh-increase 3s;
+    animation: heigh-increase 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -104,14 +116,19 @@ nav-a-tag
 
 @include animation-mixin(heigh-increase, 0%, 100%);
   
+.block-active{
+    display: block;
+}
 
-
-
+.block-none{
+    display: none;
+}
 
 // section 2 volga salon
 .volga-salon-container{
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     .volga-road-img{
         width: 100%;
@@ -122,16 +139,18 @@ nav-a-tag
     }
     .volga-wheel-img{
         @include position-property(absolute, 35%, 20%);
+        width: 20%;
     }
     .volga-blog-img{
         @include position-property(absolute, 51%, 67%);
         width: 14%;
     }
     .volga-map-img{
-        @include position-property(absolute, 42%, 43%);
+        @include position-property(absolute, 41%, 43%);
+        width: 10%;
     }
     .volga-clock-img{
-        @include position-property(absolute, 53%, 60%);
+        @include position-property(absolute, 52.6%, 59.9%);
         width: 5%;
     }
     .volga-radio-img{
@@ -139,15 +158,498 @@ nav-a-tag
         width: 14%;
     }
     .volga-mirror-img{
-        @include position-property(absolute, 10%, 44%);
+        @include position-property(absolute, 12%, 42%);
+        width: 12%;
     }
     .volga-sticker-img{
         @include position-property(absolute, 40%, 60%);
+        width: 20%;
     }
     .volga-sit-img{
-        @include position-property(absolute, 0%, 10%);
-        display: none;
+        @include position-property(absolute, 80%, 0%);
+        width: 100%;
+    }
+}
+.hide{
+    display: none;
+}
+.section3{
+    position: relative;
+    .pointer{
+        animation:pointer 1.5s linear infinite;
+        position: absolute;
+        cursor: pointer;
+    }
+    .pointer:nth-child(odd) { 
+        animation-delay: 0.7s;
+    }
+    .volga-map{
+        &-wrapper{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        &-zugdidi-img{
+            top:23.8%;
+            left:31.5%;
+        }
+        &-batumi-img{
+            top:45%;
+            left:25.4%;
+        }&-muxrani-img{
+            top:41%;
+            left:60.3%;
+        }&-tbilisi-img{
+            top:48.2%;
+            left:62%;
+        }&-rustavi-img{
+            top:54%;
+            left:64.7%;
+        }
+        &-background-img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    
+    
+        @keyframes pointer {
+            0%{
+                transform:translateY(0);
+              }
+            50% {
+                transform:translateY(-10%);
+              }
+            100% {
+                transform:translateY(0);
+            }
+
+        }
+        &-modali{
+            padding: 20px 55px;
+            background: white;
+            z-index: 5;
+        }
+        &-modal{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+            animation: videoCard 0.4s;
+            animation-fill-mode: forwards;
+            
+            @keyframes videoCard {
+                from {left: 0%;}
+                to {left: 50%;}
+            }
+            &-header{
+                display: flex;
+                z-index: 3;
+                &-items{
+                    padding: 12px 30px;
+                    margin-right: 2px;
+                    font-size:1.15rem;
+                    background: #889ca4;
+                    cursor: pointer;
+                    &-active{
+                        background: white;
+                    }
+                }
+                img{
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                    cursor: pointer;
+                }
+            }
+            video{
+                width: 650px;
+                height: 350px;
+                background: black;
+            }
+            p{
+                padding: 10px 0;
+                width: 650px;
+                font-size:0.95em;
+            }
+            &-zugdidi-pictures{
+                .pictures-slider{
+                    display: flex;
+                    img{
+                        width: 220px;
+                        height: 190px;
+                        margin:0 10px
+                    }
+                }
+                p{
+                    max-width: 100%;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.hide{
+    display: none;
+}
+.section3{
+    height: 100vh;
+    position: relative;
+    background-image: url(../images/map/map_background.jpg);
+    background-position: center;
+    background-size: cover;
+    .pointer{
+        animation:pointer 1.5s linear infinite;
+        position: absolute;
+        cursor: pointer;
+    }
+    .img{
+        cursor: pointer;
+        width: 210px;
+        height: 190px;
+        object-fit: cover;
+        margin-left: 6px;
+    }
+    .volga-map{
+        &-wrapper{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        &-zugdidi-img{
+            top:23.8%;
+            left:31.5%;
+        }
+        &-batumi-img{
+            top:45%;
+            left:25.4%;
+        }&-muxrani-img{
+            top:41%;
+            left:60.3%;
+        }&-tbilisi-img{
+            top:48.2%;
+            left:62%;
+        }&-rustavi-img{
+            top:54%;
+            left:64.7%;
+        }
+        @keyframes pointer {
+            0%{
+                transform:translateY(0);
+              }
+            50% {
+                transform:translateY(-10%);
+              }
+            100% {
+                transform:translateY(0);
+            }
+            
+        }
+        &-modali{
+            padding: 20px 55px;
+            background: white;
+            z-index: 5;
+        }
+        &-modal{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            &-header{
+                display: flex;
+                z-index: 3;
+                &-items{
+                    padding: 12px 30px;
+                    margin-right: 2px;
+                    font-size:1.15rem;
+                    background: #889ca4;
+                    cursor: pointer;
+                    &-active{
+                        background: white;
+                    }
+                }
+                img{
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                    cursor: pointer;
+                }
+            }
+            video{
+                width: 650px;
+                height: 350px;
+                background: black;
+            }
+            .video-post{
+                max-width: 650px;
+                width: 100%;
+                height: 400px;
+            }            
+            p{
+                padding: 10px 0;
+                width: 650px;
+                font-size:0.95em;
+            }
+            &-zugdidi-pictures{
+                .pictures-slider{
+                    display: flex;
+                    img{
+                        width: 220px;
+                        height: 190px;
+                        margin:0 10px
+                    }
+                }
+                p{
+                    max-width: 100%;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+}
+
+.previous{
+    max-width: 50px;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    cursor: pointer;
+}
+.next{
+    max-width: 50px;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    cursor: pointer;
+}
+
+
+.section4 {
+    height: 100vh;
+    background-image: url(../images/Timeline/timeline_background.jpg);
+    background-position: center;
+    background-size: cover;
+    @include d-flex(flex, center, center);
+    .timelineFold  {
+        @include d-flex(flex, center, center);
+        flex-direction: column;
+        .timelineContainer {
+            @include d-flex(flex, space-between, center);
+            gap: 2.5rem;
+            background-color: $color01;
+            opacity: 0.8;
+            padding: 1.25rem 1.75rem;
+            .prev:active, .next1:active {
+                transform: translateY(1px);
+            }
+            .timelineText {
+                box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+                background-color: $color02;
+                opacity: 0.8;
+                height: 150px;
+                width: 700px;
+                color: $color01;
+                padding: 1.5rem;
+                p {
+                    display: none;
+                    font-family: $gentium;
+                }
+                p:last-child {
+                    display: block;
+                }
+            }
+        }
+        .timelineCar {
+            background-color: $color02;
+            width: 700px;
+            height: auto;
+            margin-top: 1.5rem;
+            opacity: 0.8;
+            padding: 0.5rem 0;
+            #car {
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                margin-left: 50px;
+                background-image: url(../images/Timeline/min-volga1.png);
+            }
+            #line {
+                height: 10px;
+                background-color: #334D51;
+                margin: 50px 50px 20px 50px;
+                .butt {
+                    width: 15px;
+                    height: 20px;
+                    float: left;
+                    position: relative;
+                    background-color: #6AC5C1;
+                    margin-left: 50px;
+                    transition: height 0.4s ease-in-out;
+                }
+                .butt:nth-child(1){
+                    margin-left: 30px;
+                }
+                .butt:hover{
+                    cursor: pointer;
+                    height: 30px;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                }
+            }
+            .yearContainer {
+                span {
+                    display: none;
+                    width: 15px;
+                    height: 20px;
+                    float: left;
+                    position: relative;
+                    font-size: 14px;
+                    margin-left: 50px;
+                }
+                span:first-child {
+                    display: block;
+                    margin-left: 73px;
+                }
+            }
+        }
     }
 }
 
 
+// section 5
+.section5{
+    height: 100vh;
+    background-image: url(../images/Radio/Radio.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .background-radio{    
+        height: 630px;
+        width: 1000px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        background-image: url(../images/Radio/radio_big.png);
+        
+    }
+    .backround-blur-cont{
+        width: 1191px;
+        height: 658px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%); 
+        position: absolute;
+        .background-radio-blur{
+            background-color: black;
+            opacity: .7;
+            position: absolute;
+            height: 658px;
+            width: 1050px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);     
+        }
+        .radio-buttons{
+            height: 200px;
+            width: 70px;
+            position: absolute;
+            top: 35%;
+            cursor: pointer;
+            background-color: black;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: .7;
+        }
+        .radio-previous{
+            background-image: url(../images/Radio/previous.png);
+            left: 0;
+        }
+        .radio-next{
+            background-image: url(../images/Radio/next.png);
+            right: 1px;
+        }
+        .background-white-blur{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%,-50%);   
+            height: 366px;
+            width: 952px;
+            background-color: white;
+            opacity: 0.6;
+        }
+    }
+    .radio-singer-info{
+        padding: 5px 40px;
+        height: 340px;
+        width: 770px;
+        background-color: white;
+        opacity: 0.9;
+        position: absolute;
+        z-index: 1;
+        top: 39%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Gentium Book Basic', serif;
+        .radio-singer-upper{
+            display: flex;
+            height: 216px;
+            .singer-image{
+                background-image: url(../images/Radio/singer_big/1.jpg);
+                height: 200px;
+                width: 170px;
+                float: left;
+                margin: 10px 15px 0 0;
+            }
+            .singer-about{
+                width: 550px;
+                .singer-name{
+                    font-size: 31px;
+                    color: #394f5a;  
+                }
+                .singer-info{
+                    font-size: 16px;
+                    color: #394f5a;  
+                }
+            }        
+        }
+        .radio-singer-lower{
+            margin-top: 20px;
+            .radio-music{
+                width: 688px;
+                height: 28px;
+                margin-bottom: 3px;
+                background-color: #819CA5;
+                padding-left: 7px;
+                color: white;
+                font-size: 18px;
+                cursor: pointer;                
+            }
+        }        
+    }
+    .radio-player-wrapper{
+        font-family: 'Gentium Book Basic', serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 70px;
+        width: 300px;
+        background-color: white;
+        z-index: 2;
+        font-size: 13px;
+        color: #394f5a;
+        // display: none;
+    }   
+}
+// end of section 5

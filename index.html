@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Speed Westward</title>
     <link rel="icon" type="text/css" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/global.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -26,8 +30,8 @@
         <nav class="navigation-block" id="navigation-block">
             <ul class="nav-ul">
                 <li><a class="nav-li-a active" href="#section2"> <i class="fa-solid fa-car-side"></i> </a> </li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-location-dot"></i></a></li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-clock"></i></a></li>
+                <li><a class="nav-li-a" href="#section3"><i class="fa-solid fa-location-dot"></i></a></li>
+                <li><a class="nav-li-a" href="#section4"><i class="fa-solid fa-clock"></i></a></li>
                 <li><a class="nav-li-a" href="#"><i class="fa-solid fa-signal"></i></a></li>
                 <li><a class="nav-li-a" href="#"><i class="fa-solid fa-pen"></i> </a></li>
                 <li><a class="nav-li-a" href="#"><i class="fa-solid fa-clapperboard"></i></a></li>
@@ -39,25 +43,112 @@
     <section class="section1">
         <div class="video-container">
             <video autoplay muted loop class="start-video" src="video/Intro_Video_HD_02.mp4"></video>
-            <a href="#section2"> <img class="start-img" src="images/start.png" alt="lets go"> </a>  
+            <a class="start-img-a floating" href="#section2"> <img class="start-img" src="images/start.png" alt="lets go"> </a>  
         </div>
     </section>
  
     <section class="section2" id="section2">
         <div class="volga-salon-container" id='volga-salon-container'>
-            <img class="volga-road-img" src="images/interior/00_BG.jpg" alt="road-img">
+            <img class="volga-road-img" id="volga-road-img" src="images/interior/00_BG.jpg" alt="road-img">
             <img class="volga-salon-img" src="images/interior/salon.png" alt="salon-img">
             <img class="volga-blog-img" src="images/interior/blog.png" alt="blog-img">
             <img class="volga-map-img" src="images/interior/map.png" alt="map-img">
             <img class="volga-clock-img" src="images/interior/clock.png" alt="clock-img">
-            <img class="volga-wheel-img" src="images/interior/wheel.png" alt="wheel-img">
+            <img class="volga-wheel-img" id="volga-wheel-img" src="images/interior/wheel.png" alt="wheel-img">
             <img class="volga-mirror-img" src="images/interior/mirror.png" alt="mirror-img">
             <img class="volga-radio-img" src="images/interior/radio.png" alt="radio-img">
             <img class="volga-sit-img" src="images/interior/sit.png" alt="sit-img">
             <img class="volga-sticker-img" src="images/interior/sticker.png" alt="sticker-img">
         </div>
     </section>
-    <script src="js/script.js"></script>
     
+    <section class="section3" id="section3">
+        <div class="volga-map-wrapper">
+            <img class="volga-map-img" src="images/map/map_big.png" alt="map-img">
+            <img class="volga-map-zugdidi-img pointer" src="images/map/point.png" alt="map-zugdidi-img" data-id="0">
+            <img class="volga-map-batumi-img pointer" src="images/map/point.png" alt="map-batumi-img" data-id="1">
+            <img class="volga-map-muxrani-img pointer" src="images/map/point.png" alt="map-muxrani-img" data-id="2">
+            <img class="volga-map-tbilisi-img pointer" src="images/map/point.png" alt="map-tbilisi-img" data-id="3">
+            <img class="volga-map-rustavi-img pointer" src="images/map/point.png" alt="map-rustavi-img" data-id="4">
+        </div>
+        <div class="volga-map-modal hide" id="modal">
+            <div class="volga-map-modal-header">
+                <div class="volga-map-modal-header-items volga-map-modal-header-items-active" id="videos-click">Videos</div>
+                <div class="volga-map-modal-header-items" id="pictures-click">Pictures</div>
+                <img src="images/map/close.png" alt="close" id="close">
+            </div>
+            <div class="volga-map-modali" id="video-content">
+                <div class="volga-map-modal-zugdidi-videos" id="videos">
+                    
+                </div>
+                <div class="volga-map-modal-zugdidi-pictures hide" id="pictures">
+
+                 
+                </div>
+            </div>
+        </div>
+        <img class="previous hide" id="previous" src="images/map/previous.png" alt="">
+        <img class="next hide" id="next" src="images/map/next.png" alt="">  
+    </section>
+    
+    <section class="section4" id="section4">
+        <div class="timelineFold">
+            <div class="timelineContainer">
+                <img class="prev pointerCursor" id="arrow-left" src="images/Timeline/previous.png" alt="">
+                <div class="timelineText" id="timelineText">
+                    <p id="text">Du 3 au 9 mars Tbilissi est secouée par une vague de manifestations en la mémoire du dictateur Staline, elles cristallisent le sentiment antisoviétique.Le mouvement est réprimé dans un bain de sang. Plus d’une centaine de jeunes sont tués par les forces spéciales soviétiques.</p>
+                </div>
+                <img class="next1 pointerCursor" id="arrow-right" src="images/Timeline/next.png" alt="">
+            </div>
+            <div class="timelineCar">
+                <div id="car"></div>
+                <div id="line"></div>
+                <div class="yearContainer" id="yearContainer">
+                    <span id="year">1956</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section 5 - radio -->
+    <section class="section5" id="section5">
+        <div class="backround-blur-cont">
+            <div class="radio-previous radio-buttons" id="prev-radio"></div>
+            <div class="background-radio-blur"></div>
+            <div class="radio-next radio-buttons" id="next-radio"></div>
+            <div class="background-white-blur"></div>
+        </div>
+        <div class="radio-singer-info">
+            <div class="radio-singer-upper">
+                <div class="singer-image" id="singer-image"></div>
+                <div class="singer-about">
+                    <h4 class="singer-name" id="singer-name">33a</h4>
+                    <p class="singer-info" id="singer-info">Niaz Diasamidze est le chanteur et leader de 33a, un groupe de folk rock géorgien fondé en 1994 à Tbilissi. 33a livre un métissage du folk français et géorgien avec des éléments pop et reggae, sur des textes principalement en géorgien parfois en français. Le nom du groupe fait référence au numéro de l’immeuble de la rue Paliachvili à Tbilissi où habite Niaz Diasamidze.</p>
+                </div>
+            </div>
+            <div class="radio-singer-lower">
+                <div class="radio-music first-music" id="first-music"><span>33a - Galaktioni</span></div>
+                <div class="radio-music second-music" id="second-music"><span>33a - Me Vzivar Navshi</span></div>
+                <div class="radio-music third-music" id="third-music"><span>33a - Saperavi Ampelography</span></div>
+            </div>
+        </div>
+
+        <div class="radio-player-wrapper">
+            <p class="player-singer" id="player-singer">33a</p>
+            <p class="player-music" id="player-music">Galaktioni</p>
+            <audio controls class="audio">
+                <source src="music/1/first_music.ogg" type="audio/ogg">
+                <source src="music/1/first_music.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
+        <div class="background-radio">
+        </div>
+    </section>
+    <!-- end of section 5 - radio -->
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>
