@@ -406,7 +406,7 @@ body {
   }
 }
 .section3 .volga-map-modali {
-  padding: 20px 55px;
+  padding: 30px 55px;
   background: white;
   z-index: 5;
 }
@@ -601,20 +601,44 @@ body {
   width: 650px;
   font-size: 0.95em;
 }
-.section3 .volga-map-modal-zugdidi-pictures .pictures-slider {
+.section3 .volga-map-modal-pictures {
+  padding: 20px;
+}
+.section3 .volga-map-modal-pictures .pictures-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 654px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+.section3 .volga-map-modal-pictures .post-descr {
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+.section3 .volga-map-modal-pictures .pictures-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.section3 .volga-map-modal-zugdidi-pictures .pictures-slider img {
+.section3 .volga-map-modal-pictures .pictures-slider img {
   width: 220px;
   height: 190px;
   margin: 0 10px;
 }
-.section3 .volga-map-modal-zugdidi-pictures p {
+.section3 .volga-map-modal-pictures p {
   max-width: 100%;
   padding: 0;
   margin: 0;
+}
+
+.post-descr {
+  margin: 20px;
 }
 
 .previous {
