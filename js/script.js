@@ -548,4 +548,34 @@ function radioSwiperAction(){
 
 radioSwiperAction();
 
+
+// overlay
+
+const overlayRadio = document.getElementById('overlay-radio');
+const radioMusic1 = document.getElementById('first-music');
+const radioMusic2 = document.getElementById('second-music');
+const radioMusic3 = document.getElementById('third-music');
+
+function onMusicClick(){
+  overlayRadio.classList.add('show-overlay')
+}
+radioMusic1.addEventListener('click', onMusicClick);
+radioMusic2.addEventListener('click', onMusicClick);
+radioMusic3.addEventListener('click', onMusicClick);
+
+document.addEventListener('mouseup', function(e) {
+  if (!overlayRadio.contains(e.target)) {
+      overlayRadio.classList.remove('show-overlay')
+      pauseAudio()
+  }
+});
+const audio = document.getElementById("audio"); 
+
+function pauseAudio() { 
+  audio.pause(); 
+  audio.currentTime = 0;
+} 
+
+// end of overlay
+
 // end of section 5 - radio 
