@@ -10,3 +10,12 @@
     0%, 100% { transform: translateY(-20px); }
     50% { transform: translateY(0); }
   }
+
+//   Timeline animation
+  .upanimation {
+    animation: up 0.2s ease-out;
+  }
+  @keyframes up {
+    0% { transform: translateY(80px); }
+    100% { transform: translateY(0); }
+  }
