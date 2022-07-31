@@ -438,11 +438,7 @@ const slider = () => {
 slider();
 
 
-
-
-
-// section 5 - radio 
-
+/////////////////////// section 5 - radio 
 
 let radioData = [
   {
@@ -451,7 +447,10 @@ let radioData = [
     text: 'Niaz Diasamidze est le chanteur et leader de 33a, un groupe de folk rock géorgien fondé en 1994 à Tbilissi. 33a livre un métissage du folk français et géorgien avec des éléments pop et reggae, sur des textes principalement en géorgien parfois en français. Le nom du groupe fait référence au numéro de l’immeuble de la rue Paliachvili à Tbilissi où habite Niaz Diasamidze.',
     song1: '33a - Galaktioni',
     song2: '33a - Me Vzivar Navshi',
-    song3: '33a - Saperavi Ampelography'
+    song3: '33a - Saperavi Ampelography',
+    audio1: 'music/1/first_music',
+    audio2: 'music/1/second_music',
+    audio3: 'music/1/third_music'
   },
   {
     id: 1,
@@ -459,7 +458,10 @@ let radioData = [
     text: 'Gacha est un jeune artiste géorgien plein d’avenir qui crée son propre son en s’appropriant différents styles électro. Voici un premier album parfait pour se détendre. Ce paysage sonore a toute sa place chez Apollo Records, filiale du label belge R&S Records (Renaat Vandepapeliere).',
     song1: 'Gacha - Burning',
     song2: 'Gacha - Love You Down',
-    song3: 'Gacha - Open Chords'
+    song3: 'Gacha - Open Chords',
+    audio1: 'music/2/first_music',
+    audio2: 'music/2/second_music',
+    audio3: 'music/2/third_music'
   },
   {
     id: 2,
@@ -467,7 +469,10 @@ let radioData = [
     text: 'Soft Eject, c’est une perle du folk rock made in Caucase. Fondé en 1989, le groupe géorgien mêle influences folk européennes et géorgiennes avec des sonorités psychédéliques et rock. La plupart des paroles sont en anglais. Actuellement, le groupe se compose de six membres - Vaho Babunashvili (basse, voc.), Nodar Manchkhashvili (percussions), Giorgi Kobakhidze (guitare, voc.), Sandro Nikoladze (flûte, lyre), Emzar Burduli (cor d’harmonie, voc.) et Anna Sikharulidze (accordéon, clavier).',
     song1: 'Soft Eject - A Dozing Day',
     song2: `Soft Eject - I'm On My Way`,
-    song3: 'Soft Eject - Please Just Carry On'
+    song3: 'Soft Eject - Please Just Carry On',
+    audio1: 'music/3/first_music',
+    audio2: 'music/3/second_music',
+    audio3: 'music/3/third_music'
   },
   {
     id: 3,
@@ -475,7 +480,10 @@ let radioData = [
     text: 'Fondé en 2009 par le jeune poète Zura Jishkariani, le groupe Kung Fu Junkie joue de la pop électro. Il est composé de Chring et Zura Jishkariani au chant, Linda Folio à la guitare, et de MC CutDaKill et Max Machiadze. Les textes de Kung Fu Junkie sont en géorgien et en anglais. Sur sa page Facebook, le groupe explique qu’il s’inspire du communisme chinois et du poète William Burroughs.',
     song1: 'Kung Fu Junkie - ANY',
     song2: 'Kung Fu Junkie - BioRobot(acoustic)',
-    song3: 'Kung Fu Junkie - Flowerz In My Brain'
+    song3: 'Kung Fu Junkie - Flowerz In My Brain',
+    audio1: 'music/4/first_music',
+    audio2: 'music/4/second_music',
+    audio3: 'music/4/third_music'
   },
   {
     id: 4,
@@ -483,7 +491,10 @@ let radioData = [
     text: 'Shuqi movida (ou Chouki movida) est un groupe de punk franco-géorgien fondé en 2000 par le chanteur et guitariste français Frédéric Payen. Dans ses trois albums, la plupart des titres évoquent les problèmes sociaux et la société géorgienne à une époque où les coupures de courant étaient encore quotidiennes. D’où le nom du groupe, qui signifie « L’électricité est revenue ».',
     song1: 'Shuqi Movida - Chouki Movida',
     song2: 'Shuqi Movida - Jigoulis Kaci',
-    song3: 'Shuqi Movida - Minibusis Zaza'
+    song3: 'Shuqi Movida - Minibusis Zaza',
+    audio1: 'music/5/first_music',
+    audio2: 'music/5/second_music',
+    audio3: 'music/5/third_music'
   },
   {
     id: 5,
@@ -491,12 +502,15 @@ let radioData = [
     text: `Le Géorgien Nika Machaidze est réalisateur de films et musicien électro. Membre du collectif « Goslab », il a produit la bande originale de la pièce « Le parc » de l'auteur dramatique allemand Botho Strauss. Il met aussi en musique des défilés de mode et des productions télévisées.`,
     song1: 'Erast - Argentina',
     song2: 'Erast - Cyberpunk',
-    song3: 'Nikakoi - Dzzenn'
+    song3: 'Nikakoi - Dzzenn',
+    audio1: 'music/6/first_music',
+    audio2: 'music/6/second_music',
+    audio3: 'music/6/third_music'
   }
 ]
 
 const radioPrevious = document.getElementById('prev-radio');
-const redioNext = document.getElementById('next-radio');
+const radioNext = document.getElementById('next-radio');
 const singerImage = document.getElementById('singer-image');
 const singerName = document.getElementById('singer-name');
 const singerInfo = document.getElementById('singer-info');
@@ -504,9 +518,16 @@ const firstMusic = document.getElementById('first-music');
 const secondMusic = document.getElementById('second-music');
 const thirdMusic = document.getElementById('third-music');
 const playerSinger = document.getElementById('player-singer');
+const playerMusic = document.getElementById('player-music');
+const audioPlayerOgg = document.getElementById('audio-player-ogg');
+const audioPlayerMp3 = document.getElementById('audio-player-mp3');
+const audio = document.getElementById("audio"); 
+const overlayRadio = document.getElementById('overlay-radio');
+const radioMusic1 = document.getElementById('first-music');
+const radioMusic2 = document.getElementById('second-music');
+const radioMusic3 = document.getElementById('third-music');
 
 let radioSliderIndex = 0;
-
 
 function setRadioSwiper(){
   singerImage.style.backgroundImage = `url("images/Radio/singer_big/${radioSliderIndex+1}.jpg")`;
@@ -516,6 +537,7 @@ function setRadioSwiper(){
   secondMusic.innerHTML = '';
   thirdMusic.innerHTML = '';
   playerSinger.innerHTML = '';
+  playerMusic.innerHTML = '';
 
   singerName.append(radioData[radioSliderIndex].name);  
   singerInfo.append(radioData[radioSliderIndex].text);  
@@ -523,7 +545,42 @@ function setRadioSwiper(){
   secondMusic.append(radioData[radioSliderIndex].song2);  
   thirdMusic.append(radioData[radioSliderIndex].song3);  
   playerSinger.append(radioData[radioSliderIndex].name);  
+
+  getRightMusic()
 }
+setRadioSwiper()
+
+function getRightMusic(){
+  radioMusic1.addEventListener('click', function(){
+    firstMusic.style.backgroundColor = '#CDD7DB';
+    firstMusic.style.color = '#819CA5'
+    playerMusic.innerHTML = '';
+    playerMusic.append(radioData[radioSliderIndex].song1.split(' - ')[1]);
+    audioPlayerMp3.src = `${radioData[radioSliderIndex].audio1}.mp3`;
+    audioPlayerOgg.src = `${radioData[radioSliderIndex].audio1}.ogg`;
+    audio.load();
+  });
+  radioMusic2.addEventListener('click', function(){
+    secondMusic.style.backgroundColor = '#CDD7DB';
+    secondMusic.style.color = '#819CA5'
+    playerMusic.innerHTML = '';
+    playerMusic.append(radioData[radioSliderIndex].song2.split(' - ')[1]);
+    audioPlayerMp3.src = `${radioData[radioSliderIndex].audio2}.mp3`;
+    audioPlayerOgg.src = `${radioData[radioSliderIndex].audio2}.ogg`;
+    audio.load();
+  });
+  radioMusic3.addEventListener('click', function(){
+    thirdMusic.style.backgroundColor = '#CDD7DB';
+    thirdMusic.style.color = '#819CA5'
+    playerMusic.innerHTML = '';
+    playerMusic.append(radioData[radioSliderIndex].song3.split(' - ')[1]);
+    audioPlayerMp3.src = `${radioData[radioSliderIndex].audio3}.mp3`;
+    audioPlayerOgg.src = `${radioData[radioSliderIndex].audio3}.ogg`;
+    audio.load();
+  });
+
+}
+getRightMusic()
 
 function radioArrowRightClick(){
   if(radioSliderIndex == radioData.length-1){
@@ -542,40 +599,41 @@ function radioArrowLeftClick(){
 }
 
 function radioSwiperAction(){
-  redioNext.addEventListener('click', radioArrowRightClick);
+  radioNext.addEventListener('click', radioArrowRightClick);
   radioPrevious.addEventListener('click', radioArrowLeftClick);
 }
 
 radioSwiperAction();
 
-
 // overlay
-
-const overlayRadio = document.getElementById('overlay-radio');
-const radioMusic1 = document.getElementById('first-music');
-const radioMusic2 = document.getElementById('second-music');
-const radioMusic3 = document.getElementById('third-music');
-
 function onMusicClick(){
   overlayRadio.classList.add('show-overlay')
 }
-radioMusic1.addEventListener('click', onMusicClick);
-radioMusic2.addEventListener('click', onMusicClick);
-radioMusic3.addEventListener('click', onMusicClick);
 
+function onMusicClickAction(){
+  radioMusic1.addEventListener('click', onMusicClick);
+  radioMusic2.addEventListener('click', onMusicClick);
+  radioMusic3.addEventListener('click', onMusicClick);
+
+}
+onMusicClickAction()
+// close overlay on clicking outside overlay
 document.addEventListener('mouseup', function(e) {
   if (!overlayRadio.contains(e.target)) {
       overlayRadio.classList.remove('show-overlay')
       pauseAudio()
+      firstMusic.style.backgroundColor = '';
+      secondMusic.style.backgroundColor = '';
+      thirdMusic.style.backgroundColor = '';
+      firstMusic.style.color = ''
+      secondMusic.style.color = ''
+      thirdMusic.style.color = ''
   }
 });
-const audio = document.getElementById("audio"); 
 
 function pauseAudio() { 
   audio.pause(); 
   audio.currentTime = 0;
 } 
 
-// end of overlay
-
-// end of section 5 - radio 
+/////////////////////// end of section 5 - radio 
