@@ -603,7 +603,7 @@ body {
 .section3 .volga-map-modal-pictures {
   padding: 20px;
 }
-.section3 .volga-map-modal-pictures .pictures-wrapper {
+.section3 .volga-map-modal-pictures .swiper-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -644,8 +644,8 @@ body {
   max-width: 50px;
   width: 100%;
   position: absolute;
-  top: 35%;
-  left: 15%;
+  top: 30%;
+  left: 18%;
   cursor: pointer;
 }
 
@@ -653,8 +653,8 @@ body {
   max-width: 50px;
   width: 100%;
   position: absolute;
-  top: 35%;
-  right: 15%;
+  top: 30%;
+  right: 18%;
   cursor: pointer;
 }
 
