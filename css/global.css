@@ -953,3 +953,29 @@ body {
             transform: translateY(0);
   }
 }
+.upanimation {
+  -webkit-animation: up 0.2s ease-out;
+          animation: up 0.2s ease-out;
+}
+
+@-webkit-keyframes up {
+  0% {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes up {
+  0% {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}

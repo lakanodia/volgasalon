@@ -376,15 +376,23 @@ let arrowRight = document.getElementById('arrow-right');
 let carDiv = document.getElementById('car');
 let textDiv = document.getElementById('text');
 let year = document.getElementById('year');
+let text = document.getElementById('text');
 
 let sliderIndex = 0;
-
+const textAnimation = () => {
+    text.classList.add('upanimation');
+    setTimeout(() => {
+        text.classList.remove('upanimation')}, 200);
+}
 const setSlider = () => {
   textDiv.innerText = '';
   year.innerText = '';
   carDiv.style.backgroundImage = `url("images/Timeline/min-volga${sliderIndex+1}.png")`;
-  textDiv.append(data[sliderIndex].text);  
+  textDiv.append(data[sliderIndex].text); 
   year.append(data[sliderIndex].year);
+  year.style.transitionDuration = "0.5s";
+  carDiv.style.transitionDuration = "1.5s";
+  textAnimation();
 }
 
 const arrowRightClick = () => {
@@ -394,7 +402,6 @@ const arrowRightClick = () => {
   sliderIndex= sliderIndex+1;
   carDiv.style.transform = `translateX(${sliderIndex*65}px)`;
   year.style.transform = `translateX(${sliderIndex*65}px)`;
-
   setSlider();
 }
 
