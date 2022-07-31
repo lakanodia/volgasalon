@@ -401,7 +401,7 @@ body {
             }
             &-pictures{
                 padding: 20px;
-                .pictures-wrapper{
+                .swiper-content{
                     display: flex;
                     justify-content: space-between;
                     width: 654px;
@@ -444,16 +444,16 @@ body {
     max-width: 50px;
     width: 100%;
     position: absolute;
-    top: 35%;
-    left: 15%;
+    top: 30%;
+    left: 18%;
     cursor: pointer;
 }
 .next{
     max-width: 50px;
     width: 100%;
     position: absolute;
-    top: 35%;
-    right: 15%;
+    top: 30%;
+    right: 18%;
     cursor: pointer;
 }
 

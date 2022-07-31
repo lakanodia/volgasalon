@@ -165,6 +165,7 @@ function headerPictureClick() {
   headerVideoItem.classList.remove('volga-map-modal-header-items-active');
   pictureContent.classList.remove('hide');
   videoContent.classList.add('hide');
+  setUpSwiper();
   arrowIconOne.classList.remove('hide');
   arrowIconTwo.classList.remove('hide');
 
@@ -241,7 +242,8 @@ let pictureData = [
 
 function pictureCardInfo(item){
   let picturesDiv = document.createElement('div');
-  picturesDiv.classList.add('pictures-wrapper');
+  picturesDiv.classList.add('swiper-content');
+  picturesDiv.setAttribute('id', 'swiper-content');
 
   let pictureDescription = document.createElement('p');
   pictureDescription.classList.add('post-descr');
@@ -273,6 +275,7 @@ function pictureCardInfo(item){
 
   picturesDiv.appendChild(pictureSlideOne);
   picturesDiv.appendChild(pictureSlideTwo);
+  picturesDiv.appendChild(pictureSlideTree);
   picturesDiv.appendChild(pictureSlideFour);
   picturesDiv.appendChild(pictureSlideFive);
   picturesDiv.appendChild(pictureSlideSix);
@@ -292,25 +295,28 @@ function openPictureCard(id){
   pictureCardInfo(id);
 };
 
+// set up swiepr function
+function setUpSwiper() {
+  const productContainers = [...document.querySelectorAll(".swiper-content")];
+  const nxtBtn = [...document.querySelectorAll(".next")];
+  console.log(nxtBtn);
+  const preBtn = [...document.querySelectorAll(".previous")];
 
+  productContainers.forEach((swiperContent, i) => {
+    console.log(swiperContent);
+    console.log(i);
+    let containerDimensions = swiperContent.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+    
+    nxtBtn[i].addEventListener("click", () => {
+      swiperContent.scrollLeft += containerWidth/3;
+    });
 
-// swiper
-const productContainers = [...document.querySelectorAll(".pictures-wrapper")];
-const nxtBtn = [...document.querySelectorAll(".next")];
-const preBtn = [...document.querySelectorAll(".previous")];
-
-productContainers.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
-
-  nxtBtn[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth/3;
+    preBtn[i].addEventListener("click", () => {
+      swiperContent.scrollLeft -= containerWidth/3;
+    });
   });
-
-  preBtn[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth/3;
-  });
-});
+}
 
 
 
