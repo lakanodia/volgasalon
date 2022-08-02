@@ -930,6 +930,139 @@ body {
   z-index: 1000;
 }
 
+.section6 {
+  background-image: url(../images/bagage/bagage_ground.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+.section6 .volga-bagage-img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+}
+.section6 .volga-light-img {
+  position: absolute;
+  top: 72%;
+  left: 29%;
+  width: 30%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-light-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.section6 .volga-sax-img {
+  position: absolute;
+  top: 40%;
+  left: 65%;
+  width: 10%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-sax-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.section6 .volga-clap-img {
+  position: absolute;
+  top: 65%;
+  left: 23%;
+  width: 8%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-clap-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.section6 .volga-camera-img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 20%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-camera-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.section6 .volga-soundrec-img {
+  position: absolute;
+  top: 57%;
+  left: 30%;
+  width: 25%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-soundrec-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.section6 .volga-reel-img {
+  position: absolute;
+  top: 70%;
+  left: 33%;
+  width: 11%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-reel-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.section6 .volga-tv-img {
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  width: 15%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-tv-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.section6 .volga-megaphone-img {
+  position: absolute;
+  top: 43%;
+  left: 40%;
+  width: 6%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-megaphone-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.section6 .volga-keyboard-img {
+  position: absolute;
+  top: 66%;
+  left: 40%;
+  width: 11%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section6 .volga-keyboard-img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
 .hidden {
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
