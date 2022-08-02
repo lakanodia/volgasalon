@@ -125,51 +125,64 @@ body {
 }
 
 // section 2 volga salon
-.volga-salon-container{
-    width: 100%;
+.section2 {
+    background-color: $color05;
     position: relative;
-    overflow: hidden;
-
-    .volga-road-img{
+    .volga-road-img {
+        position: absolute;
+        top: 500px;
+        left: 0;
         width: 100%;
+        z-index: 0;
     }
-    .volga-salon-img{
-        @include position-property(absolute, 0%,  0%);
-        width: 100%;
-    }
-    .volga-wheel-img{
-        @include position-property(absolute, 35%, 20%);
-        width: 20%;
-    }
-    .volga-blog-img{
-        @include position-property(absolute, 51%, 67%);
-        width: 14%;
-    }
-    .volga-map-img{
-        @include position-property(absolute, 41%, 43%);
-        width: 10%;
-    }
-    .volga-clock-img{
-        @include position-property(absolute, 52.6%, 59.9%);
-        width: 5%;
-    }
-    .volga-radio-img{
-        @include position-property(absolute, 52%, 44%);
-        width: 14%;
-    }
-    .volga-mirror-img{
-        @include position-property(absolute, 12%, 42%);
-        width: 12%;
-    }
-    .volga-sticker-img{
-        @include position-property(absolute, 40%, 60%);
-        width: 20%;
+    .container-section2 {
+        position: relative;
+        top: 190px;
+        left: 0;
+        .volga-salon-container{
+            .volga-salon-img{
+                @include position-property(relative, 0%,  0%);
+                width: 100%;
+            }
+            .volga-wheel-img{
+                @include position-property(absolute, 36%, 21.5%);
+                width: 20%;
+            }
+            .volga-blog-img{
+                @include position-property(absolute, 51%, 67%);
+                width: 14%;
+            }
+            .volga-map-img{
+                @include position-property(absolute, 40.5%, 42.6%);
+                width: 11%;
+            }
+            .volga-clock-img{
+                @include position-property(absolute, 52.6%, 59.9%);
+                width: 5%;
+            }
+            .volga-radio-img{
+                @include position-property(absolute, 52%, 44%);
+                width: 14%;
+            }
+            .volga-mirror-img{
+                @include position-property(absolute, 11%, 43.3%);
+                width: 12%;
+            }
+            .volga-sticker-img{
+                @include position-property(absolute, 36.8%, 58.2%);
+                width: 20%;
+            }
+        }
     }
     .volga-sit-img{
-        @include position-property(absolute, 80%, 0%);
+        position: absolute;
+        left: 0;
+        bottom: 0;
         width: 100%;
     }
+ 
 }
+
 .hide{
     display: none;
 }
