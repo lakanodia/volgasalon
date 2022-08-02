@@ -79,8 +79,8 @@ window.addEventListener("scroll", function() {
   console.log(value)
   document.getElementById('volga-road-img').style.transform = "translateY(-"+ value*0.7+"px)";
   document.getElementById('volga-salon-container').style.transform = "translateY(-"+ value*0.24 + "px)";
-  if (value < 1789) {
-    document.getElementById('volga-map-wrapper').style.top = `${value*0.31}px`;
+  if (value < 1789 && value > 1000) {
+    document.getElementById('volga-map-wrapper').style.top = `${value*0.33-100}px`;
   }
 })
 
