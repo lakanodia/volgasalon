@@ -700,3 +700,98 @@ body {
     } 
 }
 // end of section 5
+
+// section 6
+.section6{
+    background-image: url(../images/bagage/bagage_ground.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    .volga-bagage-img{
+        @include position-property(relative, 50%,  50%);
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+    .volga-light-img{
+        @include position-property(absolute, 72%,  29%);
+        width: 30%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-light-img:hover{
+        transform: translateY(-5px);
+    }
+    .volga-sax-img{
+        @include position-property(absolute, 40%,  65%);
+        width: 10%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-sax-img:hover{
+        transform: translateY(-5px);
+    }
+    .volga-clap-img{
+        @include position-property(absolute, 65%,  23%);
+        width: 8%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-clap-img:hover{
+        transform: translateY(-5px);
+    }
+    .volga-camera-img{
+        @include position-property(absolute, 40%,  50%);
+        width: 20%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-camera-img:hover{
+        transform: translateY(-5px);
+    }
+    .volga-soundrec-img{
+        @include position-property(absolute, 57%,  30%);
+        width: 25%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-soundrec-img:hover{
+        transform: translateY(-5px);
+    }
+    .volga-reel-img{
+        @include position-property(absolute, 70%,  33%);
+        width: 11%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-reel-img:hover{
+        transform: translateY(-5px);
+    }
+    .volga-tv-img{
+        @include position-property(absolute, 45%,  25%);
+        width: 15%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-tv-img:hover{
+        transform: translateY(-5px);
+    }
+    .volga-megaphone-img{
+        @include position-property(absolute, 43%,  40%);
+        width: 6%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-megaphone-img:hover{
+        transform: translateY(-5px);
+    }
+    .volga-keyboard-img{
+        @include position-property(absolute, 66%,  40%);
+        width: 11%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .volga-keyboard-img:hover{
+        transform: translateY(-5px);
+    }
+}
