@@ -69,13 +69,8 @@ window.addEventListener("scroll", function() {
   let value = scrollY;
   document.getElementById('volga-road-img').style.transform = "translateY(-"+ value*0.7+"px)";
   document.getElementById('volga-salon-container').style.transform = "translateY(-"+ value*0.24 + "px)";
-<<<<<<< Updated upstream
-  if (value < 1789 && value > 1000) {
-    document.getElementById('volga-map-wrapper').style.top = `${value*0.33-100}px`;
-=======
   if (value < 1750) {
     document.getElementById('volga-map-wrapper').style.top = `${value*0.4-150}px`;
->>>>>>> Stashed changes
   }
 })
 
@@ -396,7 +391,7 @@ const setSlider = () => {
   carDiv.style.backgroundImage = `url("images/Timeline/min-volga${sliderIndex+1}.png")`;
   textDiv.append(data[sliderIndex].text); 
   year.append(data[sliderIndex].year);
-  year.style.transitionDuration = "0.5s";
+  year.style.transitionDuration = "1.5s";
   carDiv.style.transitionDuration = "1.5s";
   textAnimation();
 }
