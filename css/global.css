@@ -907,12 +907,13 @@ body {
 .section5 .radio-player-wrapper {
   font-family: "Gentium Book Basic", serif;
   position: absolute;
-  top: 69%;
-  left: 50%;
+  top: 68.2%;
+  left: 50.2%;
+  border-radius: 11px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 85px;
-  width: 345px;
+  height: 70px;
+  width: 341px;
   background-color: white;
   z-index: 2;
   font-size: 13px;
@@ -920,9 +921,12 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+.section5 .radio-player-wrapper p {
+  margin-left: 10px;
+}
 .section5 .radio-player-wrapper .audio {
-  width: 345px;
-  height: 45px;
+  width: 341px;
+  height: 35px;
 }
 .section5 #overlay-radio.show-overlay {
   opacity: 1;
