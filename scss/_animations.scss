@@ -19,3 +19,12 @@
     0% { transform: translateY(80px); }
     100% { transform: translateY(0); }
   }
+
+.heightUp {
+  animation: heightUp 3.5s ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes heightUp {
+  0% {height: 0};
+  100% {height: 475px}
+}

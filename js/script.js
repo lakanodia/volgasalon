@@ -651,3 +651,15 @@ function pauseAudio() {
 } 
 
 /////////////////////// end of section 5 - radio 
+// section7
+let playbut = document.getElementById('playbut')
+window.addEventListener("scroll", () => {
+  if (scrollY > 5000 && scrollY < 7000) {
+    playbut.style.bottom = `${this.scrollY*0.5-2550}px`;
+  }
+})
+playbut.addEventListener("click", function() {
+  document.getElementById("view").style.display = "flex";
+  document.getElementById("view").classList.add("heightUp");
+  playbut.classList.add("hidden")
+})

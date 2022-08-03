@@ -128,6 +128,7 @@ body {
 .section2 {
     background-color: $color05;
     position: relative;
+    z-index: 1;
     .volga-road-img {
         position: absolute;
         top: 500px;
@@ -798,5 +799,35 @@ body {
     }
     .volga-keyboard-img:hover{
         transform: translateY(-5px);
+    }
+}
+
+.section7 {
+    background: no-repeat center url(../images/Trailer/trailer_background.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    #trailerView {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 500px;
+        width: 800px;
+        // z-index: 1;
+        #view {
+            margin-top: -20px;
+            @include d-flex(flex, center, center);
+            background:no-repeat center url(../images/Trailer/screen.png);
+            display: none;
+        }
+    }
+    #playbut {
+        height: 117px;
+        width: 117px;
+        position: absolute;
+        bottom: 200px;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
