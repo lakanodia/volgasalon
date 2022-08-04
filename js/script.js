@@ -124,7 +124,6 @@ let videoData = [
   },
 ];
 
-
 let videoContent = document.getElementById('videos');
 
 function openCard(id){
@@ -159,6 +158,7 @@ let headerVideoItem =document.getElementById('videos-click');
 let arrowIconOne = document.getElementById('previous');
 let arrowIconTwo = document.getElementById('next');
 
+
 headerPictureItem.addEventListener('click' , headerPictureClick);
 
 function headerPictureClick() {
@@ -169,8 +169,8 @@ function headerPictureClick() {
   setUpSwiper();
   arrowIconOne.classList.remove('hide');
   arrowIconTwo.classList.remove('hide');
-
 }
+
 
 headerVideoItem.addEventListener('click', headerVideoClick );
 
@@ -182,8 +182,6 @@ function headerVideoClick() {
   arrowIconOne.classList.add('hide');
   arrowIconTwo.classList.add('hide');
 }
-
-
 
 // section three pictures data and swiper
 let pictureData = [
