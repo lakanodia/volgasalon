@@ -256,7 +256,7 @@ body {
             overflow: hidden;
             animation: videoCard 0.4s;
             animation-fill-mode: forwards;
-            
+            z-index: 999;
             @keyframes videoCard {
                 from {left: 0%;}
                 to {left: 50%;}
