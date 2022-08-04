@@ -314,7 +314,7 @@ body {
     display: none;
 }
 .section3{
-    height: 100vh;
+    height: 114vh;
     position: relative;
     background-image: url(../images/map/map_background.jpg);
     background-position: center;
@@ -900,7 +900,8 @@ body {
         flex-wrap: wrap;
         .character-item{
             position: relative;
-            overflow: hidden; 
+            overflow: hidden;
+            cursor: pointer; 
             .character-img{
                 width: 100%;
                 height: auto;

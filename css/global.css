@@ -501,7 +501,7 @@ body {
 }
 
 .section3 {
-  height: 100vh;
+  height: 114vh;
   position: relative;
   background-image: url(../images/map/map_background.jpg);
   background-position: center;
@@ -1210,6 +1210,7 @@ body {
 .section8 .character-container .character-item {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .section8 .character-container .character-item .character-img {
   width: 100%;

@@ -808,8 +808,8 @@ keyboardItem.addEventListener('click', function(){
 // section7
 let playbut = document.getElementById('playbut')
 window.addEventListener("scroll", () => {
-  if (scrollY > 5000 && scrollY < 7000) {
-    playbut.style.bottom = `${this.scrollY*0.5-2550}px`;
+  if (scrollY > 6000 && scrollY < 7000) {
+    playbut.style.bottom = `${this.scrollY*0.5-2800}px`;
   }
 })
 playbut.addEventListener("click", function() {
@@ -817,4 +817,19 @@ playbut.addEventListener("click", function() {
   document.getElementById("view").classList.add("heightUp");
   playbut.classList.add("hidden")
 })
+
+
+// section 6 
+// outside click close function section 6
+let section3 =document.getElementById('section3');
+let language = document.getElementById('language-block');
+let section6 =document.getElementById('section6');
+window.onclick = function(event) {
+  if (event.target.parentElement.children[1]==language) {
+    mapFoldTrunk.classList.add("hide");
+  }else if(event.target.parentElement==section6){
+    mapFoldTrunk.classList.add("hide");
+  }
+}
+
 
