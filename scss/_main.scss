@@ -851,6 +851,7 @@ body {
             cursor: pointer;
         }
     }
+}
 
 .section7 {
     background: no-repeat center url(../images/Trailer/trailer_background.jpg);
@@ -881,4 +882,91 @@ body {
         transform: translate(-50%, -50%);
     }
 
+}
+
+// section 8
+
+.section8{
+    background-image: url(../images/bagage/bagage_ground.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 130vh;
+    .character-container{
+        max-width: 1100px;
+        width: 100%;
+        @include d-flex(flex, space-between, center);
+        margin: auto;
+        flex-wrap: wrap;
+        .character-item{
+            position: relative;
+            overflow: hidden; 
+            .character-img{
+                width: 100%;
+                height: auto;
+                border: 15px solid rgb(255, 255, 255);
+            }
+            .character-content{
+                width: 100%;
+                text-align: center;
+                transform: scale(0);
+                position: absolute;
+                top: 35px;
+                left: 0;
+                transition: all 0.5s ease 0s;
+            }
+        }
+    
+        
+        .character-item:hover .character-content{ transform: scale(1); }
+        .character-item .character-title{
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: capitalize;
+            margin: 0;
+            cursor: pointer;
+        }
+       .character-p{
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .character-item:before{
+            content: '';
+            background: linear-gradient(#2193b0,#6dd5ed);
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: all 0.3s ease 0s;
+        }
+        .character-item:hover:before{
+            opacity: 0.7;
+            left: 30px;
+            right: 30px;
+            top: 50px;
+            bottom: 50px;
+        }
+
+    }
+    .final-block{
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        .final-img{
+            width: 100%;
+        }
+    }
+    .character-overlay{
+        height: 500px;
+        background-color: #fff;
+        overflow-y: scroll;
+        padding: 40px;
+        line-height: 25px;
+    }
 }
