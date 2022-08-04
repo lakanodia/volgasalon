@@ -952,12 +952,13 @@ body {
 }
 .section6 .volga-light-img {
   position: absolute;
-  top: 72%;
-  left: 29%;
-  width: 30%;
+  top: 63%;
+  left: 30%;
+  width: 8%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  z-index: 2;
 }
 .section6 .volga-light-img:hover {
   -webkit-transform: translateY(-5px);
@@ -965,8 +966,8 @@ body {
 }
 .section6 .volga-sax-img {
   position: absolute;
-  top: 40%;
-  left: 65%;
+  top: 37%;
+  left: 55%;
   width: 10%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
@@ -978,12 +979,13 @@ body {
 }
 .section6 .volga-clap-img {
   position: absolute;
-  top: 65%;
-  left: 23%;
-  width: 8%;
+  top: 57%;
+  left: 26%;
+  width: 7%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  z-index: 1;
 }
 .section6 .volga-clap-img:hover {
   -webkit-transform: translateY(-5px);
@@ -991,8 +993,8 @@ body {
 }
 .section6 .volga-camera-img {
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 34%;
+  left: 40%;
   width: 20%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
@@ -1004,9 +1006,9 @@ body {
 }
 .section6 .volga-soundrec-img {
   position: absolute;
-  top: 57%;
-  left: 30%;
-  width: 25%;
+  top: 56%;
+  left: 47%;
+  width: 11%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1017,12 +1019,13 @@ body {
 }
 .section6 .volga-reel-img {
   position: absolute;
-  top: 70%;
-  left: 33%;
-  width: 11%;
+  top: 62%;
+  left: 35%;
+  width: 9%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  z-index: 1;
 }
 .section6 .volga-reel-img:hover {
   -webkit-transform: translateY(-5px);
@@ -1030,9 +1033,9 @@ body {
 }
 .section6 .volga-tv-img {
   position: absolute;
-  top: 45%;
-  left: 25%;
-  width: 15%;
+  top: 40%;
+  left: 27%;
+  width: 13%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1043,9 +1046,9 @@ body {
 }
 .section6 .volga-megaphone-img {
   position: absolute;
-  top: 43%;
-  left: 40%;
-  width: 6%;
+  top: 48%;
+  left: 44%;
+  width: 5%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1056,9 +1059,9 @@ body {
 }
 .section6 .volga-keyboard-img {
   position: absolute;
-  top: 66%;
-  left: 40%;
-  width: 11%;
+  top: 65%;
+  left: 44%;
+  width: 10%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
