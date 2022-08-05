@@ -570,7 +570,14 @@ body {
     background-image: url(../images/Radio/Radio.jpg);
     background-position: center;
     background-size: cover;
-    position: relative;
+    .section-5-parallax{
+        width: 1191px;
+        height: 658px;
+        position: relative;
+        top: 50%;
+        margin: 0 auto;
+        transform: translate(-50%,-50%);
+    }
     .background-radio{    
         height: 630px;
         width: 1000px;
@@ -636,9 +643,9 @@ body {
         opacity: 0.9;
         position: absolute;
         z-index: 1;
-        top: 39%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-75%);
         font-family: 'Gentium Book Basic', serif;
         .radio-singer-upper{
             display: flex;
@@ -679,7 +686,7 @@ body {
     .radio-player-wrapper{
         font-family: 'Gentium Book Basic', serif;
         position: absolute;
-        top: 68.2%;
+        top: 70.9%;
         left: 50.2%;
         border-radius: 11px;
         transform: translate(-50%,-50%);
