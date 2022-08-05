@@ -820,6 +820,18 @@ body {
             @include d-flex(flex, center, center);
             background:no-repeat center url(../images/Trailer/screen.png);
             display: none;
+<<<<<<< Updated upstream
+=======
+            background-position: bottom;
+            position: relative;
+            overflow: hidden;
+            .video {
+                width: 743px;
+                height: 404px;
+                position: absolute;
+                bottom: 49px;
+            }
+>>>>>>> Stashed changes
         }
     }
     #playbut {

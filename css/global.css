@@ -1096,6 +1096,18 @@ body {
           align-items: center;
   background: no-repeat center url(../images/Trailer/screen.png);
   display: none;
+<<<<<<< Updated upstream
+=======
+  background-position: bottom;
+  position: relative;
+  overflow: hidden;
+}
+.section7 #trailerView #view .video {
+  width: 743px;
+  height: 404px;
+  position: absolute;
+  bottom: 49px;
+>>>>>>> Stashed changes
 }
 .section7 #playbut {
   height: 117px;
