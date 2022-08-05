@@ -56,20 +56,13 @@ item.forEach(img => {
 });
 
 // scroll aniamtions 
-window.onscroll = function () {
-  scrollRotate();
-};
-
-function scrollRotate() {
-  let image = document.getElementById("volga-wheel-img");
-  let offset = window.pageYOffset/11;
-  image.style.transform = "rotate(-" + offset + "deg)";
-}
 window.addEventListener("scroll", function() {
   let value = scrollY;
-  document.getElementById('volga-road-img').style.transform = "translateY(-"+ value*0.7+"px)";
-  document.getElementById('volga-salon-container').style.transform = "translateY(-"+ value*0.24 + "px)";
-  if (value < 1750) {
+  if (value < 1750 && value > 100) {
+    let image = document.getElementById("volga-wheel-img");
+    image.style.transform = "rotate(-" + value/9 + "deg)";
+    document.getElementById('volga-road-img').style.transform = "translateY(-"+ value*0.7+"px)";
+    document.getElementById('volga-salon-container').style.transform = "translateY(-"+ value*0.24 + "px)";
     document.getElementById('volga-map-wrapper').style.top = `${value*0.4-150}px`;
   }
   // section-5-parallax:
