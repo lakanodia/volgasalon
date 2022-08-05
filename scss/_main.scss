@@ -515,7 +515,6 @@ body {
             margin-top: 1.5rem;
             opacity: 0.8;
             padding: 0.5rem 0;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
             #car {
                 position: absolute;
                 width: 70px;
@@ -590,7 +589,7 @@ body {
         
     }
     .backround-blur-cont{
-        width: 1190px;
+        width: 1191px;
         height: 658px;
         top: 50%;
         left: 50%;
@@ -647,8 +646,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%,-75%);
-        font-family: $gentium;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        font-family: 'Gentium Book Basic', serif;
         .radio-singer-upper{
             display: flex;
             height: 216px;
@@ -686,13 +684,13 @@ body {
         }        
     }
     .radio-player-wrapper{
-        font-family: $gentium;
+        font-family: 'Gentium Book Basic', serif;
         position: absolute;
         top: 70.9%;
         left: 50.2%;
-        border-radius: 7px;
+        border-radius: 11px;
         transform: translate(-50%,-50%);
-        height: 73px;
+        height: 70px;
         width: 341px;
         background-color: white;
         z-index: 2;
@@ -700,19 +698,12 @@ body {
         color: #394f5a;
         opacity: 0;
         pointer-events: none;
-        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-
         p{
             margin-left: 10px;
         }
         .audio{
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            width: 341px;
             height: 35px;
-        }
-        audio::-webkit-media-controls-enclosure {
-            background-color: #ffffff;
         }
     }   
     #overlay-radio.show-overlay{
@@ -906,7 +897,6 @@ body {
         bottom: 200px;
         left: 50%;
         transform: translate(-50%, -50%);
-        cursor: pointer;
     }
 
 }
@@ -922,12 +912,14 @@ body {
     position: relative;
     min-height: 100vh;
     .character-container{
-        max-width: 1100px;
-        width: 100%;
-        @include d-flex(flex, space-between, center);
+        width: 1020px;
+        display: grid;
+        grid-template-columns: auto auto auto;
         margin: auto;
-        flex-wrap: wrap;
         .character-item{
+            width: 300px;
+            height: 201px;
+            margin: 10px;
             position: relative;
             overflow: hidden;
             cursor: pointer; 
@@ -936,51 +928,79 @@ body {
                 height: auto;
                 border: 15px solid rgb(255, 255, 255);
             }
-            .character-content{
-                width: 100%;
+        }
+
+        .character-item:before {
+            content: '';
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 148, 255, 0.5);
+            left: auto;
+            right: 0;
+            height: 361px;
+            width: 361px;
+            transform-origin: 100% 0%;
+            transition: all 0.3s ease-in-out 0.6s;
+            transform: rotate(56.5deg) translateX(-180px);
+            opacity: 1;
+        }
+        .character-item:after {
+            content: '';
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            height: 361px;
+            width: 361px;
+            background-color: rgba(0, 148, 255, 0.5);
+            transform: rotate(56.5deg) translateX(180px);
+            transition: all 0.3s ease-in-out 0.6s;
+            transform-origin: 0% 100%;
+        }
+        .character-item:hover:before, .character-item:hover:after{
+            transition-delay: 0s;
+        }
+        .character-item:hover:before {
+            transform: rotate(56.5deg) translateX(1px);
+        }
+        .character-item:hover:after {
+            transform: rotate(56.5deg) translateX(-1px);
+        }
+        .character-content {
+            position: absolute;
+            top: 0;
+            background: rgba(0, 0, 0, 0.9);
+            height: 0px;
+            overflow: hidden;
+            opacity: 0.5;
+            width: 390px;
+            transform: rotate(-33.5deg) translate(-112px, 166px);
+            transform-origin: 0% 100%;
+            transition: all 0.4s ease-in-out 0.3s;
+            z-index: 1;
+            .character-title {
+                color: white;
+                margin-top: 5px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                text-transform: uppercase;
                 text-align: center;
-                transform: scale(0);
-                position: absolute;
-                top: 35px;
-                left: 0;
-                transition: all 0.5s ease 0s;
+                font-size: 1rem;
+                padding: 10px;                
+            }
+            .character-p {
+                color: white;
+                font-style: italic;
+                font-size: 12px;
+                padding: 10px 20px 20px;
+                text-align: center;
             }
         }
-    
-        
-        .character-item:hover .character-content{ transform: scale(1); }
-        .character-item .character-title{
-            color: #fff;
-            font-size: 20px;
-            font-weight: 700;
-            text-transform: capitalize;
-            margin: 0;
-            cursor: pointer;
-        }
-       .character-p{
-            color: #fff;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        .character-item:before{
-            content: '';
-            background: linear-gradient(#2193b0,#6dd5ed);
-            opacity: 0;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            transition: all 0.3s ease 0s;
-        }
-        .character-item:hover:before{
-            opacity: 0.7;
-            left: 30px;
-            right: 30px;
-            top: 50px;
-            bottom: 50px;
+        .character-item:hover .character-content{
+            height: 120px;
+            width: 300px;
+            opacity: 0.9;
+            top: 40px;
+            transform: rotate(0deg) translate(0, 0);
         }
 
     }
