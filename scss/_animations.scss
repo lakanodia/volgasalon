@@ -21,7 +21,7 @@
   }
 
 .heightUp {
-  animation: heightUp 3.5s ease-in;
+  animation: heightUp 2.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 @keyframes heightUp {

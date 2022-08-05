@@ -869,8 +869,9 @@ body {
         #view {
             margin-top: -20px;
             @include d-flex(flex, center, center);
-            background:no-repeat center url(../images/Trailer/screen.png);
+            background:no-repeat  url(../images/Trailer/screen.png);
             display: none;
+            background-position: bottom;
         }
     }
     #playbut {

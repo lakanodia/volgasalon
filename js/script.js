@@ -808,8 +808,9 @@ keyboardItem.addEventListener('click', function(){
 // section7
 let playbut = document.getElementById('playbut')
 window.addEventListener("scroll", () => {
-  if (scrollY > 6000 && scrollY < 7000) {
-    playbut.style.bottom = `${this.scrollY*0.5-2800}px`;
+  if (scrollY > 5500 && scrollY < 5710) {
+    playbut.style.bottom = `${this.scrollY*0.7-3650}px`;
+    console.log(scrollY)
   }
 })
 playbut.addEventListener("click", function() {

@@ -1171,8 +1171,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: no-repeat center url(../images/Trailer/screen.png);
+  background: no-repeat url(../images/Trailer/screen.png);
   display: none;
+  background-position: bottom;
 }
 .section7 #playbut {
   height: 117px;
@@ -1342,8 +1343,8 @@ body {
   }
 }
 .heightUp {
-  -webkit-animation: heightUp 3.5s ease-in;
-          animation: heightUp 3.5s ease-in;
+  -webkit-animation: heightUp 2.5s ease-in-out;
+          animation: heightUp 2.5s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
