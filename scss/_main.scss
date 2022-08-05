@@ -872,6 +872,14 @@ body {
             background:no-repeat  url(../images/Trailer/screen.png);
             display: none;
             background-position: bottom;
+            position: relative;
+            overflow: hidden;
+            .video {
+                width: 743px;
+                height: 404px;
+                position: absolute;
+                bottom: 49px;
+            }
         }
     }
     #playbut {
