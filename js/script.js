@@ -124,7 +124,6 @@ let videoData = [
   },
 ];
 
-
 let videoContent = document.getElementById('videos');
 
 function openCard(id){
@@ -159,6 +158,7 @@ let headerVideoItem =document.getElementById('videos-click');
 let arrowIconOne = document.getElementById('previous');
 let arrowIconTwo = document.getElementById('next');
 
+
 headerPictureItem.addEventListener('click' , headerPictureClick);
 
 function headerPictureClick() {
@@ -169,8 +169,8 @@ function headerPictureClick() {
   setUpSwiper();
   arrowIconOne.classList.remove('hide');
   arrowIconTwo.classList.remove('hide');
-
 }
+
 
 headerVideoItem.addEventListener('click', headerVideoClick );
 
@@ -182,8 +182,6 @@ function headerVideoClick() {
   arrowIconOne.classList.add('hide');
   arrowIconTwo.classList.add('hide');
 }
-
-
 
 // section three pictures data and swiper
 let pictureData = [
@@ -649,13 +647,169 @@ function pauseAudio() {
   audio.pause(); 
   audio.currentTime = 0;
 } 
-
 /////////////////////// end of section 5 - radio 
+
+
+// section 6
+let volgaTunkItem = document.querySelectorAll(".tunkItem");
+let mapFoldTrunk = document.getElementById("mapFold-bagage");
+let volgaInfoItem = document.querySelectorAll(".light-item");
+
+volgaTunkItem.forEach((trunkItem)=>{
+  trunkItem.addEventListener("click",()=>{
+    mapFoldTrunk.classList.toggle("hide");
+  })
+})
+
+let closeBtn2 = document.getElementById("close2");
+closeBtn2.addEventListener("click",()=>{
+  mapFoldTrunk.classList.add("hide");
+})
+
+let lighItem = document.getElementById('volga-light-img');
+let saxItem = document.getElementById('volga-sax-img');
+let clapItem = document.getElementById('volga-clap-img');
+let cameraItem = document.getElementById('volga-camera-img');
+let soundrecItem = document.getElementById('volga-soundrec-img');
+let reelItem = document.getElementById('volga-reel-img');
+let tvItem = document.getElementById('volga-tv-img');
+let mregaphoneItem = document.getElementById('volga-megaphone-img');
+let keyboardItem = document.getElementById('volga-keyboard-img');
+
+let light = document.getElementById('light');
+let sax = document.getElementById('sax');
+let clap = document.getElementById('clap');
+let camera = document.getElementById('camera');
+let soundrec = document.getElementById('soundrec');
+let reel = document.getElementById('reel');
+let tv = document.getElementById('tv');
+let megaphone = document.getElementById('megaphone');
+let keyboard = document.getElementById('keyboard');
+
+lighItem.addEventListener('click',function(){
+  light.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+saxItem.addEventListener('click',function(){
+  sax.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+clapItem.addEventListener('click', function(){
+  clap.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+
+})
+
+cameraItem.addEventListener('click', function(){
+  camera.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+soundrecItem.addEventListener('click', function(){
+  soundrec.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+})
+
+reelItem.addEventListener('click', function(){
+  reel.classList.remove('hide');
+  
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+tvItem.addEventListener('click', function(){
+  tv.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+mregaphoneItem.addEventListener('click', function(){
+  megaphone.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+keyboardItem.addEventListener('click', function(){
+  keyboard.classList.remove('hide');
+
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+
 // section7
 let playbut = document.getElementById('playbut')
 window.addEventListener("scroll", () => {
-  if (scrollY > 5000 && scrollY < 7000) {
-    playbut.style.bottom = `${this.scrollY*0.5-2550}px`;
+  if (scrollY > 6000 && scrollY < 7000) {
+    playbut.style.bottom = `${this.scrollY*0.5-2800}px`;
   }
 })
 playbut.addEventListener("click", function() {
@@ -663,3 +817,19 @@ playbut.addEventListener("click", function() {
   document.getElementById("view").classList.add("heightUp");
   playbut.classList.add("hidden")
 })
+
+
+// section 6 
+// outside click close function section 6
+let section3 =document.getElementById('section3');
+let language = document.getElementById('language-block');
+let section6 =document.getElementById('section6');
+window.onclick = function(event) {
+  if (event.target.parentElement.children[1]==language) {
+    mapFoldTrunk.classList.add("hide");
+  }else if(event.target.parentElement==section6){
+    mapFoldTrunk.classList.add("hide");
+  }
+}
+
+

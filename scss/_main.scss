@@ -256,7 +256,7 @@ body {
             overflow: hidden;
             animation: videoCard 0.4s;
             animation-fill-mode: forwards;
-            
+            z-index: 999;
             @keyframes videoCard {
                 from {left: 0%;}
                 to {left: 50%;}
@@ -314,7 +314,7 @@ body {
     display: none;
 }
 .section3{
-    height: 100vh;
+    height: 114vh;
     position: relative;
     background-image: url(../images/map/map_background.jpg);
     background-position: center;
@@ -720,16 +720,17 @@ body {
         width: 80%;
     }
     .volga-light-img{
-        @include position-property(absolute, 72%,  29%);
-        width: 30%;
+        @include position-property(absolute, 63%,  30%);
+        width: 8%;
         cursor: pointer;
         transition: all 0.3s;
+        z-index: 2;
     }
     .volga-light-img:hover{
         transform: translateY(-5px);
     }
     .volga-sax-img{
-        @include position-property(absolute, 40%,  65%);
+        @include position-property(absolute,37%,  55%);
         width: 10%;
         cursor: pointer;
         transition: all 0.3s;
@@ -738,16 +739,17 @@ body {
         transform: translateY(-5px);
     }
     .volga-clap-img{
-        @include position-property(absolute, 65%,  23%);
-        width: 8%;
+        @include position-property(absolute,  57%,  26%);
+        width: 7%;
         cursor: pointer;
         transition: all 0.3s;
+        z-index: 1;
     }
     .volga-clap-img:hover{
         transform: translateY(-5px);
     }
     .volga-camera-img{
-        @include position-property(absolute, 40%,  50%);
+        @include position-property(absolute,  34%,  40%);
         width: 20%;
         cursor: pointer;
         transition: all 0.3s;
@@ -756,8 +758,8 @@ body {
         transform: translateY(-5px);
     }
     .volga-soundrec-img{
-        @include position-property(absolute, 57%,  30%);
-        width: 25%;
+        @include position-property(absolute, 56%,  47%);
+        width: 11%;
         cursor: pointer;
         transition: all 0.3s;
     }
@@ -765,17 +767,18 @@ body {
         transform: translateY(-5px);
     }
     .volga-reel-img{
-        @include position-property(absolute, 70%,  33%);
-        width: 11%;
+        @include position-property(absolute, 62%,  35%);
+        width: 9%;
         cursor: pointer;
         transition: all 0.3s;
+        z-index: 1;
     }
     .volga-reel-img:hover{
         transform: translateY(-5px);
     }
     .volga-tv-img{
-        @include position-property(absolute, 45%,  25%);
-        width: 15%;
+        @include position-property(absolute, 40%,  27%);
+        width: 13%;
         cursor: pointer;
         transition: all 0.3s;
     }
@@ -783,8 +786,8 @@ body {
         transform: translateY(-5px);
     }
     .volga-megaphone-img{
-        @include position-property(absolute, 43%,  40%);
-        width: 6%;
+        @include position-property(absolute, 48%,  44%);
+        width: 5%;
         cursor: pointer;
         transition: all 0.3s;
     }
@@ -792,13 +795,61 @@ body {
         transform: translateY(-5px);
     }
     .volga-keyboard-img{
-        @include position-property(absolute, 66%,  40%);
-        width: 11%;
+        @include position-property(absolute, 65%,  44%);
+        width: 10%;
         cursor: pointer;
         transition: all 0.3s;
     }
     .volga-keyboard-img:hover{
         transform: translateY(-5px);
+    }
+}
+
+// modal style section 6
+.mapFold_bagage{
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 99;
+    max-width: 900px;
+    width: 100%;
+    height: 400px;
+    animation: bagageCard 0.4s;
+    animation-fill-mode: forwards;
+    @keyframes bagageCard {
+        from {left: 0%;}
+        to {left: 25%;}
+    }
+    .info-block-overlay{
+        height: 500px;
+        background-color: #fff;
+        overflow-y: scroll;
+        padding: 40px;
+        line-height: 25px;     
+        .info-title{
+            font-size: 20px;
+            font-weight: 900;
+            margin-top: 10px;
+        }
+        .info-sax-title{
+            margin-top: 15px;
+        }
+    }
+    .info-header{
+        display: flex;
+        justify-content: space-between;
+        &-item{
+            max-width: 150px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            @include d-flex(flex, center, center);
+            font-size: 20px;
+            font-weight: 900;  
+        }
+        &-icon{
+            cursor: pointer;
+        }
     }
 }
 
@@ -838,5 +889,94 @@ body {
         bottom: 200px;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+}
+
+// section 8
+
+.section8{
+    background-image: url(../images/bagage/bagage_ground.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 130vh;
+    .character-container{
+        max-width: 1100px;
+        width: 100%;
+        @include d-flex(flex, space-between, center);
+        margin: auto;
+        flex-wrap: wrap;
+        .character-item{
+            position: relative;
+            overflow: hidden;
+            cursor: pointer; 
+            .character-img{
+                width: 100%;
+                height: auto;
+                border: 15px solid rgb(255, 255, 255);
+            }
+            .character-content{
+                width: 100%;
+                text-align: center;
+                transform: scale(0);
+                position: absolute;
+                top: 35px;
+                left: 0;
+                transition: all 0.5s ease 0s;
+            }
+        }
+    
+        
+        .character-item:hover .character-content{ transform: scale(1); }
+        .character-item .character-title{
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: capitalize;
+            margin: 0;
+            cursor: pointer;
+        }
+       .character-p{
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .character-item:before{
+            content: '';
+            background: linear-gradient(#2193b0,#6dd5ed);
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: all 0.3s ease 0s;
+        }
+        .character-item:hover:before{
+            opacity: 0.7;
+            left: 30px;
+            right: 30px;
+            top: 50px;
+            bottom: 50px;
+        }
+
+    }
+    .final-block{
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        .final-img{
+            width: 100%;
+        }
+    }
+    .character-overlay{
+        height: 500px;
+        background-color: #fff;
+        overflow-y: scroll;
+        padding: 40px;
+        line-height: 25px;
     }
 }
