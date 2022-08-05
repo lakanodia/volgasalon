@@ -820,17 +820,139 @@ playbut.addEventListener("click", function() {
 })
 
 
-// section 6 
-// outside click close function section 6
+
+
+// section 8
+let textModalContent = document.getElementById('text-modal');
+let videoModalContent = document.getElementById('video-modal');
+let characterOverlay = document.querySelector('.character-overlay');
+let closeBtn3 = document.getElementById("close3");
+closeBtn3.addEventListener("click",()=>{
+  headertextClick();
+  characterOverlay.classList.add("hide");
+})
+
+let characterItem = document.querySelectorAll(".character-item");
+characterItem.forEach((characterItem)=>{
+  characterItem.addEventListener("click",()=>{
+    headertextClick();
+    characterOverlay.classList.toggle("hide");
+  })
+})
+
+let textCharacterItem = document.getElementById('text-item');
+let videoCharacterItem = document.getElementById('video-item');
+
+textCharacterItem.addEventListener('click' , headertextClick);
+videoCharacterItem.addEventListener('click', headerCharacterVideoClick)
+
+function headertextClick() {
+  textCharacterItem.classList.remove('inActive');
+  videoCharacterItem.classList.add('inActive');
+  textModalContent.classList.remove('hide');
+  videoModalContent.classList.add('hide');
+}
+
+function headerCharacterVideoClick(){
+  textCharacterItem.classList.add('inActive');
+  videoCharacterItem.classList.remove('inActive');
+  textModalContent.classList.add('hide');
+  videoModalContent.classList.remove('hide');
+}
+
+let characterTextData = [
+  {
+      id: 1,
+      videoUrl: 'https://www.youtube.com/embed/lHL8jpipT-A',
+      textDescription: "Tea Tsulukiani (née en 1975) est nommée ministre de la Justice par Bidzina Ivanichvili au lendemain des législatives de 2012. Tsulukiani, personnalité politique préférée des Géorgiens, a longtemps vécu en France. Elle a effectué une partie de sa scolarité à Lyon, décroché un master à l’École nationale d’administration (ENA) de Strasbourg, travaillé dans l’entourage d’un préfet et été pendant dix ans juriste à la Cour européenne des droits de l’homme de Strasbourg. En 2010, elle retourne en Géorgie où elle rejoint Notre Géorgie - Démocrates libres, le parti fondé par Irakli Alassania, ancien représentant permanent de la Géorgie auprès de l'ONU, qui s’est brouillé avec le président Saakachvili au sujet de l’affrontement avec la Russie en 2008. Sa nomination au ministère de la Justice a été suivie d’une série d’arrestations de hauts dignitaires de l’administration précédente et d’une amnistie pour des milliers de prisonniers « politiques ». Parmi ses objectifs majeurs, elle cite la réforme de la justice et la séparation du parquet et de l’exécutif. Elle échoue toutefois à imposer son projet de loi qui devait renforcer les droits des travailleurs. A l’avenir, elle souhaite d’une part renforcer les droits des femmes et des minorités, d’autre part libéraliser les lois en matière d’usage des stupéfiants."
+  },
+  {
+      id: 2,
+      videoUrl: 'https://www.youtube.com/embed/xWj8Y4fiuoQ',
+      textDescription: "Le Métropolite Calistrate (né en 1938) dirige depuis une trentaine d’années l’éparchie de Kutais-Gaenati et est considéré comme le plus haut dignitaire ecclésiastique de Géorgie occidentale. Chota Ilia Margalitachvili est né dans une région viticole de Kakhétie. Après son service militaire, il suit des études d’ingénieur à Voronej en Russie et à l’institut pédagogique de Telavi, se marie et a un fils avant d’entrer en 1982 comme novice au monastère de Béthanie. La même année, il devient moine et un an plus tard, il est nommé évêque. En 1985, à la demande du patriarche géorgien Elie II, il se rend à Tchernobyl peu de temps après la catastrophe nucléaire pour exprimer sa compassion aux populations touchées. En 1992, il est élevé au rang de métropolite. Jusqu’en 2010, Mgr. Calistrate est recteur de l’académie religieuse du monastère de Ghélati et de l’institut de théologie de Koutaïssi, où il crée des facultés d’histoire de l’art, de journalisme et de médecine. En trente ans, il a inauguré cinq éparchies en Géorgie occidentale et consacré plus de trois cents églises, chapelles et monastères. Il est porteur de la Croix Briliant et de l’Ordre d’or de Saint-Georges, deux des plus hautes distinctions de l’Eglise orthodoxe de Géorgie."
+  },
+
+  {
+      id: 3,
+      videoUrl: 'https://www.youtube.com/embed/n6aPQrCI9pU',
+      textDescription: "Bidsina Iwanischwili (geb. 1956) ist mit einem geschätzten Vermögen von über 6,5 Milliarden US-Dollar der reichste Mann in Georgien. 2011 trat der Geschäftsmann in die Politik ein und wurde zum mächtigen Gegenspieler von Präsident Saakaschwili. Iwanischwili gründete Anfang der 90er-Jahre in Russland die „Rossiskij Kredit“-Bank und stieg in Moskau rasch zu einem Oligarchen der zweiten Reihe auf. Wegen seiner bis heute engen Kontakte zu Russland werfen ihm seine politischen Gegner vor, ein Agent des Kreml zu sein. Dennoch gewann das von ihm gegründete Parteienbündnis „Georgischer Traum“ die Parlamentswahlen 2012 und der Milliardär wurde Premierminister. Durch eine bereits vor dem Machtwechsel beschlossene Verfassungsreform erhielt er somit die Schlüsselposition für die Ausrichtung der georgischen Politik. Iwanischwili leitete eine Annäherung an Russland ein und pflegt enge Kontakte zur christlich-orthodoxen Kirche, die als wichtiges Bindeglied zwischen Russland und Georgien gilt. Gleichzeitig betonte Iwanischwili, den Westkurs fortsetzen und die Anbindung an EU und NATO vorantreiben zu wollen. Iwanischwili ist verheiratet und hat drei Kinder. Sein Adoptivsohn Bera ist ein populärer Rapper."
+  },
+  {
+      id: 4,
+      videoUrl: 'https://www.youtube.com/embed/xa_DQX13Sgw',
+      textDescription: "Dato Imnaischwili (geb. 1954) arbeitet seit mehr als 30 Jahren als Automechaniker in Tiflis und hat sich vor allem auf die Reparaturen russischer Fahrzeugmodelle spezialisiert. Er wurde im russischen Swerdlowsk (Jekaterinburg) geboren. Erst als er zwölf Jahre alt war, zogen seine Eltern zurück nach Georgien. Nach seinem Wehrdienst in der sowjetischen Armee in Nowosibirsk (Russland) absolvierte er in den 70er Jahren eine technische Ausbildung zum Kfz-Mechaniker. 1980 trat er in den Dienst bei den staatlichen Autowerkstätten Nummer 1 für Dienstfahrzeuge und Taxis im Bezirk Isani ein. Durch den Zusammenbruch der Sowjetunion verlor er seine feste Anstellung und arbeitet seitdem auf eigene Rechnung. Seit einer schweren Gasexplosion 2007, bei der mehrere seiner Kollegen ums Leben kamen, mietet er eine Reparatur-Garage in einem benachbarten Werkstattareal. Imnaischwili lebt mit Frau, Tochter und Schwägerin in einem Tiflisser Hinterhof und ist seit sechs Jahren stolzer Opa."
+  },
+  {
+      id: 5,
+      videoUrl: 'https://www.youtube.com/embed/-GkQaaxfk8k',
+      textDescription: "Lascha Bakradse (geb. 1965) ist einer der streitbarsten Intellektuellen Georgiens. Der Direktor des Nationalen Literaturmuseums studierte Literatur- und Sprachwissenschaft in Tiflis, Germanistik in Jena, Politik in Potsdam und Theologie in Bern. Nach einem Promotionsstudium an der Humboldt-Universität Berlin promovierte er in Tiflis mit einer Dissertation über die deutsch-georgischen Beziehungen während des Ersten Weltkriegs. Bakradse arbeitete für das Georgische Auswärtige Amt, als Journalist für verschiedene georgische Medien und als Programmreferent des Goethe-Instituts. Er schrieb den bis heute meist genutzten deutschen Sprachführer für Georgisch und ist seit 1999 in mehreren Filmen als Schauspieler aufgetreten, u.a. als Hauptdarsteller in „Lost Killers“ von Regisseur Dito Tsintsadse. 2006 übernahm er die Leitung der Abteilung für Filmarchivierung und Restauration im Georgischen Nationalen Filmzentrum und ist seit 2010 assoziierter Professor an der Ilia Universität in Tiflis. Bakradse unterstützt regelmäßig Kunstprojekte, engagiert sich für die Menschenrechte in Georgien und nimmt immer wieder in den Medien zur gesellschaftlichen Entwicklung seines Landes Stellung."
+  },
+  {
+    id: 5,
+    videoUrl: 'https://www.youtube.com/embed/jgD7BIFD0xY',
+    textDescription: "Michail („Mischa“) Saakaschwili (geb. 1967) stürmte 2003 mit einer Rose ins georgische Parlament und jagte den sich durch Wahlmanipulationen an der Macht haltenden Präsidenten Eduard Schewardnadze aus dem Amt. Nach dieser „Rosenrevolution“ wurde er selbst zum Präsidenten gewählt und hat in den knapp neun Jahren seiner Amtszeit Georgien auf einen radikalen Westkurs getrimmt. In seiner Ära wurden Polizei und Behörden reformiert, wichtige Straßen gebaut und mit dem Bau einer neuen Eisenbahnverbindung nach Europa begonnen. Bei den Georgiern sind vor allem seine ehrgeizigen Bauprojekte umstritten, mit denen er das Land auch visuell ins 21. Jahrhundert führen wollte – vor allem in der Hafenstadt Batumi. Ein weiteres ehrgeiziges Projekt war „Lasika“: In den georgischen Sümpfen am Schwarzen Meer sollte ein kaukasisches Dubai gebaut werden. 2008 kam es zu einem kurzen Krieg mit Russland um die abtrünnige Provinz Samotschablo („Süd-Ossetien“), für dessen Ausbruch Kritiker auch Saakaschwili verantwortlich machen. Seine zweite Amtszeit wurde von Korruptions- und Foltervorwürfen gegen Mitglieder seiner Regierungspartei überschattet, was maßgeblich zur Niederlage seiner „Nationalen Bewegung“ bei den Parlamentswahlen 2012 beigetragen hat. Saakaschwili ist mit der Niederländerin Sandra Roeloffs verheiratet und hat zwei Söhne."
+},
+];
+
+
+function openCharacterCardText(id){
+  characterCardInfo(id);
+}
+
+function characterCardInfo(item){
+  let characterText = document.createElement('p');
+  characterText.classList.add('post-descr');
+  characterText.innerHTML = characterTextData[item].textDescription; 
+
+  let characterVideo = document.createElement('iframe');
+  characterVideo.classList.add('video-character');
+  characterVideo.setAttribute("src", characterTextData[item].videoUrl);
+
+  textModalContent.appendChild(characterText);
+  videoModalContent.appendChild(characterVideo);
+}
+characterItem.forEach(item => {
+  item.addEventListener('click', () => {
+    textModalContent.innerHTML = '';
+    videoModalContent.innerHTML = '';
+      let imageValue = item.getAttribute('data-char' , item.value);
+      openCharacterCardText(imageValue);
+  });
+});
+
+
+// outside click close function
 let section3 =document.getElementById('section3');
+let section8 = document.getElementById('section8');
 let language = document.getElementById('language-block');
 let section6 =document.getElementById('section6');
+let final = document.querySelector('.final-block');
+let section2 = document.getElementById("container-section2");
+
+
+
+let imgFinalVolga = document.querySelector('.final-img');
+imgFinalVolga.addEventListener('click', function(){
+  characterOverlay.classList.add('hide');
+})
+
+section2.addEventListener('click',modalClose)
+
+function modalClose(){
+  modal.classList.add('hide');
+}
 window.onclick = function(event) {
+  console.log(event.target);
   if (event.target.parentElement.children[1]==language) {
     mapFoldTrunk.classList.add("hide");
+    characterOverlay.classList.add('hide');
   }else if(event.target.parentElement==section6){
     mapFoldTrunk.classList.add("hide");
-  }
+  }else if(event.target.parentElement==section8){
+    characterOverlay.classList.add('hide');
+  }else if(event.target.parentElement.children[1]==final){
+    characterOverlay.classList.add('hide');
+  }  
 }
 
 

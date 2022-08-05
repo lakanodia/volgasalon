@@ -35,7 +35,7 @@
                 <li><a class="nav-li-a" href="#section5"><i class="fa-solid fa-signal"></i></a></li>
                 <li><a class="nav-li-a" href="#section6"><i class="fa-solid fa-clapperboard"></i></a></li>
                 <li><a class="nav-li-a" href="#section7"><i class="fa-solid fa-video"></i></a></li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-person"></i> </a></li>
+                <li><a class="nav-li-a" href="#section8"><i class="fa-solid fa-person"></i> </a></li>
             </ul>
         </nav>
     </header>
@@ -48,7 +48,7 @@
  
     <section class="section2" id="section2">
         <img class="volga-road-img" id="volga-road-img" src="images/interior/00_BG.jpg" alt="road-img">
-        <div class="container-section2">
+        <div class="container-section2" id="container-section2">
             <div class="volga-salon-container" id='volga-salon-container'>
                 <img class="volga-salon-img" src="images/interior/salon.png" alt="salon-img">
                 <img class="volga-blog-img" src="images/interior/blog.png" alt="blog-img">
@@ -378,14 +378,14 @@
 
     <section class="section8" id="section8">
         <div class="character-container">
-            <div class="character-item">
+            <div class="character-item" data-char="0">
                 <img class="character-img" src="images/character/tea.jpg" alt="character-img">
                 <div class="character-content">
                     <h3 class="character-title">TEA TSULUKIANI</h3>
                     <p class="character-p">Ministre de la Justice</p>
                 </div>
             </div>
-            <div class="character-item">
+            <div class="character-item" data-char="1">
                 <img class="character-img" src="images/character/kalistrate.jpg" alt="character-img">
                 <div class="character-content">
                     <h3 class="character-title">MGR CALISTRATE</h3>
@@ -393,28 +393,28 @@
                 </div>
 
             </div>
-            <div class="character-item">
+            <div class="character-item" data-char="2">
                 <img class="character-img" src="images/character/bidzina.jpg" alt="character-img">
                 <div class="character-content">
                     <h3 class="character-title">BIDZINA IVANICHVILI</h3>
                     <p class="character-p">Premier ministre</p>
                 </div>
             </div>
-            <div class="character-item">
+            <div class="character-item" data-char="3">
                 <img class="character-img" src="images/character/dato.jpg" alt="character-img">
                 <div class="character-content">
                     <h3 class="character-title">DATO IMNAICHVILI</h3>
                     <p class="character-p">Mécanicien auto</p>
                 </div>
             </div>
-            <div class="character-item">
+            <div class="character-item" data-char="4">
                 <img class="character-img" src="images/character/lasha.jpg" alt="character-img">
                 <div class="character-content">
                     <h3 class="character-title">LACHA BAKRADZÉ</h3>
                     <p class="character-p">Historien et journaliste</p>
                 </div>
             </div>
-            <div class="character-item">
+            <div class="character-item" data-char="5">
                 <img class="character-img" src="images/character/misha.jpg" alt="character-img">
                 <div class="character-content">
                     <h3 class="character-title">MIKHEIL SAAKACHVILI</h3>
@@ -423,13 +423,22 @@
             </div>
         </div>
         <div class="final-block">
-            <img class="final-img" src="images/character/Volga_Final.png" alt="">
+            <img class="final-img" src="images/character/Volga_Final.png" alt="img-volga">
         </div>
         <div class="character-overlay hide">
             <div class="character-header">
-                <div class="character-text ">Text</div>
-                <div class="character-video">Video</div>
-                <img class="info-header-icon" src="images/map/close.png" alt="close" id="close2">
+                <div class="character-text" id="text-item">Text</div>
+                <div class="character-video inActive" id="video-item">Video</div>
+                <img class="info-header-icon" src="images/map/close.png" alt="close" id="close3">
+            </div>
+            <div class="character-modal">
+                <div class="text-modal" id="text-modal">
+
+                </div>
+
+                <div class="character-modal hide" id="video-modal">
+                    
+                </div>
             </div>
         </div>
     </section>

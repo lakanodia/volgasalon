@@ -1073,7 +1073,7 @@ body {
 }
 
 .mapFold_bagage {
-  position: fixed;
+  position: absolute;
   top: 20%;
   left: 30%;
   z-index: 99;
@@ -1128,6 +1128,7 @@ body {
   max-width: 150px;
   width: 100%;
   background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.256);
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1198,7 +1199,7 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
-  height: 130vh;
+  min-height: 100vh;
 }
 .section8 .character-container {
   max-width: 1100px;
@@ -1285,11 +1286,75 @@ body {
   width: 100%;
 }
 .section8 .character-overlay {
+  max-width: 950px;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 20%;
   height: 500px;
-  background-color: #fff;
-  overflow-y: scroll;
   padding: 40px;
   line-height: 25px;
+  -webkit-animation: bagageCard 0.4s;
+          animation: bagageCard 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.section8 .character-overlay .character-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section8 .character-overlay .character-header .character-text {
+  background-color: #fff;
+  max-width: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.section8 .character-overlay .character-header .character-video {
+  background-color: rgb(255, 255, 255);
+  max-width: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 3px;
+  cursor: pointer;
+}
+.section8 .character-overlay .character-header .info-header-icon {
+  margin-left: 556px;
+  cursor: pointer;
+}
+.section8 .character-overlay .character-header .inActive {
+  background-color: #889ca4;
+}
+.section8 .character-modal {
+  max-width: 800px;
+  width: 100%;
+  height: 430px;
+  background-color: #fff;
+}
+.section8 .character-modal .video-character {
+  width: 100%;
+  height: 100%;
+}
+.section8 .text-modal {
+  padding: 15px;
+  font-size: 13px;
 }
 
 .hidden {
