@@ -72,7 +72,15 @@ window.addEventListener("scroll", function() {
   if (value < 1750) {
     document.getElementById('volga-map-wrapper').style.top = `${value*0.4-150}px`;
   }
+  // section-5-parallax:
+  const section5Parallax = document.getElementById('section-5-parallax');
+  var scrolled = window.pageYOffset;
+  var rate = scrolled*.1-650;
+  if (scrolled > 2670 & scrolled < 3700){
+  section5Parallax.style.transform = 'translateY('+rate+'px)';
+  }
 })
+
 
 // pointer modal click
 let pointers = document.querySelectorAll(".pointer");
