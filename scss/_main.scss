@@ -148,6 +148,7 @@ body {
             .volga-wheel-img{
                 @include position-property(absolute, 36%, 21.5%);
                 width: 20%;
+                cursor: pointer;
             }
             .volga-blog-img{
                 @include position-property(absolute, 51%, 67%);
@@ -157,13 +158,33 @@ body {
                 @include position-property(absolute, 40.5%, 42.6%);
                 width: 11%;
             }
+            .open{
+                opacity: 0;
+                transition: 0.5s;
+            }
+            .open:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
             .volga-clock-img{
                 @include position-property(absolute, 52.6%, 59.9%);
                 width: 5%;
+                cursor: pointer;
+                opacity: 0.5;
+                transition: 0.5s;
+            }
+            .volga-clock-img:hover{
+                opacity: 1;
             }
             .volga-radio-img{
                 @include position-property(absolute, 52%, 44%);
                 width: 14%;
+                opacity: 0.5;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+            .volga-radio-img:hover{
+                opacity: 1;
             }
             .volga-mirror-img{
                 @include position-property(absolute, 11%, 43.3%);
@@ -172,6 +193,12 @@ body {
             .volga-sticker-img{
                 @include position-property(absolute, 36.8%, 58.2%);
                 width: 20%;
+                cursor: pointer;
+                opacity: 0.90;
+                transition: 0.5s;
+            }
+            .volga-sticker-img:hover{
+                opacity: 1;
             }
         }
     }

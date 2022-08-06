@@ -291,6 +291,7 @@ body {
   top: 36%;
   left: 21.5%;
   width: 20%;
+  cursor: pointer;
 }
 .section2 .container-section2 .volga-salon-container .volga-blog-img {
   position: absolute;
@@ -304,17 +305,40 @@ body {
   left: 42.6%;
   width: 11%;
 }
+.section2 .container-section2 .volga-salon-container .open {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section2 .container-section2 .volga-salon-container .open:hover {
+  opacity: 1;
+  cursor: pointer;
+}
 .section2 .container-section2 .volga-salon-container .volga-clock-img {
   position: absolute;
   top: 52.6%;
   left: 59.9%;
   width: 5%;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section2 .container-section2 .volga-salon-container .volga-clock-img:hover {
+  opacity: 1;
 }
 .section2 .container-section2 .volga-salon-container .volga-radio-img {
   position: absolute;
   top: 52%;
   left: 44%;
   width: 14%;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.section2 .container-section2 .volga-salon-container .volga-radio-img:hover {
+  opacity: 1;
 }
 .section2 .container-section2 .volga-salon-container .volga-mirror-img {
   position: absolute;
@@ -327,6 +351,13 @@ body {
   top: 36.8%;
   left: 58.2%;
   width: 20%;
+  cursor: pointer;
+  opacity: 0.9;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section2 .container-section2 .volga-salon-container .volga-sticker-img:hover {
+  opacity: 1;
 }
 .section2 .volga-sit-img {
   position: absolute;
