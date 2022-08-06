@@ -1023,6 +1023,7 @@ body {
         line-height: 25px;
         animation: bagageCard 0.4s;
         animation-fill-mode: forwards;
+        z-index: 2;
         .character-header{
             display: flex;
             .character-text {
