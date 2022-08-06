@@ -56,22 +56,24 @@ item.forEach(img => {
 });
 
 // scroll aniamtions 
-window.onscroll = function () {
-  scrollRotate();
-  scrolZoom();
-};
+window.addEventListener("scroll", function() {
+  let value = scrollY;
+  if (value < 1750 && value > 100) {
+    let image = document.getElementById("volga-wheel-img");
+    image.style.transform = "rotate(-" + value/9 + "deg)";
+    document.getElementById('volga-road-img').style.transform = "translateY(-"+ value*0.7+"px)";
+    document.getElementById('volga-salon-container').style.transform = "translateY(-"+ value*0.24 + "px)";
+    document.getElementById('volga-map-wrapper').style.top = `${value*0.4-150}px`;
+  }
+  // section-5-parallax:
+  const section5Parallax = document.getElementById('section-5-parallax');
+  var scrolled = window.pageYOffset;
+  var rate = scrolled*.1-650;
+  if (scrolled > 2670 & scrolled < 3700){
+  section5Parallax.style.transform = 'translateY('+rate+'px)';
+  }
+})
 
-function scrollRotate() {
-  let image = document.getElementById("volga-wheel-img");
-  let offset = window.pageYOffset/2;
-  image.style.transform = "rotate(" + offset + "deg)";
-}
-
-function scrolZoom() {
-  let road = document.getElementById("volga-road-img");
-  let scroll = scrollY;
-  road.style.transform = 'scale(1.' + scroll + ')';
-}
 
 // pointer modal click
 let pointers = document.querySelectorAll(".pointer");
@@ -123,7 +125,6 @@ let videoData = [
   },
 ];
 
-
 let videoContent = document.getElementById('videos');
 
 function openCard(id){
@@ -158,6 +159,7 @@ let headerVideoItem =document.getElementById('videos-click');
 let arrowIconOne = document.getElementById('previous');
 let arrowIconTwo = document.getElementById('next');
 
+
 headerPictureItem.addEventListener('click' , headerPictureClick);
 
 function headerPictureClick() {
@@ -165,10 +167,11 @@ function headerPictureClick() {
   headerVideoItem.classList.remove('volga-map-modal-header-items-active');
   pictureContent.classList.remove('hide');
   videoContent.classList.add('hide');
+  setUpSwiper();
   arrowIconOne.classList.remove('hide');
   arrowIconTwo.classList.remove('hide');
-
 }
+
 
 headerVideoItem.addEventListener('click', headerVideoClick );
 
@@ -180,8 +183,6 @@ function headerVideoClick() {
   arrowIconOne.classList.add('hide');
   arrowIconTwo.classList.add('hide');
 }
-
-
 
 // section three pictures data and swiper
 let pictureData = [
@@ -241,7 +242,8 @@ let pictureData = [
 
 function pictureCardInfo(item){
   let picturesDiv = document.createElement('div');
-  picturesDiv.classList.add('pictures-wrapper');
+  picturesDiv.classList.add('swiper-content');
+  picturesDiv.setAttribute('id', 'swiper-content');
 
   let pictureDescription = document.createElement('p');
   pictureDescription.classList.add('post-descr');
@@ -273,6 +275,7 @@ function pictureCardInfo(item){
 
   picturesDiv.appendChild(pictureSlideOne);
   picturesDiv.appendChild(pictureSlideTwo);
+  picturesDiv.appendChild(pictureSlideTree);
   picturesDiv.appendChild(pictureSlideFour);
   picturesDiv.appendChild(pictureSlideFive);
   picturesDiv.appendChild(pictureSlideSix);
@@ -291,6 +294,29 @@ pointers.forEach(img => {
 function openPictureCard(id){
   pictureCardInfo(id);
 };
+
+// set up swiepr function
+function setUpSwiper() {
+  const productContainers = [...document.querySelectorAll(".swiper-content")];
+  const nxtBtn = [...document.querySelectorAll(".next")];
+  console.log(nxtBtn);
+  const preBtn = [...document.querySelectorAll(".previous")];
+
+  productContainers.forEach((swiperContent, i) => {
+    console.log(swiperContent);
+    console.log(i);
+    let containerDimensions = swiperContent.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+    
+    nxtBtn[i].addEventListener("click", () => {
+      swiperContent.scrollLeft += containerWidth/3;
+    });
+
+    preBtn[i].addEventListener("click", () => {
+      swiperContent.scrollLeft -= containerWidth/3;
+    });
+  });
+}
 
 
 
@@ -350,15 +376,23 @@ let arrowRight = document.getElementById('arrow-right');
 let carDiv = document.getElementById('car');
 let textDiv = document.getElementById('text');
 let year = document.getElementById('year');
+let text = document.getElementById('text');
 
 let sliderIndex = 0;
-
+const textAnimation = () => {
+    text.classList.add('upanimation');
+    setTimeout(() => {
+        text.classList.remove('upanimation')}, 200);
+}
 const setSlider = () => {
   textDiv.innerText = '';
   year.innerText = '';
   carDiv.style.backgroundImage = `url("images/Timeline/min-volga${sliderIndex+1}.png")`;
-  textDiv.append(data[sliderIndex].text);  
+  textDiv.append(data[sliderIndex].text); 
   year.append(data[sliderIndex].year);
+  year.style.transitionDuration = "1.5s";
+  carDiv.style.transitionDuration = "1.5s";
+  textAnimation();
 }
 
 const arrowRightClick = () => {
@@ -368,7 +402,6 @@ const arrowRightClick = () => {
   sliderIndex= sliderIndex+1;
   carDiv.style.transform = `translateX(${sliderIndex*65}px)`;
   year.style.transform = `translateX(${sliderIndex*65}px)`;
-
   setSlider();
 }
 
@@ -418,11 +451,7 @@ const slider = () => {
 slider();
 
 
-
-
-
-// section 5 - radio 
-
+/////////////////////// section 5 - radio 
 
 let radioData = [
   {
@@ -431,7 +460,10 @@ let radioData = [
     text: 'Niaz Diasamidze est le chanteur et leader de 33a, un groupe de folk rock géorgien fondé en 1994 à Tbilissi. 33a livre un métissage du folk français et géorgien avec des éléments pop et reggae, sur des textes principalement en géorgien parfois en français. Le nom du groupe fait référence au numéro de l’immeuble de la rue Paliachvili à Tbilissi où habite Niaz Diasamidze.',
     song1: '33a - Galaktioni',
     song2: '33a - Me Vzivar Navshi',
-    song3: '33a - Saperavi Ampelography'
+    song3: '33a - Saperavi Ampelography',
+    audio1: 'music/1/first_music',
+    audio2: 'music/1/second_music',
+    audio3: 'music/1/third_music'
   },
   {
     id: 1,
@@ -439,7 +471,10 @@ let radioData = [
     text: 'Gacha est un jeune artiste géorgien plein d’avenir qui crée son propre son en s’appropriant différents styles électro. Voici un premier album parfait pour se détendre. Ce paysage sonore a toute sa place chez Apollo Records, filiale du label belge R&S Records (Renaat Vandepapeliere).',
     song1: 'Gacha - Burning',
     song2: 'Gacha - Love You Down',
-    song3: 'Gacha - Open Chords'
+    song3: 'Gacha - Open Chords',
+    audio1: 'music/2/first_music',
+    audio2: 'music/2/second_music',
+    audio3: 'music/2/third_music'
   },
   {
     id: 2,
@@ -447,7 +482,10 @@ let radioData = [
     text: 'Soft Eject, c’est une perle du folk rock made in Caucase. Fondé en 1989, le groupe géorgien mêle influences folk européennes et géorgiennes avec des sonorités psychédéliques et rock. La plupart des paroles sont en anglais. Actuellement, le groupe se compose de six membres - Vaho Babunashvili (basse, voc.), Nodar Manchkhashvili (percussions), Giorgi Kobakhidze (guitare, voc.), Sandro Nikoladze (flûte, lyre), Emzar Burduli (cor d’harmonie, voc.) et Anna Sikharulidze (accordéon, clavier).',
     song1: 'Soft Eject - A Dozing Day',
     song2: `Soft Eject - I'm On My Way`,
-    song3: 'Soft Eject - Please Just Carry On'
+    song3: 'Soft Eject - Please Just Carry On',
+    audio1: 'music/3/first_music',
+    audio2: 'music/3/second_music',
+    audio3: 'music/3/third_music'
   },
   {
     id: 3,
@@ -455,7 +493,10 @@ let radioData = [
     text: 'Fondé en 2009 par le jeune poète Zura Jishkariani, le groupe Kung Fu Junkie joue de la pop électro. Il est composé de Chring et Zura Jishkariani au chant, Linda Folio à la guitare, et de MC CutDaKill et Max Machiadze. Les textes de Kung Fu Junkie sont en géorgien et en anglais. Sur sa page Facebook, le groupe explique qu’il s’inspire du communisme chinois et du poète William Burroughs.',
     song1: 'Kung Fu Junkie - ANY',
     song2: 'Kung Fu Junkie - BioRobot(acoustic)',
-    song3: 'Kung Fu Junkie - Flowerz In My Brain'
+    song3: 'Kung Fu Junkie - Flowerz In My Brain',
+    audio1: 'music/4/first_music',
+    audio2: 'music/4/second_music',
+    audio3: 'music/4/third_music'
   },
   {
     id: 4,
@@ -463,7 +504,10 @@ let radioData = [
     text: 'Shuqi movida (ou Chouki movida) est un groupe de punk franco-géorgien fondé en 2000 par le chanteur et guitariste français Frédéric Payen. Dans ses trois albums, la plupart des titres évoquent les problèmes sociaux et la société géorgienne à une époque où les coupures de courant étaient encore quotidiennes. D’où le nom du groupe, qui signifie « L’électricité est revenue ».',
     song1: 'Shuqi Movida - Chouki Movida',
     song2: 'Shuqi Movida - Jigoulis Kaci',
-    song3: 'Shuqi Movida - Minibusis Zaza'
+    song3: 'Shuqi Movida - Minibusis Zaza',
+    audio1: 'music/5/first_music',
+    audio2: 'music/5/second_music',
+    audio3: 'music/5/third_music'
   },
   {
     id: 5,
@@ -471,12 +515,15 @@ let radioData = [
     text: `Le Géorgien Nika Machaidze est réalisateur de films et musicien électro. Membre du collectif « Goslab », il a produit la bande originale de la pièce « Le parc » de l'auteur dramatique allemand Botho Strauss. Il met aussi en musique des défilés de mode et des productions télévisées.`,
     song1: 'Erast - Argentina',
     song2: 'Erast - Cyberpunk',
-    song3: 'Nikakoi - Dzzenn'
+    song3: 'Nikakoi - Dzzenn',
+    audio1: 'music/6/first_music',
+    audio2: 'music/6/second_music',
+    audio3: 'music/6/third_music'
   }
 ]
 
 const radioPrevious = document.getElementById('prev-radio');
-const redioNext = document.getElementById('next-radio');
+const radioNext = document.getElementById('next-radio');
 const singerImage = document.getElementById('singer-image');
 const singerName = document.getElementById('singer-name');
 const singerInfo = document.getElementById('singer-info');
@@ -484,9 +531,16 @@ const firstMusic = document.getElementById('first-music');
 const secondMusic = document.getElementById('second-music');
 const thirdMusic = document.getElementById('third-music');
 const playerSinger = document.getElementById('player-singer');
+const playerMusic = document.getElementById('player-music');
+const audioPlayerOgg = document.getElementById('audio-player-ogg');
+const audioPlayerMp3 = document.getElementById('audio-player-mp3');
+const audio = document.getElementById("audio"); 
+const overlayRadio = document.getElementById('overlay-radio');
+const radioMusic1 = document.getElementById('first-music');
+const radioMusic2 = document.getElementById('second-music');
+const radioMusic3 = document.getElementById('third-music');
 
 let radioSliderIndex = 0;
-
 
 function setRadioSwiper(){
   singerImage.style.backgroundImage = `url("images/Radio/singer_big/${radioSliderIndex+1}.jpg")`;
@@ -496,6 +550,7 @@ function setRadioSwiper(){
   secondMusic.innerHTML = '';
   thirdMusic.innerHTML = '';
   playerSinger.innerHTML = '';
+  playerMusic.innerHTML = '';
 
   singerName.append(radioData[radioSliderIndex].name);  
   singerInfo.append(radioData[radioSliderIndex].text);  
@@ -503,7 +558,42 @@ function setRadioSwiper(){
   secondMusic.append(radioData[radioSliderIndex].song2);  
   thirdMusic.append(radioData[radioSliderIndex].song3);  
   playerSinger.append(radioData[radioSliderIndex].name);  
+
+  getRightMusic()
 }
+setRadioSwiper()
+
+function getRightMusic(){
+  radioMusic1.addEventListener('click', function(){
+    firstMusic.style.backgroundColor = '#CDD7DB';
+    firstMusic.style.color = '#819CA5'
+    playerMusic.innerHTML = '';
+    playerMusic.append(radioData[radioSliderIndex].song1.split(' - ')[1]);
+    audioPlayerMp3.src = `${radioData[radioSliderIndex].audio1}.mp3`;
+    audioPlayerOgg.src = `${radioData[radioSliderIndex].audio1}.ogg`;
+    audio.load();
+  });
+  radioMusic2.addEventListener('click', function(){
+    secondMusic.style.backgroundColor = '#CDD7DB';
+    secondMusic.style.color = '#819CA5'
+    playerMusic.innerHTML = '';
+    playerMusic.append(radioData[radioSliderIndex].song2.split(' - ')[1]);
+    audioPlayerMp3.src = `${radioData[radioSliderIndex].audio2}.mp3`;
+    audioPlayerOgg.src = `${radioData[radioSliderIndex].audio2}.ogg`;
+    audio.load();
+  });
+  radioMusic3.addEventListener('click', function(){
+    thirdMusic.style.backgroundColor = '#CDD7DB';
+    thirdMusic.style.color = '#819CA5'
+    playerMusic.innerHTML = '';
+    playerMusic.append(radioData[radioSliderIndex].song3.split(' - ')[1]);
+    audioPlayerMp3.src = `${radioData[radioSliderIndex].audio3}.mp3`;
+    audioPlayerOgg.src = `${radioData[radioSliderIndex].audio3}.ogg`;
+    audio.load();
+  });
+
+}
+getRightMusic()
 
 function radioArrowRightClick(){
   if(radioSliderIndex == radioData.length-1){
@@ -522,10 +612,348 @@ function radioArrowLeftClick(){
 }
 
 function radioSwiperAction(){
-  redioNext.addEventListener('click', radioArrowRightClick);
+  radioNext.addEventListener('click', radioArrowRightClick);
   radioPrevious.addEventListener('click', radioArrowLeftClick);
 }
 
 radioSwiperAction();
 
-// end of section 5 - radio 
+// overlay
+function onMusicClick(){
+  overlayRadio.classList.add('show-overlay')
+}
+
+function onMusicClickAction(){
+  radioMusic1.addEventListener('click', onMusicClick);
+  radioMusic2.addEventListener('click', onMusicClick);
+  radioMusic3.addEventListener('click', onMusicClick);
+
+}
+onMusicClickAction()
+// close overlay on clicking outside overlay
+document.addEventListener('mouseup', function(e) {
+  if (!overlayRadio.contains(e.target)) {
+      overlayRadio.classList.remove('show-overlay')
+      pauseAudio()
+      firstMusic.style.backgroundColor = '';
+      secondMusic.style.backgroundColor = '';
+      thirdMusic.style.backgroundColor = '';
+      firstMusic.style.color = ''
+      secondMusic.style.color = ''
+      thirdMusic.style.color = ''
+  }
+});
+
+function pauseAudio() { 
+  audio.pause(); 
+  audio.currentTime = 0;
+} 
+/////////////////////// end of section 5 - radio 
+
+
+// section 6
+let volgaTunkItem = document.querySelectorAll(".tunkItem");
+let mapFoldTrunk = document.getElementById("mapFold-bagage");
+let volgaInfoItem = document.querySelectorAll(".light-item");
+
+volgaTunkItem.forEach((trunkItem)=>{
+  trunkItem.addEventListener("click",()=>{
+    mapFoldTrunk.classList.toggle("hide");
+  })
+})
+
+let closeBtn2 = document.getElementById("close2");
+closeBtn2.addEventListener("click",()=>{
+  mapFoldTrunk.classList.add("hide");
+})
+
+let lighItem = document.getElementById('volga-light-img');
+let saxItem = document.getElementById('volga-sax-img');
+let clapItem = document.getElementById('volga-clap-img');
+let cameraItem = document.getElementById('volga-camera-img');
+let soundrecItem = document.getElementById('volga-soundrec-img');
+let reelItem = document.getElementById('volga-reel-img');
+let tvItem = document.getElementById('volga-tv-img');
+let mregaphoneItem = document.getElementById('volga-megaphone-img');
+let keyboardItem = document.getElementById('volga-keyboard-img');
+
+let light = document.getElementById('light');
+let sax = document.getElementById('sax');
+let clap = document.getElementById('clap');
+let camera = document.getElementById('camera');
+let soundrec = document.getElementById('soundrec');
+let reel = document.getElementById('reel');
+let tv = document.getElementById('tv');
+let megaphone = document.getElementById('megaphone');
+let keyboard = document.getElementById('keyboard');
+
+lighItem.addEventListener('click',function(){
+  light.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+saxItem.addEventListener('click',function(){
+  sax.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+clapItem.addEventListener('click', function(){
+  clap.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+
+})
+
+cameraItem.addEventListener('click', function(){
+  camera.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+soundrecItem.addEventListener('click', function(){
+  soundrec.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+})
+
+reelItem.addEventListener('click', function(){
+  reel.classList.remove('hide');
+  
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+tvItem.addEventListener('click', function(){
+  tv.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  megaphone.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+mregaphoneItem.addEventListener('click', function(){
+  megaphone.classList.remove('hide');
+
+  keyboard.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+keyboardItem.addEventListener('click', function(){
+  keyboard.classList.remove('hide');
+
+  megaphone.classList.add('hide');
+  tv.classList.add('hide');
+  reel.classList.add('hide');
+  light.classList.add('hide');
+  sax.classList.add('hide');
+  clap.classList.add('hide');
+  camera.classList.add('hide');
+  soundrec.classList.add('hide');
+})
+
+
+// section7
+let playbut = document.getElementById('playbut')
+window.addEventListener("scroll", () => {
+  if (scrollY > 5500 && scrollY < 5710) {
+    playbut.style.bottom = `${this.scrollY*0.7-3650}px`;
+    console.log(scrollY)
+  }
+})
+playbut.addEventListener("click", function() {
+  document.getElementById("view").style.display = "flex";
+  document.getElementById("view").classList.add("heightUp");
+  playbut.classList.add("hidden")
+})
+
+
+
+
+// section 8
+let textModalContent = document.getElementById('text-modal');
+let videoModalContent = document.getElementById('video-modal');
+let characterOverlay = document.querySelector('.character-overlay');
+let closeBtn3 = document.getElementById("close3");
+closeBtn3.addEventListener("click",()=>{
+  headertextClick();
+  characterOverlay.classList.add("hide");
+})
+
+let characterItem = document.querySelectorAll(".character-item");
+characterItem.forEach((characterItem)=>{
+  characterItem.addEventListener("click",()=>{
+    headertextClick();
+    characterOverlay.classList.toggle("hide");
+  })
+})
+
+let textCharacterItem = document.getElementById('text-item');
+let videoCharacterItem = document.getElementById('video-item');
+
+textCharacterItem.addEventListener('click' , headertextClick);
+videoCharacterItem.addEventListener('click', headerCharacterVideoClick)
+
+function headertextClick() {
+  textCharacterItem.classList.remove('inActive');
+  videoCharacterItem.classList.add('inActive');
+  textModalContent.classList.remove('hide');
+  videoModalContent.classList.add('hide');
+}
+
+function headerCharacterVideoClick(){
+  textCharacterItem.classList.add('inActive');
+  videoCharacterItem.classList.remove('inActive');
+  textModalContent.classList.add('hide');
+  videoModalContent.classList.remove('hide');
+}
+
+let characterTextData = [
+  {
+      id: 1,
+      videoUrl: 'https://www.youtube.com/embed/lHL8jpipT-A',
+      textDescription: "Tea Tsulukiani (née en 1975) est nommée ministre de la Justice par Bidzina Ivanichvili au lendemain des législatives de 2012. Tsulukiani, personnalité politique préférée des Géorgiens, a longtemps vécu en France. Elle a effectué une partie de sa scolarité à Lyon, décroché un master à l’École nationale d’administration (ENA) de Strasbourg, travaillé dans l’entourage d’un préfet et été pendant dix ans juriste à la Cour européenne des droits de l’homme de Strasbourg. En 2010, elle retourne en Géorgie où elle rejoint Notre Géorgie - Démocrates libres, le parti fondé par Irakli Alassania, ancien représentant permanent de la Géorgie auprès de l'ONU, qui s’est brouillé avec le président Saakachvili au sujet de l’affrontement avec la Russie en 2008. Sa nomination au ministère de la Justice a été suivie d’une série d’arrestations de hauts dignitaires de l’administration précédente et d’une amnistie pour des milliers de prisonniers « politiques ». Parmi ses objectifs majeurs, elle cite la réforme de la justice et la séparation du parquet et de l’exécutif. Elle échoue toutefois à imposer son projet de loi qui devait renforcer les droits des travailleurs. A l’avenir, elle souhaite d’une part renforcer les droits des femmes et des minorités, d’autre part libéraliser les lois en matière d’usage des stupéfiants."
+  },
+  {
+      id: 2,
+      videoUrl: 'https://www.youtube.com/embed/xWj8Y4fiuoQ',
+      textDescription: "Le Métropolite Calistrate (né en 1938) dirige depuis une trentaine d’années l’éparchie de Kutais-Gaenati et est considéré comme le plus haut dignitaire ecclésiastique de Géorgie occidentale. Chota Ilia Margalitachvili est né dans une région viticole de Kakhétie. Après son service militaire, il suit des études d’ingénieur à Voronej en Russie et à l’institut pédagogique de Telavi, se marie et a un fils avant d’entrer en 1982 comme novice au monastère de Béthanie. La même année, il devient moine et un an plus tard, il est nommé évêque. En 1985, à la demande du patriarche géorgien Elie II, il se rend à Tchernobyl peu de temps après la catastrophe nucléaire pour exprimer sa compassion aux populations touchées. En 1992, il est élevé au rang de métropolite. Jusqu’en 2010, Mgr. Calistrate est recteur de l’académie religieuse du monastère de Ghélati et de l’institut de théologie de Koutaïssi, où il crée des facultés d’histoire de l’art, de journalisme et de médecine. En trente ans, il a inauguré cinq éparchies en Géorgie occidentale et consacré plus de trois cents églises, chapelles et monastères. Il est porteur de la Croix Briliant et de l’Ordre d’or de Saint-Georges, deux des plus hautes distinctions de l’Eglise orthodoxe de Géorgie."
+  },
+
+  {
+      id: 3,
+      videoUrl: 'https://www.youtube.com/embed/n6aPQrCI9pU',
+      textDescription: "Bidsina Iwanischwili (geb. 1956) ist mit einem geschätzten Vermögen von über 6,5 Milliarden US-Dollar der reichste Mann in Georgien. 2011 trat der Geschäftsmann in die Politik ein und wurde zum mächtigen Gegenspieler von Präsident Saakaschwili. Iwanischwili gründete Anfang der 90er-Jahre in Russland die „Rossiskij Kredit“-Bank und stieg in Moskau rasch zu einem Oligarchen der zweiten Reihe auf. Wegen seiner bis heute engen Kontakte zu Russland werfen ihm seine politischen Gegner vor, ein Agent des Kreml zu sein. Dennoch gewann das von ihm gegründete Parteienbündnis „Georgischer Traum“ die Parlamentswahlen 2012 und der Milliardär wurde Premierminister. Durch eine bereits vor dem Machtwechsel beschlossene Verfassungsreform erhielt er somit die Schlüsselposition für die Ausrichtung der georgischen Politik. Iwanischwili leitete eine Annäherung an Russland ein und pflegt enge Kontakte zur christlich-orthodoxen Kirche, die als wichtiges Bindeglied zwischen Russland und Georgien gilt. Gleichzeitig betonte Iwanischwili, den Westkurs fortsetzen und die Anbindung an EU und NATO vorantreiben zu wollen. Iwanischwili ist verheiratet und hat drei Kinder. Sein Adoptivsohn Bera ist ein populärer Rapper."
+  },
+  {
+      id: 4,
+      videoUrl: 'https://www.youtube.com/embed/xa_DQX13Sgw',
+      textDescription: "Dato Imnaischwili (geb. 1954) arbeitet seit mehr als 30 Jahren als Automechaniker in Tiflis und hat sich vor allem auf die Reparaturen russischer Fahrzeugmodelle spezialisiert. Er wurde im russischen Swerdlowsk (Jekaterinburg) geboren. Erst als er zwölf Jahre alt war, zogen seine Eltern zurück nach Georgien. Nach seinem Wehrdienst in der sowjetischen Armee in Nowosibirsk (Russland) absolvierte er in den 70er Jahren eine technische Ausbildung zum Kfz-Mechaniker. 1980 trat er in den Dienst bei den staatlichen Autowerkstätten Nummer 1 für Dienstfahrzeuge und Taxis im Bezirk Isani ein. Durch den Zusammenbruch der Sowjetunion verlor er seine feste Anstellung und arbeitet seitdem auf eigene Rechnung. Seit einer schweren Gasexplosion 2007, bei der mehrere seiner Kollegen ums Leben kamen, mietet er eine Reparatur-Garage in einem benachbarten Werkstattareal. Imnaischwili lebt mit Frau, Tochter und Schwägerin in einem Tiflisser Hinterhof und ist seit sechs Jahren stolzer Opa."
+  },
+  {
+      id: 5,
+      videoUrl: 'https://www.youtube.com/embed/-GkQaaxfk8k',
+      textDescription: "Lascha Bakradse (geb. 1965) ist einer der streitbarsten Intellektuellen Georgiens. Der Direktor des Nationalen Literaturmuseums studierte Literatur- und Sprachwissenschaft in Tiflis, Germanistik in Jena, Politik in Potsdam und Theologie in Bern. Nach einem Promotionsstudium an der Humboldt-Universität Berlin promovierte er in Tiflis mit einer Dissertation über die deutsch-georgischen Beziehungen während des Ersten Weltkriegs. Bakradse arbeitete für das Georgische Auswärtige Amt, als Journalist für verschiedene georgische Medien und als Programmreferent des Goethe-Instituts. Er schrieb den bis heute meist genutzten deutschen Sprachführer für Georgisch und ist seit 1999 in mehreren Filmen als Schauspieler aufgetreten, u.a. als Hauptdarsteller in „Lost Killers“ von Regisseur Dito Tsintsadse. 2006 übernahm er die Leitung der Abteilung für Filmarchivierung und Restauration im Georgischen Nationalen Filmzentrum und ist seit 2010 assoziierter Professor an der Ilia Universität in Tiflis. Bakradse unterstützt regelmäßig Kunstprojekte, engagiert sich für die Menschenrechte in Georgien und nimmt immer wieder in den Medien zur gesellschaftlichen Entwicklung seines Landes Stellung."
+  },
+  {
+    id: 5,
+    videoUrl: 'https://www.youtube.com/embed/jgD7BIFD0xY',
+    textDescription: "Michail („Mischa“) Saakaschwili (geb. 1967) stürmte 2003 mit einer Rose ins georgische Parlament und jagte den sich durch Wahlmanipulationen an der Macht haltenden Präsidenten Eduard Schewardnadze aus dem Amt. Nach dieser „Rosenrevolution“ wurde er selbst zum Präsidenten gewählt und hat in den knapp neun Jahren seiner Amtszeit Georgien auf einen radikalen Westkurs getrimmt. In seiner Ära wurden Polizei und Behörden reformiert, wichtige Straßen gebaut und mit dem Bau einer neuen Eisenbahnverbindung nach Europa begonnen. Bei den Georgiern sind vor allem seine ehrgeizigen Bauprojekte umstritten, mit denen er das Land auch visuell ins 21. Jahrhundert führen wollte – vor allem in der Hafenstadt Batumi. Ein weiteres ehrgeiziges Projekt war „Lasika“: In den georgischen Sümpfen am Schwarzen Meer sollte ein kaukasisches Dubai gebaut werden. 2008 kam es zu einem kurzen Krieg mit Russland um die abtrünnige Provinz Samotschablo („Süd-Ossetien“), für dessen Ausbruch Kritiker auch Saakaschwili verantwortlich machen. Seine zweite Amtszeit wurde von Korruptions- und Foltervorwürfen gegen Mitglieder seiner Regierungspartei überschattet, was maßgeblich zur Niederlage seiner „Nationalen Bewegung“ bei den Parlamentswahlen 2012 beigetragen hat. Saakaschwili ist mit der Niederländerin Sandra Roeloffs verheiratet und hat zwei Söhne."
+},
+];
+
+
+function openCharacterCardText(id){
+  characterCardInfo(id);
+}
+
+function characterCardInfo(item){
+  let characterText = document.createElement('p');
+  characterText.classList.add('post-descr');
+  characterText.innerHTML = characterTextData[item].textDescription; 
+
+  let characterVideo = document.createElement('iframe');
+  characterVideo.classList.add('video-character');
+  characterVideo.setAttribute("src", characterTextData[item].videoUrl);
+
+  textModalContent.appendChild(characterText);
+  videoModalContent.appendChild(characterVideo);
+}
+characterItem.forEach(item => {
+  item.addEventListener('click', () => {
+    textModalContent.innerHTML = '';
+    videoModalContent.innerHTML = '';
+      let imageValue = item.getAttribute('data-char' , item.value);
+      openCharacterCardText(imageValue);
+  });
+});
+
+
+// outside click close function
+let section3 =document.getElementById('section3');
+let section8 = document.getElementById('section8');
+let language = document.getElementById('language-block');
+let section6 =document.getElementById('section6');
+let final = document.querySelector('.final-block');
+let section2 = document.getElementById("container-section2");
+
+
+
+let imgFinalVolga = document.querySelector('.final-img');
+imgFinalVolga.addEventListener('click', function(){
+  characterOverlay.classList.add('hide');
+})
+
+section2.addEventListener('click',modalClose)
+
+function modalClose(){
+  modal.classList.add('hide');
+}
+window.onclick = function(event) {
+  console.log(event.target);
+  if (event.target.parentElement.children[1]==language) {
+    mapFoldTrunk.classList.add("hide");
+    characterOverlay.classList.add('hide');
+  }else if(event.target.parentElement==section6){
+    mapFoldTrunk.classList.add("hide");
+  }else if(event.target.parentElement==section8){
+    characterOverlay.classList.add('hide');
+  }else if(event.target.parentElement.children[1]==final){
+    characterOverlay.classList.add('hide');
+  }  
+}
+
+

@@ -17,7 +17,7 @@
 <body>
     <div class="loader" id="loader"></div>
 
-    <div class="language-block">
+    <div class="language-block" id="language-block">
         <div class="language-div">
             <div class="language" id="GE">GE</div>
             <div class="language" id="EN">EN</div>
@@ -32,11 +32,10 @@
                 <li><a class="nav-li-a active" href="#section2"> <i class="fa-solid fa-car-side"></i> </a> </li>
                 <li><a class="nav-li-a" href="#section3"><i class="fa-solid fa-location-dot"></i></a></li>
                 <li><a class="nav-li-a" href="#section4"><i class="fa-solid fa-clock"></i></a></li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-signal"></i></a></li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-pen"></i> </a></li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-clapperboard"></i></a></li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-video"></i></a></li>
-                <li><a class="nav-li-a" href="#"><i class="fa-solid fa-person"></i> </a></li>
+                <li><a class="nav-li-a" href="#section5"><i class="fa-solid fa-signal"></i></a></li>
+                <li><a class="nav-li-a" href="#section6"><i class="fa-solid fa-clapperboard"></i></a></li>
+                <li><a class="nav-li-a" href="#section7"><i class="fa-solid fa-video"></i></a></li>
+                <li><a class="nav-li-a" href="#section8"><i class="fa-solid fa-person"></i> </a></li>
             </ul>
         </nav>
     </header>
@@ -48,22 +47,24 @@
     </section>
  
     <section class="section2" id="section2">
-        <div class="volga-salon-container" id='volga-salon-container'>
-            <img class="volga-road-img" id="volga-road-img" src="images/interior/00_BG.jpg" alt="road-img">
-            <img class="volga-salon-img" src="images/interior/salon.png" alt="salon-img">
-            <img class="volga-blog-img" src="images/interior/blog.png" alt="blog-img">
-            <img class="volga-map-img" src="images/interior/map.png" alt="map-img">
-            <img class="volga-clock-img" src="images/interior/clock.png" alt="clock-img">
-            <img class="volga-wheel-img" id="volga-wheel-img" src="images/interior/wheel.png" alt="wheel-img">
-            <img class="volga-mirror-img" src="images/interior/mirror.png" alt="mirror-img">
-            <img class="volga-radio-img" src="images/interior/radio.png" alt="radio-img">
-            <img class="volga-sit-img" src="images/interior/sit.png" alt="sit-img">
-            <img class="volga-sticker-img" src="images/interior/sticker.png" alt="sticker-img">
+        <img class="volga-road-img" id="volga-road-img" src="images/interior/00_BG.jpg" alt="road-img">
+        <div class="container-section2" id="container-section2">
+            <div class="volga-salon-container" id='volga-salon-container'>
+                <img class="volga-salon-img" src="images/interior/salon.png" alt="salon-img">
+                <img class="volga-blog-img" src="images/interior/blog.png" alt="blog-img">
+                <img class="volga-map-img" src="images/interior/map.png" alt="map-img">
+                <img class="volga-clock-img" src="images/interior/clock.png" alt="clock-img">
+                <img class="volga-wheel-img" id="volga-wheel-img" src="images/interior/wheel.png" alt="wheel-img">
+                <img class="volga-mirror-img" src="images/interior/mirror.png" alt="mirror-img">
+                <img class="volga-radio-img" src="images/interior/radio.png" alt="radio-img">
+                <img class="volga-sticker-img" src="images/interior/sticker.png" alt="sticker-img">
+            </div>
         </div>
+        <img class="volga-sit-img" id="volga-sit-img" src="images/interior/sit.png" alt="sit-img">
     </section>
     
     <section class="section3" id="section3">
-        <div class="volga-map-wrapper">
+        <div class="volga-map-wrapper" id="volga-map-wrapper">
             <img class="volga-map-img" src="images/map/map_big.png" alt="map-img">
             <img class="volga-map-zugdidi-img pointer" src="images/map/point.png" alt="map-zugdidi-img" data-id="0">
             <img class="volga-map-batumi-img pointer" src="images/map/point.png" alt="map-batumi-img" data-id="1">
@@ -81,7 +82,7 @@
                 <div class="volga-map-modal-zugdidi-videos" id="videos">
                     
                 </div>
-                <div class="volga-map-modal-zugdidi-pictures hide" id="pictures">
+                <div class="volga-map-modal-pictures hide" id="pictures">
 
                  
                 </div>
@@ -113,42 +114,336 @@
 
     <!-- section 5 - radio -->
     <section class="section5" id="section5">
-        <div class="backround-blur-cont">
-            <div class="radio-previous radio-buttons" id="prev-radio"></div>
-            <div class="background-radio-blur"></div>
-            <div class="radio-next radio-buttons" id="next-radio"></div>
-            <div class="background-white-blur"></div>
-        </div>
-        <div class="radio-singer-info">
-            <div class="radio-singer-upper">
-                <div class="singer-image" id="singer-image"></div>
-                <div class="singer-about">
-                    <h4 class="singer-name" id="singer-name">33a</h4>
-                    <p class="singer-info" id="singer-info">Niaz Diasamidze est le chanteur et leader de 33a, un groupe de folk rock géorgien fondé en 1994 à Tbilissi. 33a livre un métissage du folk français et géorgien avec des éléments pop et reggae, sur des textes principalement en géorgien parfois en français. Le nom du groupe fait référence au numéro de l’immeuble de la rue Paliachvili à Tbilissi où habite Niaz Diasamidze.</p>
+        <div id="section-5-parallax" class="section-5-parallax">
+            <div class="backround-blur-cont">
+                <div class="radio-previous radio-buttons" id="prev-radio"></div>
+                <div class="background-radio-blur"></div>
+                <div class="radio-next radio-buttons" id="next-radio"></div>
+                <div class="background-white-blur"></div>
+            </div>
+            <div class="radio-singer-info">
+                <div class="radio-singer-upper">
+                    <div class="singer-image" id="singer-image"></div>
+                    <div class="singer-about">
+                        <h4 class="singer-name" id="singer-name">33a</h4>
+                        <p class="singer-info" id="singer-info">Niaz Diasamidze est le chanteur et leader de 33a, un groupe de folk rock géorgien fondé en 1994 à Tbilissi. 33a livre un métissage du folk français et géorgien avec des éléments pop et reggae, sur des textes principalement en géorgien parfois en français. Le nom du groupe fait référence au numéro de l’immeuble de la rue Paliachvili à Tbilissi où habite Niaz Diasamidze.</p>
+                    </div>
+                </div>
+                <div class="radio-singer-lower">
+                    <div class="radio-music first-music" id="first-music"><span>33a - Galaktioni</span></div>
+                    <div class="radio-music second-music" id="second-music"><span>33a - Me Vzivar Navshi</span></div>
+                    <div class="radio-music third-music" id="third-music"><span>33a - Saperavi Ampelography</span></div>
                 </div>
             </div>
-            <div class="radio-singer-lower">
-                <div class="radio-music first-music" id="first-music"><span>33a - Galaktioni</span></div>
-                <div class="radio-music second-music" id="second-music"><span>33a - Me Vzivar Navshi</span></div>
-                <div class="radio-music third-music" id="third-music"><span>33a - Saperavi Ampelography</span></div>
-            </div>
-        </div>
 
-        <div class="radio-player-wrapper">
-            <p class="player-singer" id="player-singer">33a</p>
-            <p class="player-music" id="player-music">Galaktioni</p>
-            <audio controls class="audio">
-                <source src="music/1/first_music.ogg" type="audio/ogg">
-                <source src="music/1/first_music.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        
-        <div class="background-radio">
+            <div class="radio-player-wrapper" id="overlay-radio">
+                <p class="player-singer" id="player-singer">33a</p>
+                <p class="player-music" id="player-music">Galaktioni</p>
+                <audio controls class="audio" id="audio">
+                    <source id="audio-player-ogg" src="music/1/first_music.ogg" type="audio/ogg">
+                    <source id="audio-player-mp3" src="music/1/first_music.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            
+            <div class="background-radio">
+            </div>
         </div>
     </section>
     <!-- end of section 5 - radio -->
+    <section class="section6" id="section6">
+        <img class="volga-bagage-img" src="images/bagage/00_bg.png" alt="bagage-img">
+    
+        <div class="main-trunk-block">
+            <img class="volga-light-img tunkItem" id="volga-light-img"  src="images/bagage/01light.png" alt="bagageItem-img">
+            <img class="volga-sax-img tunkItem" id="volga-sax-img" src="images/bagage/02sax.png" alt="bagageItem-img">
+            <img class="volga-clap-img tunkItem" id="volga-clap-img" src="images/bagage/03clap.png" alt="bagageItem-img">
+            <img class="volga-camera-img tunkItem" id="volga-camera-img" src="images/bagage/04camera.png" alt="bagageItem-img">
+            <img class="volga-soundrec-img tunkItem" id="volga-soundrec-img" src="images/bagage/05soundrec.png" alt="bagageItem-img">
+            <img class="volga-reel-img tunkItem" id="volga-reel-img" src="images/bagage/06reel.png" alt="bagageItem-img">
+            <img class="volga-tv-img tunkItem" id="volga-tv-img" src="images/bagage/07tv.png" alt="bagageItem-img">
+            <img class="volga-megaphone-img tunkItem" id="volga-megaphone-img" src="images/bagage/08megaphone.png" alt="bagageItem-img">
+            <img class="volga-keyboard-img tunkItem"  id="volga-keyboard-img" src="images/bagage/09keyboard.png" alt="bagageItem-img">
+        </div>
+        <div class="mapFold_bagage hide" id="mapFold-bagage">
+            <div class="info-header">
+                <div class="info-header-item" >Info</div>
+                <img class="info-header-icon" src="images/map/close.png" alt="close" id="close2">
+            </div>
+            <div class="info-block-overlay" id="info-block-overlay">
+                <div class="light-item hide" id="light" data-item="0">
+                    <h2 class="info-title">étalonnage</h2>
+                    <p>Dany Schelby</p>
+                    <p>http://www.schelby.tv</p>
+                    <h2 class="info-title">postproduction</h2>
+                    <p>GIZMO Postproduktion Köln</p> 
+                    <a href="http://www.gizmo-postproduktion.de/index.html">http://www.gizmo-postproduktion.de/index.html</a>
+                    <p>Marc Schubert</p> 
+                    <a href="http://www.gizmo-postproduktion.de/marc-schubert.html">http://www.gizmo-postproduktion.de/marc-schubert.html</a>
+                    <p>Maximilian Dederichs</p> 
+                    <a href="http://www.gizmo-postproduktion.de/maximilian-dederichs.html">http://www.gizmo-postproduktion.de/maximilian-dederichs.html</a>
+                    <p>Jan Wilm Schmülling</p> 
+                    <a href="http://www.gizmo-postproduktion.de/willi-schmuelling.html">http://www.gizmo-postproduktion.de/willi-schmuelling.html</a>4
+                    <h2 class="info-title">Copier HD</h2>
+                    <p>Format Station – Marcus Winckler</p>
+                    <a href="http://www.formatstation.de">http://www.formatstation.de</a>
+                    <h2 class="info-title">fabrication DCP</h2>
+                    <p>Farbkult – Erhard Giesen</p>
+                </div>
+                <div class="light-item hide" id="sax" data-item="1">
+                    <h2 class="info-title">Filmmusiken</h2>
+                    <h3 class="info-sax-title">33a - Niaz Diasamidze</h3>
+                    <p>„C’est la vie“</p>
+                    <p>„Zamtari“ (Bolo Gaseirneba)</p>
+                    <a href="https://www.facebook.com/pages/Niaz-diasamidze/165678373443753">https://www.facebook.com/pages/Niaz-diasamidze/165678373443753</a>
+                    <h3 class="info-sax-title">Mgzavrebi – Gigi Dedalamazishvili</h3>
+                    <p>„Tango“</p>
+                    <p>http://mgzavrebi.com</p>
+                    <h3 class="info-sax-title">Guram Bzvaneli</h3>
+                    <p>„Borjomis Xeoba“</p>
+                    <a href="http://www.geocinema.ge/en/komp.php?kod5=63">http://www.geocinema.ge/en/komp.php?kod5=63</a>
+                    <h3 class="info-sax-title">Bera Ivanishvili</h3>
+                    <p>„Sizmari“</p>
+                    <a href="https://www.facebook.com/beraofficial">https://www.facebook.com/beraofficial</a>
+                    <h2 class="info-title">sowie</h2>
+                    <p>saxophone et consultation musicale</p>
+                    <p>Reso Kiknadze</p>
+                    <p>http://www.reso-kiknadze.de</p>
+                </div>
+                <div class="light-item hide" id="clap" data-item="2">
+                    <h2 class="info-title">réalisateur & producteur</h2>
+                    <p>Stefan Tolz</p>
+                    <a href="www.filmpunkt.com">www.filmpunkt.com</a>
+                    <h2 class="info-title">chargé de production Tbilissi</h2>
+                    <p>Giorgi Khutsishvili</p>
+                    <p>Mzia Kurtsadze</p>
+                    <h2 class="info-title">régisseur ou chef de plateau</h2>
+                    <p>Zurab Khutsishvili</p>
+                    <h2 class="info-title">assistant électricien</h2>
+                    <p>Lado Reizbish</p>
+                    <h2 class="info-title">service production Tbilissi </h2>
+                    <p>Jana Sardlishvili - Studio 99</p>
+                    <h2 class="info-title">equipe de production Cologne</h2>
+                    <p>Katharina Jakobs</p>
+                    <p>Tatjana Urban</p>
+                    <p>Mareike Schreiber</p>
+                    <h3 class="info-sax-title">consultation des droits</h3>
+                    <p>Heiko Wiese</p>
+                    <h3 class="info-sax-title">Direction du film</h3>
+                    <p>Andrea Rupp</p>
+                    <h3 class="info-sax-title">Direction Cologne</h3>
+                    <p>Thomas Müller</p>
+                    <h3 class="info-sax-title">extraits du film</h3>
+                    <p>Georgisches Nationalarchiv</p>
+                    <p>„Als die Mandelbäume blühten“</p>
+                    <p>Lana Gogoberidze (GSSR 1972)</p>
+                    <h3 class="info-sax-title">extraits cités</h3>
+                    <p>Rustavi 2, TV9, MaestroTV</p>
+                    <h3 class="info-sax-title">Merci pour</h3>
+                    <p>Karlen Aiwazian</p>
+                    <p>George Alasania</p>
+                    <p>Tengo Ebralidze</p>
+                    <p>Tina Guelekva</p>
+                    <p>Nona Kandiashvili</p>
+                    <p>Tamuna Kirvalidze</p>
+                    <p>Mariam Skhiladze</p>
+                    <p>Irakli Solomanashvili</p>
+                    <p>sowie an die ARD Studios</p>
+                    <p>Brüssel, Genf und Moskau</p>
+                </div>
+                <div class="light-item hide" id="camera" data-item="3">
+                    <h2 class="info-title">directeur photo</h2>
+                    <p>Thomas Riedelsheimer</p>
+                    <a href="http://www.thomas-riedelsheimer.de/Home.html">http://www.thomas-riedelsheimer.de/Home.html</a>
+                    <p>Marcus Winterbauer</p>
+                    <a href="http://www.winterbauer.net">http://www.winterbauer.net</a>
+                    <h2 class="info-title">caméra DSLR</h2>
+                    <p>Stefan Tolz</p>
+                    <a href="http://www.filmpunkt.com/team_dt_ST.html">http://www.filmpunkt.com/team_dt_ST.html</a>
+                    <h2 class="info-title">2nd Unit</h2>
+                    <p>Niko Tarielashvili</p>
+                    <a href="http://nikotarocv.blogspot.com">http://nikotarocv.blogspot.com</a>
+                    <p>Michael Chauvistré</p>
+                    <a href="www.happy-endings.de"www.happy-endings.de</a>
+                    <p>Giorgi Beridze</p>
+                    <p>Levan Pataraia</p>
+                </div>
+                <div class="light-item hide" id="soundrec" data-item="4">
+                    <h2 class="info-title">son</h2>
+                    <p>Niko Tarielashvili</p>
+                    <a href="http://nikotarocv.blogspot.com">http://nikotarocv.blogspot.com</a>
+                    <p>Thomas Schwarz</p>
+                    <a href="http://www.tolle-idee-agentur.de/html/FR_wir_thomas_schwarz.ht">http://www.tolle-idee-agentur.de/html/FR_wir_thomas_schwarz.ht</a>
+                    <p>Ivane Gvaradze</p>
+                    <p>Falk Spörri</p>
+                    <h2 class="info-title">mixage TV & son</h2>
+                    <p> Marilyn Janssen</p>
+                    <a href="www.marilynjanssen.de">www.marilynjanssen.de</a>
+                    <h2 class="info-title">mixage 5.1 & web</h2>
+                    <p>Paata Godiashvili</p>
+                </div>
+                <div class="light-item hide" id="reel" data-item="5">
+                    <h2 class="info-title">assemblage</h2>
+                    <p>Stefan Tolz</p>
+                    <a href="http://www.filmpunkt.com">http://www.filmpunkt.com</a>
+                    <p>Lena Rem</p>
+                    <a href="http://www.lena-rem.com">http://www.lena-rem.com</a>
+                    <p>Marc Schubert</p>
+                    <a href="http://www.gizmo-postproduktion.de/marc-schubert.html">http://www.gizmo-postproduktion.de/marc-schubert.html</a>
+                    <p>équipe d‘assemblage Tbilissi</p>
+                    <p>Vano Arsenishvili</p>
+                    <a href="http://www.artefact.ge/vano-arsenishvili">http://www.artefact.ge/vano-arsenishvili</a>
+                    <p>Sandro Japaridze</p>
+                </div>
+                <div class="light-item hide" id="tv" data-item="6">
+                    <h2 class="info-title">Unité de programme</h2>
+                    <p>Sabine Rollberg (WDR/ARTE)</p>
+                    <p>Jutta Krug (WDR)</p>
+                    <h2 class="info-title">Unité de programme géopolitique (ARTE Strasbourg)</h2>
+                    <p>Claudia Bucher</p>
+                    <p>Philippe Muller</p>
+                    <h2 class="info-title">assistant de rédaction Cologne</h2>
+                    <p>Meike Mandel</p>
+                    <p>Nina Albrecht</p>
+                    <p>Monica Seidl</p>
+                    <p>Lina Bali</p>
+                    <h2 class="info-title">chargé de production WDR</h2>
+                    <p>Jorge Bogalho</p>
+                    <p>Entwicklungsförderung durch die</p>
+                    <h2 class="info-title">Film- und Medienstiftung NRW</h2>
+                    <h2 class="info-title">(Erstsendung am 22. Oktober 2013 auf ARTE)</h2> 
+                </div>
+                <div class="light-item hide" id="megaphone" data-item="7">
+                    <h2 class="info-title">locuteur (ARTE)</h2>
+                    <p> Sigrid Burkholder </p>
+                    <p> Hüseyin Michael Cirpici</p>
+                    <p> Peter Harting</p>
+                    <p> Gregor Höppner</p>
+                    <p> Tom Jacobs</p>
+                    <p> Matthias Ponnier</p> 
+                    <h2 class="info-title">textes supplémentaires</h2>  
+                    <p>Holger Beckmann</p>
+                    <p>Mathias Erb</p> 
+                    <p>Sabine Rollberg</p>
+                    <h2 class="info-title">locuteur web</h2>
+                    <p>Heike Kühl</p>
+                    <p>Jana Kühl</p>
+                    <p>Eduard Schreiber</p>
+                    <p>Falk Spörri</p>
+                    <h2 class="info-title">traductions</h2>
+                    <p>Khatia Elbakidze-Machavariani</p>
+                    <p>Mzia Kurtsadze</p>
+                    <p>Natia Mikeladze-Bachsoliani</p>
+                    <h2 class="info-title">textes originaux</h2>
+                    <p>Stefan Tolz</p>
+                    <a href="http://www.filmpunkt.com/team_dt_ST.html"> http://www.filmpunkt.com/team_dt_ST.html </a>
+                    <h2>casting et adaption</h2>
+                    <p>Ingrid Terhorst</p>
 
+                </div>
+                <div class="light-item hide" id="keyboard" data-item="8">
+                    <h2 class="info-title">Web design et la mise en œuvre technique</h2>
+                    <p>Sandro Asatiani (Sandro’s Books)</p>
+                    <a href="http://www.sandroasatiani.com">http://www.sandroasatiani.com</a>
+                    <p>Alexi Amniashvili</p>
+                    <p>Shota Ioramashvili</p>
+                    <p>Tamar Kapanadze</p>
+                    <p>Salome Mosiava</p>
+                    <p>Laka Nodia</p>
+                    <p>Ketevan Tchabukiani</p>
+                    <p>Luka Katchkatchishvili</p>
+                    <h2 class="info-title">Graphisme, animation et conception & de l'affiche</h2>
+                    <p>Irakli Gharibashvili (Studio QuBitz)</p>
+                    <a href="https://www.facebook.com/QuBitz.tv?fref=ts">https://www.facebook.com/QuBitz.tv?fref=ts</a>
+                    <h2 class="info-title">Web Editor</h2>
+                    <p>Tamar Kalkhitashvili</p>
+                    <h2>Réalisé et édité par site</h2>
+                    <p>Stefan Tolz</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 
+    <!-- trailer section - section 7 -->
+    <section class="section7" id="section7">
+        <div id="trailerView">
+            <img src="images/trailer/sadgami.png" alt="stander">
+            <div id='view'>
+                <!-- <img src="images/trailer/comingsoon.png" alt="comingsoon"> -->
+                <iframe class="video"src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"></iframe>
+            </div>
+        </div>
+        <div id="playbut">
+            <img src="images/Trailer/caret-square-right.svg" alt="">
+        </div>
+    </section>
+
+    <section class="section8" id="section8">
+        <div class="character-container">
+            <div class="character-item" data-char="0">
+                <img class="character-img" src="images/character/tea.jpg" alt="character-img">
+                <div class="character-content">
+                    <h3 class="character-title">TEA TSULUKIANI</h3>
+                    <p class="character-p">Ministre de la Justice</p>
+                </div>
+            </div>
+            <div class="character-item" data-char="1">
+                <img class="character-img" src="images/character/kalistrate.jpg" alt="character-img">
+                <div class="character-content">
+                    <h3 class="character-title">MGR CALISTRATE</h3>
+                    <p class="character-p">Métropolite de Koutaïssi</p>
+                </div>
+
+            </div>
+            <div class="character-item" data-char="2">
+                <img class="character-img" src="images/character/bidzina.jpg" alt="character-img">
+                <div class="character-content">
+                    <h3 class="character-title">BIDZINA IVANICHVILI</h3>
+                    <p class="character-p">Premier ministre</p>
+                </div>
+            </div>
+            <div class="character-item" data-char="3">
+                <img class="character-img" src="images/character/dato.jpg" alt="character-img">
+                <div class="character-content">
+                    <h3 class="character-title">DATO IMNAICHVILI</h3>
+                    <p class="character-p">Mécanicien auto</p>
+                </div>
+            </div>
+            <div class="character-item" data-char="4">
+                <img class="character-img" src="images/character/lasha.jpg" alt="character-img">
+                <div class="character-content">
+                    <h3 class="character-title">LACHA BAKRADZÉ</h3>
+                    <p class="character-p">Historien et journaliste</p>
+                </div>
+            </div>
+            <div class="character-item" data-char="5">
+                <img class="character-img" src="images/character/misha.jpg" alt="character-img">
+                <div class="character-content">
+                    <h3 class="character-title">MIKHEIL SAAKACHVILI</h3>
+                    <p class="character-p">Président</p>
+                </div>
+            </div>
+        </div>
+        <div class="final-block">
+            <img class="final-img" src="images/character/Volga_Final.png" alt="img-volga">
+        </div>
+        <div class="character-overlay hide">
+            <div class="character-header">
+                <div class="character-text" id="text-item">Text</div>
+                <div class="character-video inActive" id="video-item">Video</div>
+                <img class="info-header-icon" src="images/map/close.png" alt="close" id="close3">
+            </div>
+            <div class="character-modal">
+                <div class="text-modal" id="text-modal">
+
+                </div>
+
+                <div class="character-modal hide" id="video-modal">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="js/script.js"></script>
 </body>
 </html>
