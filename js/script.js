@@ -936,6 +936,8 @@ let language = document.getElementById('language-block');
 let section6 =document.getElementById('section6');
 let final = document.querySelector('.final-block');
 let section2 = document.getElementById("container-section2");
+let section7 = document.getElementById('section7');
+let sit = document.getElementById('volga-sit-img');
 
 
 
@@ -944,10 +946,14 @@ imgFinalVolga.addEventListener('click', function(){
   characterOverlay.classList.add('hide');
 })
 
-section2.addEventListener('click',modalClose)
+section2.addEventListener('click',modalClose);
+sit.addEventListener('click', modalClose);
 
 function modalClose(){
   modal.classList.add('hide');
+  arrowIconOne.classList.add('hide');
+  arrowIconTwo.classList.add('hide');
+  headerVideoClick();
 }
 window.onclick = function(event) {
   console.log(event.target);
@@ -960,7 +966,9 @@ window.onclick = function(event) {
     characterOverlay.classList.add('hide');
   }else if(event.target.parentElement.children[1]==final){
     characterOverlay.classList.add('hide');
-  }  
+  }else if(event.target.parentElement==section7){
+    characterOverlay.classList.add('hide');
+  }
 }
 
 
