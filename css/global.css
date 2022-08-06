@@ -1334,6 +1334,7 @@ body {
           animation: bagageCard 0.4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  z-index: 2;
 }
 .section8 .character-overlay .character-header {
   display: -webkit-box;
