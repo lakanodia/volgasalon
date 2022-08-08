@@ -506,6 +506,8 @@ body {
     background-position: center;
     background-size: cover;
     @include d-flex(flex, center, center);
+    position: relative;
+    z-index: 1;
     .timelineFold  {
         @include d-flex(flex, center, center);
         flex-direction: column;
@@ -598,12 +600,8 @@ body {
     background-position: center;
     background-size: cover;
     .section-5-parallax{
-        width: 1191px;
-        height: 658px;
         position: relative;
-        top: 50%;
         margin: 0 auto;
-        transform: translate(-50%,-50%);
     }
     .background-radio{    
         height: 630px;
@@ -613,10 +611,40 @@ body {
         transform: translate(-50%,-50%);
         position: absolute;
         background-image: url(../images/Radio/radio_big.png);
+        .radio-player-wrapper{
+            font-family: $gentium;
+            position: absolute;
+            top: 72%;
+            left: 50.1%;
+            border-radius: 8px;
+            transform: translate(-50%,-50%);
+            height: 72px;
+            width: 339px;
+            background-color: white;
+            z-index: 2;
+            font-size: 13px;
+            color: #394f5a;
+            opacity: 0;
+            pointer-events: none;
+            p{
+                margin-left: 10px;
+                margin-top: 2px;
+            }
+            
+            .audio{
+                width: 100%;
+                height: 30px;
+                bottom: 0;
+                &::-webkit-media-controls-enclosure {
+                    border-radius: 8px;
+                    background-color: rgb(255, 255, 255);
+                }
+            }
+        }  
         
     }
     .backround-blur-cont{
-        width: 1191px;
+        width: 1190px;
         height: 658px;
         top: 50%;
         left: 50%;
@@ -624,7 +652,7 @@ body {
         position: absolute;
         .background-radio-blur{
             background-color: black;
-            opacity: .7;
+            opacity: .8;
             position: absolute;
             height: 658px;
             width: 1050px;
@@ -641,7 +669,7 @@ body {
             background-color: black;
             background-repeat: no-repeat;
             background-position: center;
-            opacity: .7;
+            opacity: .8;
         }
         .radio-previous{
             background-image: url(../images/Radio/previous.png);
@@ -650,6 +678,9 @@ body {
         .radio-next{
             background-image: url(../images/Radio/next.png);
             right: 1px;
+        }
+        .radio-previous:active, .radio-next:active {
+            transform: translateY(1px);
         }
         .background-white-blur{
             position: absolute;
@@ -663,6 +694,7 @@ body {
         }
     }
     .radio-singer-info{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
         padding: 5px 40px;
         height: 340px;
         width: 770px;
@@ -673,7 +705,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%,-75%);
-        font-family: 'Gentium Book Basic', serif;
+        font-family: $gentium;
         .radio-singer-upper{
             display: flex;
             height: 216px;
@@ -710,29 +742,6 @@ body {
             }
         }        
     }
-    .radio-player-wrapper{
-        font-family: 'Gentium Book Basic', serif;
-        position: absolute;
-        top: 70.9%;
-        left: 50.2%;
-        border-radius: 11px;
-        transform: translate(-50%,-50%);
-        height: 70px;
-        width: 341px;
-        background-color: white;
-        z-index: 2;
-        font-size: 13px;
-        color: #394f5a;
-        opacity: 0;
-        pointer-events: none;
-        p{
-            margin-left: 10px;
-        }
-        .audio{
-            width: 341px;
-            height: 35px;
-        }
-    }   
     #overlay-radio.show-overlay{
         opacity: 1;
         pointer-events: auto;

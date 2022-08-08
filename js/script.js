@@ -67,10 +67,10 @@ window.addEventListener("scroll", function() {
   }
   // section-5-parallax:
   const section5Parallax = document.getElementById('section-5-parallax');
-  var scrolled = window.pageYOffset;
-  var rate = scrolled*.1-650;
-  if (scrolled > 2670 & scrolled < 3700){
-  section5Parallax.style.transform = 'translateY('+rate+'px)';
+  var rate = value/4;
+  if (value > 2910 && value < 4000 ){
+    section5Parallax.style.top = "-33rem";
+    section5Parallax.style.transform = 'translateY('+rate+'px)';
   }
 })
 
