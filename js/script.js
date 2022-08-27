@@ -67,10 +67,10 @@ window.addEventListener("scroll", function() {
   }
   // section-5-parallax:
   const section5Parallax = document.getElementById('section-5-parallax');
-  var scrolled = window.pageYOffset;
-  var rate = scrolled*.1-650;
-  if (scrolled > 2670 & scrolled < 3700){
-  section5Parallax.style.transform = 'translateY('+rate+'px)';
+  var rate = value/4;
+  if (value > 2910 && value < 4000 ){
+    section5Parallax.style.top = "-33rem";
+    section5Parallax.style.transform = 'translateY('+rate+'px)';
   }
 })
 
@@ -923,45 +923,73 @@ characterItem.forEach(item => {
 
 
 // outside click close function
-let section3 =document.getElementById('section3');
-let section8 = document.getElementById('section8');
-let language = document.getElementById('language-block');
-let section6 =document.getElementById('section6');
-let final = document.querySelector('.final-block');
-let section2 = document.getElementById("container-section2");
-let section7 = document.getElementById('section7');
-let sit = document.getElementById('volga-sit-img');
+// let section3 =document.getElementById('section3');
+// let section8 = document.getElementById('section8');
+// let language = document.getElementById('language-block');
+// let section6 =document.getElementById('section6');
+// let final = document.querySelector('.final-block');
+// let section2 = document.getElementById("container-section2");
+// let section7 = document.getElementById('section7');
+// let sit = document.getElementById('volga-sit-img');
 
 
 
-let imgFinalVolga = document.querySelector('.final-img');
-imgFinalVolga.addEventListener('click', function(){
-  characterOverlay.classList.add('hide');
-})
+// let imgFinalVolga = document.querySelector('.final-img');
+// imgFinalVolga.addEventListener('click', function(){
+//   characterOverlay.classList.add('hide');
+// })
 
-section2.addEventListener('click',modalClose);
-sit.addEventListener('click', modalClose);
+// section2.addEventListener('click',modalClose);
+// sit.addEventListener('click', modalClose);
 
-function modalClose(){
-  modal.classList.add('hide');
-  arrowIconOne.classList.add('hide');
-  arrowIconTwo.classList.add('hide');
-  headerVideoClick();
-}
-window.onclick = function(event) {
-  console.log(event.target);
-  if (event.target.parentElement.children[1]==language) {
-    mapFoldTrunk.classList.add("hide");
+// function modalClose(){
+//   modal.classList.add('hide');
+//   arrowIconOne.classList.add('hide');
+//   arrowIconTwo.classList.add('hide');
+//   headerVideoClick();
+// }
+// window.onclick = function(event) {
+//   console.log(event.target);
+//   if (event.target.parentElement.children[1]==language) {
+//     mapFoldTrunk.classList.add("hide");
+//     characterOverlay.classList.add('hide');
+//   }else if(event.target.parentElement==section6){
+//     mapFoldTrunk.classList.add("hide");
+//   }else if(event.target.parentElement==section8){
+//     characterOverlay.classList.add('hide');
+//   }else if(event.target.parentElement.children[1]==final){
+//     characterOverlay.classList.add('hide');
+//   }else if(event.target.parentElement==section7){
+//     characterOverlay.classList.add('hide');
+//   }
+// }
+
+
+document.addEventListener('mouseup', function(e) {
+  if (!characterOverlay.contains(e.target)) {
     characterOverlay.classList.add('hide');
-  }else if(event.target.parentElement==section6){
-    mapFoldTrunk.classList.add("hide");
-  }else if(event.target.parentElement==section8){
-    characterOverlay.classList.add('hide');
-  }else if(event.target.parentElement.children[1]==final){
-    characterOverlay.classList.add('hide');
-  }else if(event.target.parentElement==section7){
-    characterOverlay.classList.add('hide');
+    headertextClick();
   }
+});
+
+
+
+document.addEventListener('mouseup', function(k) {
+  if (!mapFoldTrunk.contains(k.target)) {
+    mapFoldTrunk.classList.add('hide');
+  }
+});
+
+
+document.addEventListener('mouseup',mapOutsideCklick);
+
+
+function mapOutsideCklick(b) {
+  if (!modal.contains(b.target) && !arrowIconOne.contains(b.target) && !arrowIconTwo.contains(b.target)) {
+    modal.classList.add('hide');
+    arrowIconOne.classList.add('hide');
+    arrowIconTwo.classList.add('hide');
+    headerVideoClick();
+  }
+  
 }
-
-
