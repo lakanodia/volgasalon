@@ -149,6 +149,15 @@ body {
                 @include position-property(absolute, 36%, 21.5%);
                 width: 20%;
                 cursor: pointer;
+                transition: 0.5s;
+            }
+            .volga-wheel-img:hover{
+                animation: rotate 10s forwards;
+            }
+            @keyframes rotate {
+               50% {
+                transform: rotate(45deg);
+               }
             }
             .volga-blog-img{
                 @include position-property(absolute, 51%, 67%);
@@ -198,7 +207,7 @@ body {
                 transition: 0.5s;
             }
             .volga-sticker-img:hover{
-                opacity: 1;
+                transform: translate(5%);
             }
         }
     }
@@ -1102,3 +1111,4 @@ body {
         font-size: 13px;
     }
 }
+

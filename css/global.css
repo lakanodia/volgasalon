@@ -292,6 +292,24 @@ body {
   left: 21.5%;
   width: 20%;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section2 .container-section2 .volga-salon-container .volga-wheel-img:hover {
+  -webkit-animation: rotate 10s forwards;
+          animation: rotate 10s forwards;
+}
+@-webkit-keyframes rotate {
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+@keyframes rotate {
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
 }
 .section2 .container-section2 .volga-salon-container .volga-blog-img {
   position: absolute;
@@ -357,7 +375,8 @@ body {
   transition: 0.5s;
 }
 .section2 .container-section2 .volga-salon-container .volga-sticker-img:hover {
-  opacity: 1;
+  -webkit-transform: translate(5%);
+          transform: translate(5%);
 }
 .section2 .volga-sit-img {
   position: absolute;
