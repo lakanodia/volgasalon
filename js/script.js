@@ -67,9 +67,9 @@ window.addEventListener("scroll", function() {
   }
   // section-5-parallax:
   const section5Parallax = document.getElementById('section-5-parallax');
-  var rate = value/4;
-  if (value > 2910 && value < 4000 ){
-    section5Parallax.style.top = "-33rem";
+  var rate = value/5;
+  if (value > 2900 && value < 3500 ){
+    section5Parallax.style.top = "-16rem";
     section5Parallax.style.transform = 'translateY('+rate+'px)';
   }
 })
