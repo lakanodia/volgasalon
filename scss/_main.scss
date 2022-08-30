@@ -516,7 +516,7 @@ body {
     background-size: cover;
     @include d-flex(flex, center, center);
     position: relative;
-    z-index: 1;
+    z-index: 9;
     .timelineFold  {
         @include d-flex(flex, center, center);
         flex-direction: column;
