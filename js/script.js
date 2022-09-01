@@ -922,49 +922,6 @@ characterItem.forEach(item => {
 });
 
 
-// outside click close function
-// let section3 =document.getElementById('section3');
-// let section8 = document.getElementById('section8');
-// let language = document.getElementById('language-block');
-// let section6 =document.getElementById('section6');
-// let final = document.querySelector('.final-block');
-// let section2 = document.getElementById("container-section2");
-// let section7 = document.getElementById('section7');
-// let sit = document.getElementById('volga-sit-img');
-
-
-
-// let imgFinalVolga = document.querySelector('.final-img');
-// imgFinalVolga.addEventListener('click', function(){
-//   characterOverlay.classList.add('hide');
-// })
-
-// section2.addEventListener('click',modalClose);
-// sit.addEventListener('click', modalClose);
-
-// function modalClose(){
-//   modal.classList.add('hide');
-//   arrowIconOne.classList.add('hide');
-//   arrowIconTwo.classList.add('hide');
-//   headerVideoClick();
-// }
-// window.onclick = function(event) {
-//   console.log(event.target);
-//   if (event.target.parentElement.children[1]==language) {
-//     mapFoldTrunk.classList.add("hide");
-//     characterOverlay.classList.add('hide');
-//   }else if(event.target.parentElement==section6){
-//     mapFoldTrunk.classList.add("hide");
-//   }else if(event.target.parentElement==section8){
-//     characterOverlay.classList.add('hide');
-//   }else if(event.target.parentElement.children[1]==final){
-//     characterOverlay.classList.add('hide');
-//   }else if(event.target.parentElement==section7){
-//     characterOverlay.classList.add('hide');
-//   }
-// }
-
-
 document.addEventListener('mouseup', function(e) {
   if (!characterOverlay.contains(e.target)) {
     characterOverlay.classList.add('hide');
@@ -993,3 +950,47 @@ function mapOutsideCklick(b) {
   }
   
 }
+
+
+
+let videoDataFr = [
+  {
+      id: 1,
+      videoUrl: 'https://player.vimeo.com/video/77417889?h=f15a81e41e',
+      descrb:'Maka Samuchia: Journaliste de 25 ans, elle travaille pour la chaîne géorgienne « Odischi ». Pendant la guerre russo-géorgienne en 2008, quand les troupes russes occupèrent une grande partie de l’Ouest du pays, elle a vu Zougdidi devenir une ville fantôme. Avec sa collègue Tamar Lataria, elle prépare une série de documentaires sur la mission de l’UE en Géorgie.'
+  },
+  {
+      id: 2,
+      videoUrl: 'https://player.vimeo.com/video/77417881?h=5ba39e88ad',
+      descrb:'Natia Bolkavadze, alias Frida:Chaque année, cette artiste remonte sa paillotte sur la plage de Kvariati,au sud de la ville de Batoumi. Un endroit très prisé par les bobos de Tbilissi. La spécialité de Frida est le « chwichtari » (pain de maïs au fromage).'
+  },
+
+  {
+      id: 3,
+      videoUrl: 'https://player.vimeo.com/video/77417883?h=2239825476',
+      descrb:'Mamuka Khazaradze:Le château Mukhrani, l’un des projets favoris du banquier de Tbilissi, est actuellement transformé en hôtel de grand luxe – avec un petit théâtre en plein air et des écuries. Cet amateur de chevaux part chaque année faire des randonnées équestres dans les hautes vallées du Grand Caucase.'
+  },
+  {
+      id: 4,
+      videoUrl: ' https://player.vimeo.com/video/77417887?h=87befd7aac',
+      descrb:'Mamuka Khazaradze:C’est en s’entourant d’étudiants en sciences économiques que ce banquier fonde dans les années 90 ce qui est devenu un véritable empire… A l’époque, pour créer une banque, il suffisait d’un capital de 500 dollars. TBC est aujourd’hui la deuxième banque du pays. Mamuka soutient des projets environnementaux et culturels.'
+  },
+  {
+      id: 5,
+      videoUrl: 'https://player.vimeo.com/video/77419018?h=79534b15b0',
+      descrb:'Pavle Zereteli:Cet homme de 81 ans, qui a vécu les débuts du combinat d’acier et de fer à Roustavi, a formé des générations de sidérurgistes. Après l’effondrement de l’Union soviétique, il s’est engagé, avec le président Gamsakhourdia, pour la sauvegarde du site industriel. Aujourd’hui encore, il vient tous les jours dans l’usine pour conseiller la direction.'
+  },
+];
+
+
+
+
+let languageFr = document.getElementById('FR');
+languageFr.addEventListener('click', function (i) {
+  for (let i = 0; i < videoData.length; i++) {
+    const element = videoData[i];
+    console.log(element.descrb);
+    element.descrb = videoDataFr[i].descrb;
+    element.videoUrl = videoDataFr[i].videoUrl;
+  }
+})
