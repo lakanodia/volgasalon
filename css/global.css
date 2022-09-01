@@ -734,7 +734,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .section4 .timelineFold {
   display: -webkit-box;
