@@ -88,6 +88,7 @@ body {
             @include border-shape(5px double white, 50%, 20px );
             @include d-flex(flex, center, center);
             margin-bottom: 10px;
+            margin-top: 10px;
             color: $color01;
             cursor: pointer;
             background-color: $color03;
