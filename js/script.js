@@ -25,36 +25,6 @@ function toggleMenuFunction() {
     }
 }
 
-// let item = document.getElementById('volga-salon-container').childNodes
-// item.forEach(img => {
-//     img.addEventListener('click', () => {
-//         let imageValue = img.getAttribute('class' , img.value);
-//         switch (imageValue) {
-//             case "volga-clock-img":
-//               alert("რომელი საათია? რომელი საათია...");
-//               break;
-//             case "volga-map-img":
-//               alert("მე რუკა ვარ");
-//               break;
-//             case "volga-sticker-img":
-//               alert("ვიღაც უცხო ხალხი");
-//               break;
-//             case "volga-mirror-img":
-//               alert("mirror mirror on the wall");
-//               break;
-//             case "volga-radio-img":
-//               alert("მე ვარ რადიო");
-//               break;
-//             case "volga-wheel-img":
-//               alert("მე ვარ საჭე");
-//               break;
-//             case "volga-blog-img":
-//               alert("უუპს");
-//               break;
-//           }
-//     });
-// });
-
 // scroll aniamtions 
 window.addEventListener("scroll", function() {
   let value = scrollY;
@@ -98,30 +68,30 @@ closeBtn.addEventListener("click",()=>{
 // in modal pages
 let videoData = [
   {
-      id: 1,
-      videoUrl: 'https://player.vimeo.com/video/77050912?h=0beffb1750',
-      descrb:'Maka Samuschia: Die 25-jährige Journalistin arbeitet für das mengrelische Fernsehen „Odischi“.Während des russisch-georgischen Krieges 2008, als russische Truppen große Teile Westgeorgiens besetzten, erlebte sie Zugdidi als „Geisterstadt“. Mit ihrer Kollegin Tamar Lataria arbeitet sie an einer mehrteiligen Fernsehreihe über die EU-Mission in Georgien.'
+    id: 1,
+    videoUrl: 'https://player.vimeo.com/video/77417889?h=f15a81e41e',
+    descrb:'Maka Samuchia: Journaliste de 25 ans, elle travaille pour la chaîne géorgienne « Odischi ». Pendant la guerre russo-géorgienne en 2008, quand les troupes russes occupèrent une grande partie de l’Ouest du pays, elle a vu Zougdidi devenir une ville fantôme. Avec sa collègue Tamar Lataria, elle prépare une série de documentaires sur la mission de l’UE en Géorgie.'
   },
   {
       id: 2,
-      videoUrl: 'https://player.vimeo.com/video/77049851?h=a22aeb104b',
-      descrb:'Frida: Die Künstlerin baut ihr „Café Muschel“ jedes Jahr selbst in Kvariati auf. Der Strand liegt südlich von Batumi und ist bei junge Leuten aus der Kulturszene und Bohemiens aus Tiflis sehr beliebt – wie Fridas Spezialitäten, z.B. das Chwischtari (Maisbrot mit Käse).'
+      videoUrl: 'https://player.vimeo.com/video/77417881?h=5ba39e88ad',
+      descrb:'Natia Bolkavadze, alias Frida:Chaque année, cette artiste remonte sa paillotte sur la plage de Kvariati,au sud de la ville de Batoumi. Un endroit très prisé par les bobos de Tbilissi. La spécialité de Frida est le « chwichtari » (pain de maïs au fromage).'
   },
 
   {
       id: 3,
       videoUrl: 'https://player.vimeo.com/video/77417883?h=2239825476',
-      descrb:'Mamuka Khasaradze: Das Schloss Mukhrani ist ein Lieblingsprojekt des Bankers aus Tiflis. Er läßt es derzeit zu einem Hotel ausgebauen – mit kleinem Freilichttheater und Stallungen. Der Pferdeliebhaber reitet jedes Jahr auch in den Hochtälern des großen Kaukasus.'
+      descrb:'Mamuka Khazaradze:Le château Mukhrani, l’un des projets favoris du banquier de Tbilissi, est actuellement transformé en hôtel de grand luxe – avec un petit théâtre en plein air et des écuries. Cet amateur de chevaux part chaque année faire des randonnées équestres dans les hautes vallées du Grand Caucase.'
   },
   {
       id: 4,
-      videoUrl: 'https://player.vimeo.com/video/77051709?h=09aea399f7',
-      descrb:'Mamuka Khasaradze: Der Banker begründete sein Imperium mit Wirtschaftsstudenten in den 90er Jahren, als Banken nur ein Startkapital von 500 Dollar vorweisen mussten. Die TBC-Bank ist heute die zweitgrößte Bank in Georgien und Mamuka engagiert sich in Umwelt- und Kulturprojekten.'
+      videoUrl: ' https://player.vimeo.com/video/77417887?h=87befd7aac',
+      descrb:'Mamuka Khazaradze:C’est en s’entourant d’étudiants en sciences économiques que ce banquier fonde dans les années 90 ce qui est devenu un véritable empire… A l’époque, pour créer une banque, il suffisait d’un capital de 500 dollars. TBC est aujourd’hui la deuxième banque du pays. Mamuka soutient des projets environnementaux et culturels.'
   },
   {
       id: 5,
-      videoUrl: 'https://player.vimeo.com/video/77050909?h=f201c73c85',
-      descrb:'Pavle Zereteli: Der 81-jährige erlebte die Anfänge des Stahl- und Eisenkombinats in Rustavi mit und hat Generationen von Stahlarbeiten ausgebildet. Nach dem Zusammenbruch der Sowjetunion setzte er sich beim damaligen Präsidenten Gamsachurdia für die Rettung des Werkes ein. Auch heute noch kommt er täglich ins Werk und berät die Geschäftsleitung.'
+      videoUrl: 'https://player.vimeo.com/video/77419018?h=79534b15b0',
+      descrb:'Pavle Zereteli:Cet homme de 81 ans, qui a vécu les débuts du combinat d’acier et de fer à Roustavi, a formé des générations de sidérurgistes. Après l’effondrement de l’Union soviétique, il s’est engagé, avec le président Gamsakhourdia, pour la sauvegarde du site industriel. Aujourd’hui encore, il vient tous les jours dans l’usine pour conseiller la direction.'
   },
 ];
 
@@ -299,12 +269,12 @@ function openPictureCard(id){
 function setUpSwiper() {
   const productContainers = [...document.querySelectorAll(".swiper-content")];
   const nxtBtn = [...document.querySelectorAll(".next")];
-  console.log(nxtBtn);
+  // console.log(nxtBtn);
   const preBtn = [...document.querySelectorAll(".previous")];
 
   productContainers.forEach((swiperContent, i) => {
-    console.log(swiperContent);
-    console.log(i);
+    // console.log(swiperContent);
+    // console.log(i);
     let containerDimensions = swiperContent.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
     
@@ -811,7 +781,7 @@ let playbut = document.getElementById('playbut')
 window.addEventListener("scroll", () => {
   if (scrollY > 5500 && scrollY < 5710) {
     playbut.style.bottom = `${this.scrollY*0.7-3650}px`;
-    console.log(scrollY)
+    // console.log(scrollY);
   }
 })
 playbut.addEventListener("click", function() {
@@ -876,22 +846,22 @@ let characterTextData = [
   {
       id: 3,
       videoUrl: 'https://www.youtube.com/embed/n6aPQrCI9pU',
-      textDescription: "Bidsina Iwanischwili (geb. 1956) ist mit einem geschätzten Vermögen von über 6,5 Milliarden US-Dollar der reichste Mann in Georgien. 2011 trat der Geschäftsmann in die Politik ein und wurde zum mächtigen Gegenspieler von Präsident Saakaschwili. Iwanischwili gründete Anfang der 90er-Jahre in Russland die „Rossiskij Kredit“-Bank und stieg in Moskau rasch zu einem Oligarchen der zweiten Reihe auf. Wegen seiner bis heute engen Kontakte zu Russland werfen ihm seine politischen Gegner vor, ein Agent des Kreml zu sein. Dennoch gewann das von ihm gegründete Parteienbündnis „Georgischer Traum“ die Parlamentswahlen 2012 und der Milliardär wurde Premierminister. Durch eine bereits vor dem Machtwechsel beschlossene Verfassungsreform erhielt er somit die Schlüsselposition für die Ausrichtung der georgischen Politik. Iwanischwili leitete eine Annäherung an Russland ein und pflegt enge Kontakte zur christlich-orthodoxen Kirche, die als wichtiges Bindeglied zwischen Russland und Georgien gilt. Gleichzeitig betonte Iwanischwili, den Westkurs fortsetzen und die Anbindung an EU und NATO vorantreiben zu wollen. Iwanischwili ist verheiratet und hat drei Kinder. Sein Adoptivsohn Bera ist ein populärer Rapper."
+      textDescription: "Bidzina Ivanichvili (né en 1956) est l’homme le plus riche de Géorgie, avec une fortune estimée à plus de 6,5 milliards de dollars. Entré en politique en 2011, l’homme d’affaires se pose rapidement en adversaire du président en exercice, Saakachvili. Ivanichvili a fondé la banque Rossyiski Kredit au début des années 1990, et très vite, il devient un oligarque de second plan à Moscou. En raison des liens étroits avec la Russie qu’il a conservés jusqu’à aujourd’hui, ses opposants politiques l’accusent d’être un agent du Kremlin – ce qui n’empêche pas la coalition Rêve géorgien, fondée par Ivanichvili, de remporter les législatives de 2012 ; le milliardaire est nommé Premier ministre. Grâce à une réforme constitutionnelle, l’essentiel du pouvoir passe des mains du président sortant qui ne pouvait se représenter vers celles du Premier ministre. Ce dernier peut alors orienter la politique géorgienne. Le ministre milliardaire amorce un rapprochement avec la Russie et renforce les relations avec l’Eglise orthodoxe, considérée comme un maillon essentiel entre la Russie et la Géorgie. Parallèlement, il veut poursuivre la révolution néolibérale de la Géorgie et se rapprocher de l’Union européenne et de l’OTAN. Il est marié et père de trois enfants. Bera, son fils adoptif, est un rappeur connu."
   },
   {
       id: 4,
       videoUrl: 'https://www.youtube.com/embed/xa_DQX13Sgw',
-      textDescription: "Dato Imnaischwili (geb. 1954) arbeitet seit mehr als 30 Jahren als Automechaniker in Tiflis und hat sich vor allem auf die Reparaturen russischer Fahrzeugmodelle spezialisiert. Er wurde im russischen Swerdlowsk (Jekaterinburg) geboren. Erst als er zwölf Jahre alt war, zogen seine Eltern zurück nach Georgien. Nach seinem Wehrdienst in der sowjetischen Armee in Nowosibirsk (Russland) absolvierte er in den 70er Jahren eine technische Ausbildung zum Kfz-Mechaniker. 1980 trat er in den Dienst bei den staatlichen Autowerkstätten Nummer 1 für Dienstfahrzeuge und Taxis im Bezirk Isani ein. Durch den Zusammenbruch der Sowjetunion verlor er seine feste Anstellung und arbeitet seitdem auf eigene Rechnung. Seit einer schweren Gasexplosion 2007, bei der mehrere seiner Kollegen ums Leben kamen, mietet er eine Reparatur-Garage in einem benachbarten Werkstattareal. Imnaischwili lebt mit Frau, Tochter und Schwägerin in einem Tiflisser Hinterhof und ist seit sechs Jahren stolzer Opa."
+      textDescription: "Dato Imnaischwili (né en 1954) est mécanicien automobile, spécialisé dans les réparations des véhicules russes, et vit à Tbilissi depuis plus de trente ans. Né en Russie à Sverdlovsk (Iekaterinbourg), il n’a que 12 ans quand ses parents reviennent s’installer en Géorgie. Dans les années 1970, après son service militaire dans l’armée soviétique à Novossibirsk (Russie), il suit une formation de mécanicien automobile. En 1980, il entre aux ateliers automobiles d’État n° 1 pour les véhicules de fonction et les taxis, dans le district d’Isani. Quand l’Union soviétique s’effondre en 1991, il perd son emploi et décide alors de se mettre à son compte. Depuis une grave explosion de gaz qui a coûté la vie à plusieurs de ses collègues en 2007, il loue un garage dans une zone d’activités voisine. Ivanichvili vit avec sa femme, sa fille et sa belle-sœur dans une arrière-cour de Tbilissi ; c’est aussi un grand-père heureux depuis six ans. "
   },
   {
       id: 5,
       videoUrl: 'https://www.youtube.com/embed/-GkQaaxfk8k',
-      textDescription: "Lascha Bakradse (geb. 1965) ist einer der streitbarsten Intellektuellen Georgiens. Der Direktor des Nationalen Literaturmuseums studierte Literatur- und Sprachwissenschaft in Tiflis, Germanistik in Jena, Politik in Potsdam und Theologie in Bern. Nach einem Promotionsstudium an der Humboldt-Universität Berlin promovierte er in Tiflis mit einer Dissertation über die deutsch-georgischen Beziehungen während des Ersten Weltkriegs. Bakradse arbeitete für das Georgische Auswärtige Amt, als Journalist für verschiedene georgische Medien und als Programmreferent des Goethe-Instituts. Er schrieb den bis heute meist genutzten deutschen Sprachführer für Georgisch und ist seit 1999 in mehreren Filmen als Schauspieler aufgetreten, u.a. als Hauptdarsteller in „Lost Killers“ von Regisseur Dito Tsintsadse. 2006 übernahm er die Leitung der Abteilung für Filmarchivierung und Restauration im Georgischen Nationalen Filmzentrum und ist seit 2010 assoziierter Professor an der Ilia Universität in Tiflis. Bakradse unterstützt regelmäßig Kunstprojekte, engagiert sich für die Menschenrechte in Georgien und nimmt immer wieder in den Medien zur gesellschaftlichen Entwicklung seines Landes Stellung."
+      textDescription: "Lacha Bakradzé (né en 1965) est l’un des intellectuels les plus controversés de Géorgie. Le directeur du musée national de la littérature a fait des études de littérature et de langues à Tbilissi, d’allemand à Iéna, de sciences politiques à Potsdam et de théologie à Berne. Après des études doctorales à l’université Humboldt de Berlin, il a soutenu sa thèse à Tbilissi sur les relations germano-géorgiennes pendant la Première Guerre mondiale. Bakradzé a été collaborateur au ministère des Affaires étrangères de Géorgie, journaliste pour divers médias géorgiens et chargé du programme à l’institut Goethe. Il est l’auteur de la plupart des guides linguistiques en allemand sur la Géorgie, et depuis 1999, on a pu le voir jouer dans plusieurs films (il tient d’ailleurs le premier rôle dans Lost Killers du réalisateur Dito Tsintsadzé). Il prend la direction du département des archives cinématographiques et de la restauration des films au Centre national du cinéma en 2006. Il est professeur associé à l’université Ilia de Tbilissi depuis 2010. Il soutient régulièrement des projets artistiques, milite pour les droits de l’homme en Géorgie et prend régulièrement position dans les médias sur l’évolution de la société géorgienne."
   },
   {
     id: 5,
     videoUrl: 'https://www.youtube.com/embed/jgD7BIFD0xY',
-    textDescription: "Michail („Mischa“) Saakaschwili (geb. 1967) stürmte 2003 mit einer Rose ins georgische Parlament und jagte den sich durch Wahlmanipulationen an der Macht haltenden Präsidenten Eduard Schewardnadze aus dem Amt. Nach dieser „Rosenrevolution“ wurde er selbst zum Präsidenten gewählt und hat in den knapp neun Jahren seiner Amtszeit Georgien auf einen radikalen Westkurs getrimmt. In seiner Ära wurden Polizei und Behörden reformiert, wichtige Straßen gebaut und mit dem Bau einer neuen Eisenbahnverbindung nach Europa begonnen. Bei den Georgiern sind vor allem seine ehrgeizigen Bauprojekte umstritten, mit denen er das Land auch visuell ins 21. Jahrhundert führen wollte – vor allem in der Hafenstadt Batumi. Ein weiteres ehrgeiziges Projekt war „Lasika“: In den georgischen Sümpfen am Schwarzen Meer sollte ein kaukasisches Dubai gebaut werden. 2008 kam es zu einem kurzen Krieg mit Russland um die abtrünnige Provinz Samotschablo („Süd-Ossetien“), für dessen Ausbruch Kritiker auch Saakaschwili verantwortlich machen. Seine zweite Amtszeit wurde von Korruptions- und Foltervorwürfen gegen Mitglieder seiner Regierungspartei überschattet, was maßgeblich zur Niederlage seiner „Nationalen Bewegung“ bei den Parlamentswahlen 2012 beigetragen hat. Saakaschwili ist mit der Niederländerin Sandra Roeloffs verheiratet und hat zwei Söhne."
+    textDescription: " Mikheil (« Mischa ») Saakachvili (né en 1967) entre en 2003 au Parlement géorgien, une rose à la main. Il chasse le président Édouard Chevardnadze qui s’était maintenu au pouvoir en truquant grossièrement les élections. Après la Révolution des roses, Saakachvili est élu à la présidence du pays et, pendant neuf ans, il met le cap sur le libéralisme économique. Sous son administration, la police et la fonction publique sont réformées, de grands axes routiers sont construits et une liaison ferroviaire mise en chantier en direction de l’Europe de l’Ouest. Ces projets de construction pharaoniques destinés à faire entrer la Géorgie – sur le plan visuel aussi – dans le XXIe siècle, suscitent une contestation au sein de la population, notamment celui du port de Batoumi sur la mer Noire, et celui de « Lasika », au milieu des marais sur la mer Noire mais censé devenir le Dubaï du Caucase. En 2008, la Géorgie et la Russie s’affrontent quelques jours durant pour obtenir la suprématie sur l’Ossétie du Sud (qui fait partie de la communauté historique géorgienne de Samachablo) ; certains concitoyens rendront Saakachvili responsable des velléités d’indépendance de cette province. Son deuxième mandat est entaché par les accusations de corruption et de torture portées contre des membres de son parti, ce qui contribue largement à la défaite du Mouvement National Uni (MNU) aux élections législatives de 2012. Saakachvili est marié à Sandra Roeloffs, d’origine néerlandaise, avec laquelle il a eu deux fils. "
 },
 ];
 
@@ -952,45 +922,250 @@ function mapOutsideCklick(b) {
 }
 
 
-
-let videoDataFr = [
+let videoDataDe = [
   {
-      id: 1,
-      videoUrl: 'https://player.vimeo.com/video/77417889?h=f15a81e41e',
-      descrb:'Maka Samuchia: Journaliste de 25 ans, elle travaille pour la chaîne géorgienne « Odischi ». Pendant la guerre russo-géorgienne en 2008, quand les troupes russes occupèrent une grande partie de l’Ouest du pays, elle a vu Zougdidi devenir une ville fantôme. Avec sa collègue Tamar Lataria, elle prépare une série de documentaires sur la mission de l’UE en Géorgie.'
+    videoUrl: 'https://player.vimeo.com/video/77050912?h=0beffb1750',
+    descrb:'Maka Samuschia: Die 25-jährige Journalistin arbeitet für das mengrelische Fernsehen „Odischi“.Während des russisch-georgischen Krieges 2008, als russische Truppen große Teile Westgeorgiens besetzten, erlebte sie Zugdidi als „Geisterstadt“. Mit ihrer Kollegin Tamar Lataria arbeitet sie an einer mehrteiligen Fernsehreihe über die EU-Mission in Georgien.'
   },
   {
-      id: 2,
-      videoUrl: 'https://player.vimeo.com/video/77417881?h=5ba39e88ad',
-      descrb:'Natia Bolkavadze, alias Frida:Chaque année, cette artiste remonte sa paillotte sur la plage de Kvariati,au sud de la ville de Batoumi. Un endroit très prisé par les bobos de Tbilissi. La spécialité de Frida est le « chwichtari » (pain de maïs au fromage).'
+      videoUrl: 'https://player.vimeo.com/video/77049851?h=a22aeb104b',
+      descrb:'Frida: Die Künstlerin baut ihr „Café Muschel“ jedes Jahr selbst in Kvariati auf. Der Strand liegt südlich von Batumi und ist bei junge Leuten aus der Kulturszene und Bohemiens aus Tiflis sehr beliebt – wie Fridas Spezialitäten, z.B. das Chwischtari (Maisbrot mit Käse).'
   },
 
   {
-      id: 3,
       videoUrl: 'https://player.vimeo.com/video/77417883?h=2239825476',
-      descrb:'Mamuka Khazaradze:Le château Mukhrani, l’un des projets favoris du banquier de Tbilissi, est actuellement transformé en hôtel de grand luxe – avec un petit théâtre en plein air et des écuries. Cet amateur de chevaux part chaque année faire des randonnées équestres dans les hautes vallées du Grand Caucase.'
+      descrb:'Mamuka Khasaradze: Das Schloss Mukhrani ist ein Lieblingsprojekt des Bankers aus Tiflis. Er läßt es derzeit zu einem Hotel ausgebauen – mit kleinem Freilichttheater und Stallungen. Der Pferdeliebhaber reitet jedes Jahr auch in den Hochtälern des großen Kaukasus.'
   },
   {
-      id: 4,
-      videoUrl: ' https://player.vimeo.com/video/77417887?h=87befd7aac',
-      descrb:'Mamuka Khazaradze:C’est en s’entourant d’étudiants en sciences économiques que ce banquier fonde dans les années 90 ce qui est devenu un véritable empire… A l’époque, pour créer une banque, il suffisait d’un capital de 500 dollars. TBC est aujourd’hui la deuxième banque du pays. Mamuka soutient des projets environnementaux et culturels.'
+      videoUrl: 'https://player.vimeo.com/video/77051709?h=09aea399f7',
+      descrb:'Mamuka Khasaradze: Der Banker begründete sein Imperium mit Wirtschaftsstudenten in den 90er Jahren, als Banken nur ein Startkapital von 500 Dollar vorweisen mussten. Die TBC-Bank ist heute die zweitgrößte Bank in Georgien und Mamuka engagiert sich in Umwelt- und Kulturprojekten.'
   },
   {
-      id: 5,
-      videoUrl: 'https://player.vimeo.com/video/77419018?h=79534b15b0',
-      descrb:'Pavle Zereteli:Cet homme de 81 ans, qui a vécu les débuts du combinat d’acier et de fer à Roustavi, a formé des générations de sidérurgistes. Après l’effondrement de l’Union soviétique, il s’est engagé, avec le président Gamsakhourdia, pour la sauvegarde du site industriel. Aujourd’hui encore, il vient tous les jours dans l’usine pour conseiller la direction.'
+      videoUrl: 'https://player.vimeo.com/video/77050909?h=f201c73c85',
+      descrb:'Pavle Zereteli: Der 81-jährige erlebte die Anfänge des Stahl- und Eisenkombinats in Rustavi mit und hat Generationen von Stahlarbeiten ausgebildet. Nach dem Zusammenbruch der Sowjetunion setzte er sich beim damaligen Präsidenten Gamsachurdia für die Rettung des Werkes ein. Auch heute noch kommt er täglich ins Werk und berät die Geschäftsleitung.'
   },
 ];
 
 
+let pictureDataDe = [
+  {
+    id: 1,
+    description: 'Die Hauptstadt der Region Mengrelien-Oberswanetien ist die georgische Stadt, die der de facto-Grenze mit der abtrünnigen Teilrepublik Abchasien am nächsten liegt. Über die Inguri-Brücke am Rande Sugdidis wird der eingeschränkte Grenzverkehr abgewickelt. Im Schloss Dadiani, dem früheren Sitz der Prinzessin von Mengrelien, sind heute die Todesmaske Napoleons und ein Grabtuch der Gottesmutter Maria zu sehen. Junge Menschen aus der Region nehmen oft an Workshops und friedensstiftenden Programmen teil, die von internationalen NGOs organisiert werden. Dank der sozialen Medien ist ein neues Kommunikationsnetzwerk enstanden, mit dessen Hilfe aktiv über die Zukunft der vom Konflikt geprägten Region diskutiert wird'
+  },
+  {
+    id: 2,
+    description: ' Die georgische Hafenstadt wurde in der Antike als griechische Kolonie mit dem Namen Batis gegründet. Die Skyline der Stadt ist immer wieder verändert worden und die Vororte mit ihren kleinen Holzhäusern und sowjetischen Wohnblocks reichen bis weit in die Hügelkette des Kleinen Kaukasus hinein. Die in den letzten Jahren neu entstandenen Bauten wie der Alphabet-Turm, die Technische Universität, die Public Service Hall und futuristische Hotel- und Restaurant-Komplexe haben die Atmosphäre allerdings komplett verändert. Viele Bewohner befürchten angesichts der gestiegenen Zahl an ausländischen Touristen und Investoren eine Überfremdung. In der Zukunft hoffen sie, wieder eine wichtigere Rolle im Leben ihrer Stadt zu spielen. '
+  },
 
+  {
+    id: 3,
+    description:  ' Das kleine Dorf und die gleichnamige Region in Ostgeorgien führen ihren historischen Namen Samuchranbatono auf einen Zweig der georgischen Königsfamilie, die Muchran-Batonis, zurück. Schloss Muchrani wurde 1873 von Prinz Iwane Bagrationi von Muchrani erbaut, der nicht nur General in der Armee des russischen Imperiums, sondern auch erfolgreicher Winzer war. Nachdem das Schloss während der Sowjetzeit zunehmend zerfiel, wurde es inzwischen renoviert und ist als „Chateau Mukhrani” Symbol eines der angesehensten Weingüter im Land. '  
+  },
 
-let languageFr = document.getElementById('FR');
-languageFr.addEventListener('click', function (i) {
+  {
+    id: 4,
+    description: ' Die Hauptstadt Georgiens trägt seit 1936 den georgischen Namen „Tbilissi” wegen ihrer heißen Schwefelquellen („tbili” = warm). Sie ist mit 1,5 Millionen Einwohnern die einzige Großstadt des Landes. Die Überreste der „ersten Europäer”, Seswa und Msia, die man bei archäologischen Ausgrabungen 2001 entdeckte, werden im Janaschia-Museum im Herzen der Stadt aufbewahrt. Nachdem in den letzten Jahren viele Neubauten das Stadtbild nicht nur positiv verändert haben, melden sich immer mehr Bürger zu Wort, um die Zerstörung alter Gebäude und traditionsreicher Plätze in ihrer Stadt zu verhindern. Vor allem Studenten und junge Wissenschaftler, die im Ausland studiert haben, spielen bei den Protesten eine entscheidende Rolle.  '
+  },
+  {
+    id: 5,
+    description:  ' Rustawi ist eine der ältesten Städte Georgiens, wurde aber im 13. Jahrhundert durch die Mongolen fast völlig zerstört und erst in der Sowjetzeit als Zentrum der Schwerindustrie wiederaufgebaut. Auf Befehl Stalins entstand hier in den 1940er-Jahren das größte Stahlwerk des Kaukasus – über 100 Industriebetriebe siedelten sich an. Vom Zusammenbruch der Sowjetunion hat sich die Stadt nie wirklich erholt. Industrieruinen und Trabantenstädte prägen heute das Stadtbild. Viele junge Bewohner suchen Anschluss an die westliche Lebensweise über Nichtregierungsorganisationen (NGOs) oder arbeiten im nur 25 km entfernten Tiflis. ' 
+  }
+]
+
+let dataSliderDe = [
+  {
+    id: 0,
+    text: 'Am 9. März kommt es zur blutigen Niederschlagung antisowjetischer Proteste in Tiflis, die als friedliche Demonstrationen für den verstorbenen Diktator Stalin begonnen hatten. Mehr als 100 zumeist junge Menschen werden von sowjetischen Einsatzkräften getötet. '
+  },
+  {
+    id: 1,
+    text: 'Nikita Chruschtschow, kommunistischer Partei- und Regierungschef der Sowjetunion besucht Tiflis zur Zeit der Tauwetterperiode zwischen Ost und West.'
+  },
+  {
+    id: 2,
+    text: 'Dynamo Tiflis wird Sowjetischer Fußballmeister. Es ist erst das zweite Mal (nach Dynamo Kiew 1960), dass eine nicht-russische Mannschaft den Titel holt.'
+  },
+  {
+    id: 3,
+    text: 'Am 21. August marschiert die sowjetische Armee in Prag ein und beendet gewaltsam den „Prager Frühling“. '
+  },
+  {
+    id: 4,
+    text: 'Wassil Mschawadnadse, 1. Sekretär des Zentralkommittees der Georgischen Kommunistischen Partei, tritt ab und Eduard Schewardnadse wird als Nachfolger gewählt.'
+  },  
+  {
+    id: 5,
+    text: 'Die erste georgische Menschenrechtsorganisation, die georgische Helsinki-Gruppe, wird von Merab Kostawa, Swiad Gamsachurdia und Wiktor Rzchiladse gegründet.'
+  },
+  {
+    id: 6,
+    text: ' Vom 8. bis 16. März findet in Tiflis das erste Rockfestival der Sowjetunion statt: „Der Rhythmus des Frühling“. Wenige Monate zuvor war die sowjetische Armee in Afghanistan einmarschiert.'
+  },
+  {
+    id: 7,
+    text: ' Patriarch Ilia II besucht das Katharinenkloster auf dem Sinai. In der Bibliothek werden wichtige georgische Schriften verwahrt. '
+  },
+  {
+    id: 8,
+    text:  ' In Tiflis kommt es zu Massenprotesten. Hauptforderung ist der Austritt Georgiens aus der Sowjetunion. Wenige Monate später kommt es zur blutigen Niederschlagung der Proteste durch sowjetische Truppen (9. April 1989).'
+  } 
+]
+
+let radioDataDe = [
+  {
+    text: 'Niaz Diasamidze ist der Leadsänger der Gruppe 33a, einer georgischen Folk-Rock-Band, die 1994 in Tiflis gegründet wurde. Die Band verbindet vor allem Folk-Einflüsse aus Georgien und Frankreich mit Pop und Reggae-Elementen. Die Liedtexte sind meist georgisch oder französisch. Der Name 33a bezieht sich auf die Hausnummer in der Paliaschwili-Straße in Tiflis, in der Niaz Diasamidze lebt.' ,
+  },
+  {
+    text: 'Gacha ist ein junger, aufstrebender Künstler aus Georgien, dem es gelingt, verschiedene Stilrichtungen der elektronischen Musik zu kombinieren und daraus einen ganz eigenen Sound zu kreieren. Dieses Debütalbum ist perfekt, um sich zu entspannen. Eine Soundlandschaft, die ganz zum Stil von Apollo Records passt, einem Ableger von R&S Records (Renaat Vandepapeliere). ',
+  },
+  {
+    text: 'Soft Eject ist georgischer Folk Rock vom Feinsten. Die Band gründete sich 1989 und kombiniert georgische und europäische Folk-Einflüsse mit psychedelischen Klängen und Rockmusik. Die Texte sind meist englisch. Die Band besteht derzeit aus sechs Mitgliedern - Vaho Babunashvili (Bass, voc.), Nodar Manchkhashvili (Percussion), Giorgi Kobakhidze (Gitarre, voc.), Sandro Nikoladze (Flöte, Leier), Emzar Burduli (Waldhorn, voc.) und Anna Sikharulidze (Akkordeon, Keyboards).',
+  },
+  {
+    text: 'Die 2009 vom jungen Dichter Zura Jishkariani gegründete Gruppe Kung Fu Junkie spielt Electronic Pop. Chring und Zura Jishkariani sind die Sänger der Gruppe, Linda Folio an der Gitarre, CutDaKill und Max Machiadze MC. Sie singen auf georgisch und englisch. Auf ihrer Facebookseite schreibt die Gruppe, dass sie vom chinesischen Kommunismus und William Burroughs beeinflusst worden sei.',
+  },
+  {
+    text: 'Die georgisch-französische Punkband der 2000-er-Jahre wurde von Sänger und Gitarrist Fred Paian gegründet. Die Texte ihrer drei veröffentlichten Alben drehen sich meist um soziale und gesellschaftliche Probleme – zu einer Zeit, als es fast keine Elektrizität in Georgien gab, weshalb die Band sich auch den Namen Schuki Movida („Der Strom ist da”) gab',
+  },
+  {
+    text: `Nika Machaidze ist ein georgischer Filmregisseur und Elektromusiker. Er produzierte den Soundtrack für das Stück „Der Park” von Botho Strauß und macht Musik für Modeschauen und Fernsehproduktionen. Er ist Mitglied der Goslab-Gruppe`,
+  }
+]
+
+let characterTextDataDe = [
+  {
+      videoUrl: 'https://www.youtube.com/embed/lHL8jpipT-A',
+      textDescription: "Tea Tsulukiani (geb. 1975) wurde nach den Parlamentswahlen 2012 von Bidsina zur Justizministerin berufen. Tsulukiani, die als beliebteste Politikerin im Land gilt, hat Großteil ihres Lebens in Frankreich verbracht. Sie absolvierte einen Teil ihrer Schulbildung Lyon, machte ihren Master an der École nationale d’administration (ENA), arbeitete im Stab eines französischen Präfekten und zehn Jahre als Anwältin am Europäischen Gerichtshof für Menschenrechte in Straßburg. Sie kehrte 2010 nach Georgien zurück und schloss sich der Freien Demokratischen Partei des ehemaligen UN-Botschafters Irakli Alasania an, der sich wegen des kurzen Krieges mit Russland 2008 mit Präsident Saakaschwili überworfen hatte. Nach ihrem Amtsantritt als Justizministerin kam es zu einer Welle von Verhaftungen ehemaliger Amtsträger der vorherigen Administration und einer Amnestie für Tausende „politischer“ Häftlinge. Als eines ihrer wichtigsten Ziele benennt sie die Reform der Justiz und die Trennung von Staatsanwaltschaft und Exekutive. Mit ihren Vorschlägen eines vor allem die Arbeiterrechte stärkenden Gesetzes konnte sie sich allerdings nicht durchsetzen. Zu ihren Zukunftsprojekten gehören die Stärkung von Frauen- und Minderheitenrechten sowie die Liberalisierung der Drogengesetze."
+  },
+  {
+      videoUrl: 'https://www.youtube.com/embed/xWj8Y4fiuoQ',
+      textDescription: "Metropolit Bischof Kalistrate (geb. 1938) steht seit rund 30 Jahren der Eparchie von Kutais-Gaenati vor und gilt als höchster kirchliche Würdenträger in Westgeorgien. Er wurde als Schota Ilia Margalitaschwili in der Weinregion Kachetien geboren und studierte nach dem Armeedienst zunächst Ingenieurwesen im russischen Woronesch und am Pädagogischen Institut von Telavi. Er heiratete und wurde Vater eines Sohnes, trat dann aber 1982 als Novize ins Kloster von Betania ein, wurde noch im selben Jahr Mönch und bereits ein Jahr später zum Bischof berufen. 1985 reiste er im Auftrag des georgischen Patriarchen Ilia II nur wenige Wochen nach dem Reaktorunglück nach Tschernobyl, um in der Todeszone Trost zu spenden. 1992 wurde er in den Rang eines Metropoliten erhoben. Bis 2010 war Bischof Kalistrate Rektor der religiösen Akademie des Klosters von Gelati und des theologischen Instituts in Kutaissi, in welchem er kunsthistorische, journalistische und medizinische Fakultäten einrichten ließ. In seiner Amtszeit wurden fünf neue Eparchien in Westgeorgien eröffnet und über 300 Kirchen, Kapellen und Klöster von ihm eingeweiht. Kalistrate ist Träger des Briliant-Kreuzes und des Goldenen Ordens des Heiligen Georg, zwei der höchsten Auszeichnungen der georgisch-orthodoxen Kirche."
+  },
+
+  {
+      videoUrl: 'https://www.youtube.com/embed/n6aPQrCI9pU',
+      textDescription: "Bidsina Iwanischwili (geb. 1956) ist mit einem geschätzten Vermögen von über 6,5 Milliarden US-Dollar der reichste Mann in Georgien. 2011 trat der Geschäftsmann in die Politik ein und wurde zum mächtigen Gegenspieler von Präsident Saakaschwili. Iwanischwili gründete Anfang der 90er-Jahre in Russland die „Rossiskij Kredit“-Bank und stieg in Moskau rasch zu einem Oligarchen der zweiten Reihe auf. Wegen seiner bis heute engen Kontakte zu Russland werfen ihm seine politischen Gegner vor, ein Agent des Kreml zu sein. Dennoch gewann das von ihm gegründete Parteienbündnis „Georgischer Traum“ die Parlamentswahlen 2012 und der Milliardär wurde Premierminister. Durch eine bereits vor dem Machtwechsel beschlossene Verfassungsreform erhielt er somit die Schlüsselposition für die Ausrichtung der georgischen Politik. Iwanischwili leitete eine Annäherung an Russland ein und pflegt enge Kontakte zur christlich-orthodoxen Kirche, die als wichtiges Bindeglied zwischen Russland und Georgien gilt. Gleichzeitig betonte Iwanischwili, den Westkurs fortsetzen und die Anbindung an EU und NATO vorantreiben zu wollen. Iwanischwili ist verheiratet und hat drei Kinder. Sein Adoptivsohn Bera ist ein populärer Rapper."
+  },
+  {
+      videoUrl: 'https://www.youtube.com/embed/xa_DQX13Sgw',
+      textDescription: "Dato Imnaischwili (geb. 1954) arbeitet seit mehr als 30 Jahren als Automechaniker in Tiflis und hat sich vor allem auf die Reparaturen russischer Fahrzeugmodelle spezialisiert. Er wurde im russischen Swerdlowsk (Jekaterinburg) geboren. Erst als er zwölf Jahre alt war, zogen seine Eltern zurück nach Georgien. Nach seinem Wehrdienst in der sowjetischen Armee in Nowosibirsk (Russland) absolvierte er in den 70er Jahren eine technische Ausbildung zum Kfz-Mechaniker. 1980 trat er in den Dienst bei den staatlichen Autowerkstätten Nummer 1 für Dienstfahrzeuge und Taxis im Bezirk Isani ein. Durch den Zusammenbruch der Sowjetunion verlor er seine feste Anstellung und arbeitet seitdem auf eigene Rechnung. Seit einer schweren Gasexplosion 2007, bei der mehrere seiner Kollegen ums Leben kamen, mietet er eine Reparatur-Garage in einem benachbarten Werkstattareal. Imnaischwili lebt mit Frau, Tochter und Schwägerin in einem Tiflisser Hinterhof und ist seit sechs Jahren stolzer Opa."
+  },
+  {
+      videoUrl: 'https://www.youtube.com/embed/-GkQaaxfk8k',
+      textDescription: "Lascha Bakradse (geb. 1965) ist einer der streitbarsten Intellektuellen Georgiens. Der Direktor des Nationalen Literaturmuseums studierte Literatur- und Sprachwissenschaft in Tiflis, Germanistik in Jena, Politik in Potsdam und Theologie in Bern. Nach einem Promotionsstudium an der Humboldt-Universität Berlin promovierte er in Tiflis mit einer Dissertation über die deutsch-georgischen Beziehungen während des Ersten Weltkriegs. Bakradse arbeitete für das Georgische Auswärtige Amt, als Journalist für verschiedene georgische Medien und als Programmreferent des Goethe-Instituts. Er schrieb den bis heute meist genutzten deutschen Sprachführer für Georgisch und ist seit 1999 in mehreren Filmen als Schauspieler aufgetreten, u.a. als Hauptdarsteller in „Lost Killers“ von Regisseur Dito Tsintsadse. 2006 übernahm er die Leitung der Abteilung für Filmarchivierung und Restauration im Georgischen Nationalen Filmzentrum und ist seit 2010 assoziierter Professor an der Ilia Universität in Tiflis. Bakradse unterstützt regelmäßig Kunstprojekte, engagiert sich für die Menschenrechte in Georgien und nimmt immer wieder in den Medien zur gesellschaftlichen Entwicklung seines Landes Stellung."
+  },
+  {
+      videoUrl: 'https://www.youtube.com/embed/jgD7BIFD0xY',
+      textDescription: "Michail („Mischa“) Saakaschwili (geb. 1967) stürmte 2003 mit einer Rose ins georgische Parlament und jagte den sich durch Wahlmanipulationen an der Macht haltenden Präsidenten Eduard Schewardnadze aus dem Amt. Nach dieser „Rosenrevolution“ wurde er selbst zum Präsidenten gewählt und hat in den knapp neun Jahren seiner Amtszeit Georgien auf einen radikalen Westkurs getrimmt. In seiner Ära wurden Polizei und Behörden reformiert, wichtige Straßen gebaut und mit dem Bau einer neuen Eisenbahnverbindung nach Europa begonnen. Bei den Georgiern sind vor allem seine ehrgeizigen Bauprojekte umstritten, mit denen er das Land auch visuell ins 21. Jahrhundert führen wollte – vor allem in der Hafenstadt Batumi. Ein weiteres ehrgeiziges Projekt war „Lasika“: In den georgischen Sümpfen am Schwarzen Meer sollte ein kaukasisches Dubai gebaut werden. 2008 kam es zu einem kurzen Krieg mit Russland um die abtrünnige Provinz Samotschablo („Süd-Ossetien“), für dessen Ausbruch Kritiker auch Saakaschwili verantwortlich machen. Seine zweite Amtszeit wurde von Korruptions- und Foltervorwürfen gegen Mitglieder seiner Regierungspartei überschattet, was maßgeblich zur Niederlage seiner „Nationalen Bewegung“ bei den Parlamentswahlen 2012 beigetragen hat. Saakaschwili ist mit der Niederländerin Sandra Roeloffs verheiratet und hat zwei Söhne."
+  },
+]
+
+let titleArrayDe = [
+  {title: 'Kalibrierung'},
+  {title: 'nach Produktion'},
+  {title: 'HD kopieren'},
+  {title: 'FAD-Fertigung'},
+  {title: 'Filmmusiken'},
+  {title: 'Sowie'},
+  {title: 'Regisseur und Produzent'},
+  {title: 'Produktionsleiter Tiflis'},   
+  {title: 'Manager oder Inspizient'},
+  {title: 'Elektriker Assistent'},
+  {title: 'Produktionsabteilung Tiflis'},
+  {title: 'Kölner Produktionsteam'},
+  {title: 'Kameramann'},
+  {title: 'DSLR-Kamera'},
+  {title: '2. Einheit'},
+  {title: 'Seine'},
+  {title: 'Mischung TV & Sound Design'},
+  {title: 'Mischung 5.1. & Web'},
+  {title: 'Montage'},
+  {title: 'Programmeinheit'},
+  {title: 'Programmeinheit Geopolitik (ARTE Straßburg)'},
+  {title: 'Redaktionsassistentin Köln'},
+  {title: 'WDR-Produktionsleiter'},
+  {title: 'Film- und Medienstiftung NRW'},
+  {title: '(Erstsendung am 22. Oktober 2013 auf ARTE)'},
+  {title: 'Sprecher (ARTE)'},
+  {title: 'textes supplémentaires'},
+  {title: 'Web-Lautsprecher'},
+  {title: 'Übersetzungen'},
+  {title: 'Originaltexte'},
+  {title: 'Casting und Anpassung'},
+  {title: 'Webdesign und technische Umsetzung'},
+  {title: 'Grafik, Animation & Posterdesign'},
+  {title: 'Web Editor'},
+  {title: 'Produziert und bearbeitet von Website'}
+]
+
+function videoDataLanguageChangeDe() {
   for (let i = 0; i < videoData.length; i++) {
     const element = videoData[i];
-    console.log(element.descrb);
-    element.descrb = videoDataFr[i].descrb;
-    element.videoUrl = videoDataFr[i].videoUrl;
+    element.descrb = videoDataDe[i].descrb;
+    element.videoUrl = videoDataDe[i].videoUrl;
   }
-})
+}
+
+
+function picturesDataLanguageChangeDe(){
+  for (let i = 0; i < pictureData.length; i++) {
+    const element = pictureData[i];
+    element.description = pictureDataDe[i].description;
+  }
+}
+
+function sliderDataLanguageChangeDe(){
+  for (let i = 0; i < data.length; i++) {
+    const element = data[i];
+    element.text = dataSliderDe[i].text;
+    let sliderText = document.getElementById('text');
+    sliderText.textContent = dataSliderDe[0].text;
+  }
+}
+
+function radioDataLanguageChangeDe(){
+  for (let i = 0; i < radioData.length; i++) {
+    const element = radioData[i];
+    element.text = radioDataDe[i].text;
+    let sliderText = document.getElementById('singer-info');
+    sliderText.textContent = dataSliderDe[0].text;
+  }
+}
+
+function characterDataLanguageChangeDe() {
+  for (let i = 0; i < characterTextData.length; i++) {
+    const element = characterTextData[i];
+    element.textDescription = characterTextDataDe[i].textDescription;
+    element.videoUrl = characterTextDataDe[i].videoUrl;
+  }
+}
+
+function titleLanguageChange(){
+  let titlesFr = document.querySelectorAll('.info-title');
+  for (let i = 0; i < titlesFr.length; i++) {
+    const element = titlesFr[i];
+    element.textContent =  titleArrayDe[i].title;
+  }
+}
+
+function changeLanguage(lang) {
+  location.hash = lang;
+  location.reload();
+}
+  
+if (window.location.hash) {
+ if (window.location.hash == "#de") {
+    videoDataLanguageChangeDe();
+    picturesDataLanguageChangeDe();
+    sliderDataLanguageChangeDe();
+    radioDataLanguageChangeDe();
+    characterDataLanguageChangeDe();
+    titleLanguageChange();
+  }
+}
+
+
+
+
+
+
