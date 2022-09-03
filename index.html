@@ -19,9 +19,9 @@
 
     <div class="language-block" id="language-block">
         <div class="language-div">
-            <div class="language" id="GE">GE</div>
+            <div class="language" id="FR" onclick="changeLanguage('fr')">FR</div>
+            <div class="language" id="DE" onclick="changeLanguage('de')">DE</div>
             <div class="language" id="EN">EN</div>
-            <div class="language" id="DE">DE</div>
         </div>
         <div class="hide-menu-div" id="hide-menu-div">Hide Menu</div>
     </div>
@@ -53,11 +53,13 @@
                 <img class="volga-salon-img" src="images/interior/salon.png" alt="salon-img">
                 <img class="volga-blog-img" src="images/interior/blog.png" alt="blog-img">
                 <img class="volga-map-img" src="images/interior/map.png" alt="map-img">
-                <img class="volga-clock-img" src="images/interior/clock.png" alt="clock-img">
-                <img class="volga-wheel-img" id="volga-wheel-img" src="images/interior/wheel.png" alt="wheel-img">
-                <img class="volga-mirror-img" src="images/interior/mirror.png" alt="mirror-img">
-                <img class="volga-radio-img" src="images/interior/radio.png" alt="radio-img">
-                <img class="volga-sticker-img" src="images/interior/sticker.png" alt="sticker-img">
+                <a href="#section3"><img class="volga-map-img open" src="images/interior/map_open.png" alt="img-map"></a>
+                <a href="#section4"><img class="volga-clock-img" src="images/interior/clock.png" alt="clock-img"></a>
+                <a href="#section6"><img class="volga-wheel-img" id="volga-wheel-img" src="images/interior/wheel.png" alt="wheel-img"></a>
+                <img class="volga-mirror-img"  src="images/interior/mirror.png" alt="mirror-img">
+                <a href="#section7"><img class="volga-mirror-img open" src="images/interior/mirror_open.png" alt="mirror-open-img"></a>
+                <a href="#section5"><img class="volga-radio-img" src="images/interior/radio.png" alt="radio-img"></a>
+                <a href="#section8"><img class="volga-sticker-img" src="images/interior/sticker.png" alt="sticker-img"></a>
             </div>
         </div>
         <img class="volga-sit-img" id="volga-sit-img" src="images/interior/sit.png" alt="sit-img">
@@ -170,7 +172,7 @@
             </div>
             <div class="info-block-overlay" id="info-block-overlay">
                 <div class="light-item hide" id="light" data-item="0">
-                    <h2 class="info-title">étalonnage</h2>
+                    <h2 id="light-info" class="info-title">étalonnage</h2>
                     <p>Dany Schelby</p>
                     <p>http://www.schelby.tv</p>
                     <h2 class="info-title">postproduction</h2>
@@ -335,7 +337,7 @@
                     <h2 class="info-title">textes originaux</h2>
                     <p>Stefan Tolz</p>
                     <a href="http://www.filmpunkt.com/team_dt_ST.html"> http://www.filmpunkt.com/team_dt_ST.html </a>
-                    <h2>casting et adaption</h2>
+                    <h2 class="info-title">casting et adaption</h2>
                     <p>Ingrid Terhorst</p>
 
                 </div>
@@ -355,7 +357,7 @@
                     <a href="https://www.facebook.com/QuBitz.tv?fref=ts">https://www.facebook.com/QuBitz.tv?fref=ts</a>
                     <h2 class="info-title">Web Editor</h2>
                     <p>Tamar Kalkhitashvili</p>
-                    <h2>Réalisé et édité par site</h2>
+                    <h2 class="info-title">Réalisé et édité par site</h2>
                     <p>Stefan Tolz</p>
                 </div>
             </div>
@@ -366,9 +368,9 @@
     <!-- trailer section - section 7 -->
     <section class="section7" id="section7">
         <div id="trailerView">
-            <img src="images/trailer/sadgami.png" alt="stander">
+            <img src="images/Trailer/sadgami.png" alt="stander">
             <div id='view'>
-                <!-- <img src="images/trailer/comingsoon.png" alt="comingsoon"> -->
+                <!-- <img src="images/Trailer/comingsoon.png" alt="comingsoon"> -->
                 <iframe class="video"src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"></iframe>
             </div>
         </div>

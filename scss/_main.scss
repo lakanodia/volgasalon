@@ -88,6 +88,7 @@ body {
             @include border-shape(5px double white, 50%, 20px );
             @include d-flex(flex, center, center);
             margin-bottom: 10px;
+            margin-top: 10px;
             color: $color01;
             cursor: pointer;
             background-color: $color03;
@@ -149,6 +150,15 @@ body {
                 @include position-property(absolute, 36%, 21.5%);
                 width: 20%;
                 cursor: pointer;
+                transition: 0.5s;
+            }
+            .volga-wheel-img:hover{
+                animation: rotate 10s forwards;
+            }
+            @keyframes rotate {
+               50% {
+                transform: rotate(45deg);
+               }
             }
             .volga-blog-img{
                 @include position-property(absolute, 51%, 67%);
@@ -198,7 +208,7 @@ body {
                 transition: 0.5s;
             }
             .volga-sticker-img:hover{
-                opacity: 1;
+                transform: translate(5%);
             }
         }
     }
@@ -507,7 +517,7 @@ body {
     background-size: cover;
     @include d-flex(flex, center, center);
     position: relative;
-    z-index: 1;
+    z-index: 2;
     .timelineFold  {
         @include d-flex(flex, center, center);
         flex-direction: column;
@@ -1049,13 +1059,13 @@ body {
         }
     }
     .character-overlay{
-        max-width: 950px;
+        max-width: 800px;
         width:100%;
         position: absolute;
         top: 0%;
         left: 20%;
         height: 500px;
-        padding: 40px;
+        padding: 20px;
         line-height: 25px;
         animation: bagageCard 0.4s;
         animation-fill-mode: forwards;
@@ -1102,3 +1112,4 @@ body {
         font-size: 13px;
     }
 }
+

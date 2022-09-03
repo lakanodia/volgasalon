@@ -191,6 +191,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 10px;
+  margin-top: 10px;
   color: black;
   cursor: pointer;
   background-color: rgb(193, 182, 154);
@@ -292,6 +293,24 @@ body {
   left: 21.5%;
   width: 20%;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section2 .container-section2 .volga-salon-container .volga-wheel-img:hover {
+  -webkit-animation: rotate 10s forwards;
+          animation: rotate 10s forwards;
+}
+@-webkit-keyframes rotate {
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+@keyframes rotate {
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
 }
 .section2 .container-section2 .volga-salon-container .volga-blog-img {
   position: absolute;
@@ -357,7 +376,8 @@ body {
   transition: 0.5s;
 }
 .section2 .container-section2 .volga-salon-container .volga-sticker-img:hover {
-  opacity: 1;
+  -webkit-transform: translate(5%);
+          transform: translate(5%);
 }
 .section2 .volga-sit-img {
   position: absolute;
@@ -715,7 +735,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .section4 .timelineFold {
   display: -webkit-box;
@@ -1362,13 +1382,13 @@ body {
   width: 100%;
 }
 .section8 .character-overlay {
-  max-width: 950px;
+  max-width: 800px;
   width: 100%;
   position: absolute;
   top: 0%;
   left: 20%;
   height: 500px;
-  padding: 40px;
+  padding: 20px;
   line-height: 25px;
   -webkit-animation: bagageCard 0.4s;
           animation: bagageCard 0.4s;
