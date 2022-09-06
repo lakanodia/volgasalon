@@ -47,7 +47,7 @@ body {
 }
 
 .language-block{
-    max-width: 140px;
+    max-width: 110px;
     width: 100%;
     color: $color01;
     @include position-property(fixed, 3%, 90%);
@@ -64,6 +64,9 @@ body {
         .language:hover{
             background-color: $color04;
         }
+        .language.active{
+            background-color: $color04;
+        }
     }
     .hide-menu-div{
         @include border-shape(2px solid white, 0%, 4px);
@@ -78,9 +81,10 @@ body {
     }
 }
 
+
 //  navogation bar
 .navigation-block{
-    @include position-property(fixed, 15%, 93%);
+    @include position-property(fixed, 15%, 91.5%);
     z-index: 99;
     overflow: hidden;
     .nav-ul{
