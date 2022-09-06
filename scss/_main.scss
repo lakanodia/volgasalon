@@ -47,16 +47,16 @@ body {
 }
 
 .language-block{
-    max-width: 120px;
+    max-width: 140px;
     width: 100%;
     color: $color01;
-    @include position-property(fixed, 3%, 91%);
+    @include position-property(fixed, 3%, 90%);
     z-index: 100;
     .language-div{
         @include border-shape(0px solid white, 0%, 0px); 
         @include d-flex(flex, space-between, center);
         .language{
-            @include border-shape(2px solid white, 0%, 6px);
+            @include border-shape(2px solid white, 0%, 4px);
             cursor: pointer;
             transition: 0.3s;
             background-color: $color03;
@@ -66,7 +66,7 @@ body {
         }
     }
     .hide-menu-div{
-        @include border-shape(2px solid white, 0%, 6px);
+        @include border-shape(2px solid white, 0%, 4px);
         background-color: $color03;
         text-align: center;
         margin-top: 4px;
@@ -246,6 +246,16 @@ body {
             top:23.8%;
             left:31.5%;
         }
+
+        &-Kutaisi-img{
+            top:32%;
+            left: 39.5%;
+        }
+        &-Gudauri-img{
+            top: 25%;
+            left: 59.5%;
+        }
+
         &-batumi-img{
             top:45%;
             left:25.4%;
@@ -943,6 +953,11 @@ body {
         bottom: 200px;
         left: 50%;
         transform: translate(-50%, -50%);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    #playbut:hover{
+        transform: translate(-55%, -55%);
     }
 
 }

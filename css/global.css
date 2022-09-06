@@ -121,12 +121,12 @@ body {
 }
 
 .language-block {
-  max-width: 120px;
+  max-width: 140px;
   width: 100%;
   color: black;
   position: fixed;
   top: 3%;
-  left: 91%;
+  left: 90%;
   z-index: 100;
 }
 .language-block .language-div {
@@ -146,7 +146,7 @@ body {
 .language-block .language-div .language {
   border: 2px solid white;
   border-radius: 0%;
-  padding: 6px;
+  padding: 4px;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -158,7 +158,7 @@ body {
 .language-block .hide-menu-div {
   border: 2px solid white;
   border-radius: 0%;
-  padding: 6px;
+  padding: 4px;
   background-color: rgb(193, 182, 154);
   text-align: center;
   margin-top: 4px;
@@ -414,6 +414,14 @@ body {
 .section3 .volga-map-zugdidi-img {
   top: 23.8%;
   left: 31.5%;
+}
+.section3 .volga-map-Kutaisi-img {
+  top: 32%;
+  left: 39.5%;
+}
+.section3 .volga-map-Gudauri-img {
+  top: 25%;
+  left: 59.5%;
 }
 .section3 .volga-map-batumi-img {
   top: 45%;
@@ -1260,6 +1268,13 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section7 #playbut:hover {
+  -webkit-transform: translate(-55%, -55%);
+          transform: translate(-55%, -55%);
 }
 
 .section8 {

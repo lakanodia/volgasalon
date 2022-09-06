@@ -19,9 +19,10 @@
 
     <div class="language-block" id="language-block">
         <div class="language-div">
+            <div class="language" id="EN" onclick="changeLanguage('en')">EN</div>
             <div class="language" id="FR" onclick="changeLanguage('fr')">FR</div>
             <div class="language" id="DE" onclick="changeLanguage('de')">DE</div>
-            <div class="language" id="EN">EN</div>
+            <div class="language" id="GE" onclick="changeLanguage('ge')">GE</div>
         </div>
         <div class="hide-menu-div" id="hide-menu-div">Hide Menu</div>
     </div>
@@ -70,9 +71,13 @@
             <img class="volga-map-img" src="images/map/map_big.png" alt="map-img">
             <img class="volga-map-zugdidi-img pointer" src="images/map/point.png" alt="map-zugdidi-img" data-id="0">
             <img class="volga-map-batumi-img pointer" src="images/map/point.png" alt="map-batumi-img" data-id="1">
-            <img class="volga-map-muxrani-img pointer" src="images/map/point.png" alt="map-muxrani-img" data-id="2">
-            <img class="volga-map-tbilisi-img pointer" src="images/map/point.png" alt="map-tbilisi-img" data-id="3">
-            <img class="volga-map-rustavi-img pointer" src="images/map/point.png" alt="map-rustavi-img" data-id="4">
+
+            <img class="volga-map-Kutaisi-img pointer" src="images/map/point.png" alt="map-batumi-img" data-id="2">
+            <img class="volga-map-Gudauri-img pointer" src="images/map/point.png" alt="map-batumi-img" data-id="3">
+
+            <img class="volga-map-muxrani-img pointer" src="images/map/point.png" alt="map-muxrani-img" data-id="4">
+            <img class="volga-map-tbilisi-img pointer" src="images/map/point.png" alt="map-tbilisi-img" data-id="5">
+            <img class="volga-map-rustavi-img pointer" src="images/map/point.png" alt="map-rustavi-img" data-id="6">
         </div>
         <div class="volga-map-modal hide" id="modal">
             <div class="volga-map-modal-header">
@@ -371,7 +376,7 @@
             <img src="images/Trailer/sadgami.png" alt="stander">
             <div id='view'>
                 <!-- <img src="images/Trailer/comingsoon.png" alt="comingsoon"> -->
-                <iframe class="video"src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"></iframe>
+                <iframe class="video"src="https://player.vimeo.com/video/77861141?h=34d80e974a" id="trailer-video"></iframe>
             </div>
         </div>
         <div id="playbut">
@@ -385,43 +390,43 @@
                 <img class="character-img" src="images/character/tea.jpg" alt="character-img">
                 <div class="character-content">
                     <h3 class="character-title">TEA TSULUKIANI</h3>
-                    <p class="character-p">Ministre de la Justice</p>
+                    <p class="character-p">Minister of Justice</p>
                 </div>
             </div>
             <div class="character-item" data-char="1">
                 <img class="character-img" src="images/character/kalistrate.jpg" alt="character-img">
                 <div class="character-content">
-                    <h3 class="character-title">MGR CALISTRATE</h3>
-                    <p class="character-p">Métropolite de Koutaïssi</p>
+                    <h3 class="character-title">ARCHBISHOP KALISTRATE</h3>
+                    <p class="character-p">Metropolitan of Kutaisi</p>
                 </div>
 
             </div>
             <div class="character-item" data-char="2">
                 <img class="character-img" src="images/character/bidzina.jpg" alt="character-img">
                 <div class="character-content">
-                    <h3 class="character-title">BIDZINA IVANICHVILI</h3>
-                    <p class="character-p">Premier ministre</p>
+                    <h3 class="character-title">BIDZINA IVANISHVILI</h3>
+                    <p class="character-p">Prime minister</p>
                 </div>
             </div>
             <div class="character-item" data-char="3">
                 <img class="character-img" src="images/character/dato.jpg" alt="character-img">
                 <div class="character-content">
-                    <h3 class="character-title">DATO IMNAICHVILI</h3>
-                    <p class="character-p">Mécanicien auto</p>
+                    <h3 class="character-title">DATO IMNAISHVILI</h3>
+                    <p class="character-p">Auto mechanic</p>
                 </div>
             </div>
             <div class="character-item" data-char="4">
                 <img class="character-img" src="images/character/lasha.jpg" alt="character-img">
                 <div class="character-content">
-                    <h3 class="character-title">LACHA BAKRADZÉ</h3>
-                    <p class="character-p">Historien et journaliste</p>
+                    <h3 class="character-title">LASHA BAKRADZE</h3>
+                    <p class="character-p">Historian and journalist</p>
                 </div>
             </div>
             <div class="character-item" data-char="5">
                 <img class="character-img" src="images/character/misha.jpg" alt="character-img">
                 <div class="character-content">
-                    <h3 class="character-title">MIKHEIL SAAKACHVILI</h3>
-                    <p class="character-p">Président</p>
+                    <h3 class="character-title">MIKHEIL SAAKASHVILI</h3>
+                    <p class="character-p">President</p>
                 </div>
             </div>
         </div>
