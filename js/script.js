@@ -1182,7 +1182,7 @@ let characterTextDataFr = [
     id: 1,
     name: "TEA TSULUKIANI",
     position: "Ministre de la Justice",
-    videoUrl: "https://www.youtube.com/embed/lHL8jpipT-A",
+    videoUrl: "https://player.vimeo.com/video/76369289?h=17f476a553",
     textDescription:
       "Tea Tsulukiani (née en 1975) est nommée ministre de la Justice par Bidzina Ivanichvili au lendemain des législatives de 2012. Tsulukiani, personnalité politique préférée des Géorgiens, a longtemps vécu en France. Elle a effectué une partie de sa scolarité à Lyon, décroché un master à l’École nationale d’administration (ENA) de Strasbourg, travaillé dans l’entourage d’un préfet et été pendant dix ans juriste à la Cour européenne des droits de l’homme de Strasbourg. En 2010, elle retourne en Géorgie où elle rejoint Notre Géorgie - Démocrates libres, le parti fondé par Irakli Alassania, ancien représentant permanent de la Géorgie auprès de l'ONU, qui s’est brouillé avec le président Saakachvili au sujet de l’affrontement avec la Russie en 2008. Sa nomination au ministère de la Justice a été suivie d’une série d’arrestations de hauts dignitaires de l’administration précédente et d’une amnistie pour des milliers de prisonniers « politiques ». Parmi ses objectifs majeurs, elle cite la réforme de la justice et la séparation du parquet et de l’exécutif. Elle échoue toutefois à imposer son projet de loi qui devait renforcer les droits des travailleurs. A l’avenir, elle souhaite d’une part renforcer les droits des femmes et des minorités, d’autre part libéraliser les lois en matière d’usage des stupéfiants.",
   },
@@ -1190,7 +1190,7 @@ let characterTextDataFr = [
     id: 2,
     name: "MGR CALISTRATE",
     position: "Métropolite de Koutaïssi",
-    videoUrl: "https://www.youtube.com/embed/xWj8Y4fiuoQ",
+    videoUrl: "https://player.vimeo.com/video/77423395?h=27987d0251",
     textDescription:
       "Le Métropolite Calistrate (né en 1938) dirige depuis une trentaine d’années l’éparchie de Kutais-Gaenati et est considéré comme le plus haut dignitaire ecclésiastique de Géorgie occidentale. Chota Ilia Margalitachvili est né dans une région viticole de Kakhétie. Après son service militaire, il suit des études d’ingénieur à Voronej en Russie et à l’institut pédagogique de Telavi, se marie et a un fils avant d’entrer en 1982 comme novice au monastère de Béthanie. La même année, il devient moine et un an plus tard, il est nommé évêque. En 1985, à la demande du patriarche géorgien Elie II, il se rend à Tchernobyl peu de temps après la catastrophe nucléaire pour exprimer sa compassion aux populations touchées. En 1992, il est élevé au rang de métropolite. Jusqu’en 2010, Mgr. Calistrate est recteur de l’académie religieuse du monastère de Ghélati et de l’institut de théologie de Koutaïssi, où il crée des facultés d’histoire de l’art, de journalisme et de médecine. En trente ans, il a inauguré cinq éparchies en Géorgie occidentale et consacré plus de trois cents églises, chapelles et monastères. Il est porteur de la Croix Briliant et de l’Ordre d’or de Saint-Georges, deux des plus hautes distinctions de l’Eglise orthodoxe de Géorgie.",
   },
@@ -1199,7 +1199,7 @@ let characterTextDataFr = [
     id: 3,
     name: "BIDZINA IVANICHVILI",
     position: "Premier ministre",
-    videoUrl: "https://www.youtube.com/embed/n6aPQrCI9pU",
+    videoUrl: "https://player.vimeo.com/video/77422825?h=4dcdb64c8a",
     textDescription:
       "Bidzina Ivanichvili (né en 1956) est l’homme le plus riche de Géorgie, avec une fortune estimée à plus de 6,5 milliards de dollars. Entré en politique en 2011, l’homme d’affaires se pose rapidement en adversaire du président en exercice, Saakachvili. Ivanichvili a fondé la banque Rossyiski Kredit au début des années 1990, et très vite, il devient un oligarque de second plan à Moscou. En raison des liens étroits avec la Russie qu’il a conservés jusqu’à aujourd’hui, ses opposants politiques l’accusent d’être un agent du Kremlin – ce qui n’empêche pas la coalition Rêve géorgien, fondée par Ivanichvili, de remporter les législatives de 2012 ; le milliardaire est nommé Premier ministre. Grâce à une réforme constitutionnelle, l’essentiel du pouvoir passe des mains du président sortant qui ne pouvait se représenter vers celles du Premier ministre. Ce dernier peut alors orienter la politique géorgienne. Le ministre milliardaire amorce un rapprochement avec la Russie et renforce les relations avec l’Eglise orthodoxe, considérée comme un maillon essentiel entre la Russie et la Géorgie. Parallèlement, il veut poursuivre la révolution néolibérale de la Géorgie et se rapprocher de l’Union européenne et de l’OTAN. Il est marié et père de trois enfants. Bera, son fils adoptif, est un rappeur connu.",
   },
@@ -1207,7 +1207,7 @@ let characterTextDataFr = [
     id: 4,
     name: "DATO IMNAICHVILI",
     position: "Mécanicien auto",
-    videoUrl: "https://www.youtube.com/embed/xa_DQX13Sgw",
+    videoUrl: "???",
     textDescription:
       "Dato Imnaischwili (né en 1954) est mécanicien automobile, spécialisé dans les réparations des véhicules russes, et vit à Tbilissi depuis plus de trente ans. Né en Russie à Sverdlovsk (Iekaterinbourg), il n’a que 12 ans quand ses parents reviennent s’installer en Géorgie. Dans les années 1970, après son service militaire dans l’armée soviétique à Novossibirsk (Russie), il suit une formation de mécanicien automobile. En 1980, il entre aux ateliers automobiles d’État n° 1 pour les véhicules de fonction et les taxis, dans le district d’Isani. Quand l’Union soviétique s’effondre en 1991, il perd son emploi et décide alors de se mettre à son compte. Depuis une grave explosion de gaz qui a coûté la vie à plusieurs de ses collègues en 2007, il loue un garage dans une zone d’activités voisine. Ivanichvili vit avec sa femme, sa fille et sa belle-sœur dans une arrière-cour de Tbilissi ; c’est aussi un grand-père heureux depuis six ans. ",
   },
@@ -1215,7 +1215,7 @@ let characterTextDataFr = [
     id: 5,
     name: "LACHA BAKRADZÉ",
     position: "Historien et journaliste",
-    videoUrl: "https://www.youtube.com/embed/-GkQaaxfk8k",
+    videoUrl: "https://player.vimeo.com/video/77423604?h=459d5670dc",
     textDescription:
       "Lacha Bakradzé (né en 1965) est l’un des intellectuels les plus controversés de Géorgie. Le directeur du musée national de la littérature a fait des études de littérature et de langues à Tbilissi, d’allemand à Iéna, de sciences politiques à Potsdam et de théologie à Berne. Après des études doctorales à l’université Humboldt de Berlin, il a soutenu sa thèse à Tbilissi sur les relations germano-géorgiennes pendant la Première Guerre mondiale. Bakradzé a été collaborateur au ministère des Affaires étrangères de Géorgie, journaliste pour divers médias géorgiens et chargé du programme à l’institut Goethe. Il est l’auteur de la plupart des guides linguistiques en allemand sur la Géorgie, et depuis 1999, on a pu le voir jouer dans plusieurs films (il tient d’ailleurs le premier rôle dans Lost Killers du réalisateur Dito Tsintsadzé). Il prend la direction du département des archives cinématographiques et de la restauration des films au Centre national du cinéma en 2006. Il est professeur associé à l’université Ilia de Tbilissi depuis 2010. Il soutient régulièrement des projets artistiques, milite pour les droits de l’homme en Géorgie et prend régulièrement position dans les médias sur l’évolution de la société géorgienne.",
   },
@@ -1223,7 +1223,7 @@ let characterTextDataFr = [
     id: 5,
     name: "MIKHEIL SAAKACHVILI",
     position: "Président",
-    videoUrl: "https://www.youtube.com/embed/jgD7BIFD0xY",
+    videoUrl: "https://player.vimeo.com/video/77422822?h=b06808cf16",
     textDescription:
       " Mikheil (« Mischa ») Saakachvili (né en 1967) entre en 2003 au Parlement géorgien, une rose à la main. Il chasse le président Édouard Chevardnadze qui s’était maintenu au pouvoir en truquant grossièrement les élections. Après la Révolution des roses, Saakachvili est élu à la présidence du pays et, pendant neuf ans, il met le cap sur le libéralisme économique. Sous son administration, la police et la fonction publique sont réformées, de grands axes routiers sont construits et une liaison ferroviaire mise en chantier en direction de l’Europe de l’Ouest. Ces projets de construction pharaoniques destinés à faire entrer la Géorgie – sur le plan visuel aussi – dans le XXIe siècle, suscitent une contestation au sein de la population, notamment celui du port de Batoumi sur la mer Noire, et celui de « Lasika », au milieu des marais sur la mer Noire mais censé devenir le Dubaï du Caucase. En 2008, la Géorgie et la Russie s’affrontent quelques jours durant pour obtenir la suprématie sur l’Ossétie du Sud (qui fait partie de la communauté historique géorgienne de Samachablo) ; certains concitoyens rendront Saakachvili responsable des velléités d’indépendance de cette province. Son deuxième mandat est entaché par les accusations de corruption et de torture portées contre des membres de son parti, ce qui contribue largement à la défaite du Mouvement National Uni (MNU) aux élections législatives de 2012. Saakachvili est marié à Sandra Roeloffs, d’origine néerlandaise, avec laquelle il a eu deux fils. ",
   },
@@ -1233,28 +1233,28 @@ let characterTextDataGe = [
   {
     name: "თეა წულუკიანი",
     position: "იუსტიციის მინისტრი",
-    videoUrl: "https://player.vimeo.com/video/77421481?h=c13d0bfd55",
+    videoUrl: "https://player.vimeo.com/video/80864540?h=f44335cc86",
     textDescription:
       "თეა წულუკიანი (დაბ.1975) 2012 წლის საპარლამენტო არჩევნების შემდეგ ბიძინა ივანიშვილის მიერ იუსტიციის მინისტრად დაინიშნა. წულუკიანს, რომელიც მოსახლეობაში პოპულარობით სარგებლობს, ცხოვრების დიდი ნაწილი საფრანგეთში აქვს გატარებული. მან საშუალო განათლება დაასრულა ლიონში, არის საფრანგეთის ნაციონალური ადმინისტრაციული სკოლის (École Nationale d’Administration (ENA)) მაგისტრი, მუშაობდა ფრანგი პრეფექტის შტაბში შემდეგ კი, ათი წლის განმავლობაში სტრასბურგში, ევროპულ სასამართლოში, ადამიანის უფლებათა დაცვის საკითხებზე, ადვოკატის რანგში. წულუკიანი საქართველოში 2010 წელს დაბრუნდა და გაერთიანებული ერების ორგანიზაციაში საქართველოს ყოფილი ელჩის, ირაკლი ალასანიას პოლიტიკურ პარტიას შეუერთდა. ალასანია პრეზიდენტმა სააკაშვილმა რუსეთთან 2008 წელს მომხდარი ომის შემდეგ გამოიწვია ელჩობიდან. წულუკიანის იუსტიციის მინისტრად დანიშვნის შემდეგ მალევე დაიწყო ყოფილი თანამდებობის პირების დაკავება, ასევე, ამნისტიცია შეეხო ათასობით პოლიტპატიმარს. თავის უპირველეს მიზნად წულუკიანი იუსტიციის სისტემის რეფორმირებასთან ერთად, სააღმსრულებლო ბიუროსა და პროკურატურის მოხელეთა გადამზადებას ასახელებს. მის სამომავლო პროექტებად მოიაზრება: ქალებისა და უმცირესობების უფლებების გაძლიერება, ნარკოტიკულ ნივთირებებთან დაკავშირებული კანონის ლიბერალიზება.",
   },
   {
     name: "მიტროპოლიტი კალისტრატე",
     position: "ქუთაისის მიტროპოლიტი",
-    videoUrl: "https://player.vimeo.com/video/76404105?h=2d8c4cc857",
+    videoUrl: "https://player.vimeo.com/video/80802089?h=14433af2af",
     textDescription:
       "მიტროპოლიტი კალისტრატე (დაბ. 1938 წ.) 30 წელია ქუთაის-გაენათის ეპარქიას უძღვება და დასავლეთ საქართველოში უმაღლესი საეკლესიო წოდების მატარებელია. მიტროპოლიტი კალისტრატე, ერში შოთა მარგალიტაშვილი ღვინის რეგიონში, კახეთში დაიბადა. საბჭოთა ჯარში სამხედრო სამსახურის დასრულების შემდეგ სწავლობდა ინჟინერიას ვორონეჟში შემდეგ კი თელავის პედაგოგიური ინსტიტუტის სტუდენტი გახდა. 1982 წელს ბეთანიის მონასტერში მორჩილად აღიკვეცამდე შოთა მარგალიტაშვილი დაქორწინებული იყო და ჰყავდა სამი ვაჟი. მორჩილობის შვიდი წლის შემდეგ აღიკვეცა ბერად, კიდევ ერთი წლის შემდეგ ხელი დაასხეს ეპისკოპოსად. 1985 წელს საქართველოს პატრიარქის ილია მეორის დავალებით გაემგზავრა ჩერნობილში, უბედური შემთხვევის შემდეგ მოსახლეობის ნუგეშისცემისათვის. 1992 წელს აყვანილ იქნა მიტროპოლიტის რანგში. 2010 წლამდე ეპისკოპოსი კალისტრატე იყო გელათის მონასტრის სასულიერო აკადემიის და ქუთაისის თეოლოგიის ინსტიტუტის რექტორი, სადაც მან ხელოვნების ისტორიის, ჟურნალისტიკის და მედიცინის ფაკულტეტების არსებობა დაუშვა. მისი მოღვაწეობის დროს დასავლეთ საქართველოში ხუთი ეპარქია დაარსდა და სამასზე მეტი ეკლესია, სამლოცველო და მონასტერი განახლდა. მეუფე კალისტრატე ქართული მართმადიდებლური ეკლესიის ორი უმაღლესი ჯილდოს, ბრილიანტის ჯვრისა და წმ. გიორგის ოქროს ორდენის მატარებელია.",
   },
   {
     name: "ბიძინა ივანიშვილი",
     position: "ყოფილი პრემიერ მინისტრი(2012 - 2013)",
-    videoUrl: "https://player.vimeo.com/video/76369288?h=21aae0c20c",
+    videoUrl: "https://player.vimeo.com/video/80802086?h=a703ce3224",
     textDescription:
       "ბიძინა ივანიშვილი (დაბ. 1956 წ.) თავისი 6,5 მილიონიანი შემოსავლით, ყველაზე მდიდარი ქართველია. 2011 წელს ბიზნესიდან პოლიტიკაში წავიდა და პრეზიდენტ სააკაშვილის ძლიერი მოწინააღმდეგე გახდა. ივანიშვილმა 90-იანი წლების დასაწყისში რუსეთში ბანკი „რუსული კრედიტი“ დააარსა და მალევე მეორე რანგის ოლიგარქი გახდა. რუსეთთან მჭიდრო კონტაქტის გამო, პოლიტიკური ოპონენტები კრემლის აგენტად მოიხსენიებენ. ამის მიუხედავად, მის მიერ დაარსებულმა კოალიციამ „ქართული ოცნება“ 2012 წლის საპარლამენტო არჩევნებში გაიმარჯვა და მილიარდერი პრემიერმინისტრი გახდა. ამჟამად აქტიურად მიმდინარე გადანაცვლებების მიუხედავად, ის მაინც ინარჩუნებს მნიშვნელოვან პოზიციას ქართულ პოლიტიკაში. ივანიშვილი მხარს უჭერს რუსეთთან დაახლოების საკითხს და უფრთხილდება მართმადიდებლურ ეკლესიასთან ახლო კონტაქტებს, ვინაიდან თვლის, რომ ეკლესია უმნიშვნელოვანესი მაკავშირებელია რუსეთსა და საქართველოს შორის. ამავდროულად, ივანიშვილი მუდმივად ხაზს უსვამს, რომ საქართველოს დასავლური კურსი გაგრძელდება, გამოთქვამს ევრო კავშირსა და ნატოსთან გაერთიანების დაჩქარების სურვილს. ივანიშვილი დაქორწინებულია და ჰყავს სამი შვილი. მისი ვაჟი ბერა, პოპულარული რეპერია.",
   },
   {
     name: "დათო იმნაიშვილი",
     position: "ავტომანქანის მექანიკოსი",
-    videoUrl: "https://player.vimeo.com/video/76418526?h=524dd7e8b5",
+    videoUrl: "https://player.vimeo.com/video/80802087?h=aceea459d9",
     textDescription:
       "დათო იმნაიშვილი დაიბადა 1954 წლის 7 ივნისს, ქალაქ სვერლოვსკში, რუსეთში. ოჯახი საქართველოში ბრუნდება 1966 წელს. 1971 წელს დაამთავრა ქ. თბილისის 91-ე საშუალო სკოლა. 1973-75 წლებში მსახურობდა საბჭოთა არმიაში, ნოვოსიბირსკში. 1979 წელს დაქორწინდა მარინე ხვთისიაშვილზე, ჰყავს ქალიშვილი თამარი და შვილიშვილი მარიამი.ხელობა შეისწავლა პროფესიულ სასწავლებელში. 1980 წლიდან მუშაობს ავტომექანიკოსად. არის კარგი ქართული ღვინის დამფასებელი და ყოველ წელს აყენებს საკუთარ ღვინოს.",
   },
@@ -1644,7 +1644,7 @@ function radioDataLanguageChangeDe() {
     const element = radioData[i];
     element.text = radioDataDe[i].text;
     let sliderText = document.getElementById("singer-info");
-    sliderText.textContent = dataSliderDe[0].text;
+    sliderText.textContent = radioDataDe[0].text;
   }
 }
 
@@ -1653,7 +1653,7 @@ function radioDataLanguageChangeFr() {
     const element = radioData[i];
     element.text = radioDataFr[i].text;
     let sliderText = document.getElementById("singer-info");
-    sliderText.textContent = dataSliderFr[0].text;
+    sliderText.textContent = radioDataFr[0].text;
   }
 }
 
@@ -1662,7 +1662,7 @@ function radioDataLanguageChangeGe() {
     const element = radioData[i];
     element.text = radioDataGe[i].text;
     let sliderText = document.getElementById("singer-info");
-    sliderText.textContent = dataSliderGe[0].text;
+    sliderText.textContent = radioDataGe[0].text;
   }
 }
 
@@ -1765,20 +1765,35 @@ function tralerLanguageChangeGe() {
   tralerVideo.setAttribute('src', 'https://player.vimeo.com/video/80881883?h=09cea62159');
 }
 
-function changeLanguage(lang) {
-  location.hash = lang;
-  location.reload();
-}
 
-if (window.location.hash) {
-  if (window.location.hash == "#en") {
-    characterTitleLanguageChangeEn();
-    let sliderText = document.getElementById("text");
-    sliderText.textContent = data[0].text;
-    traletLanguageChangeEn();
-  }
+let fr = document.getElementById('FR');
+let de = document.getElementById('DE');
+let ge = document.getElementById('GE');
+let en = document.getElementById('EN');
 
-  if (window.location.hash == "#de") {
+fr.addEventListener('click', function(){
+    videoDataLanguageChangeFr();
+    picturesDataLanguageChangeFr();
+    sliderDataLanguageChangeFr();
+    radioDataLanguageChangeFr();
+    characterDataLanguageChangeFr();
+    tralerLanguageChangeFr();
+    ge.classList.remove('active');
+    // en.classList.add('active');
+      if (en.style.display ==="none") {
+      en.style.display = "block";
+      fr.style.display = "none";
+      
+      en.addEventListener('click', function(){
+        location.reload();
+        en.style.display = "none";
+        fr.style.display = "block";
+        fr.classList.add('active');
+      })
+    }
+});
+
+de.addEventListener('click', function(){
     videoDataLanguageChangeDe();
     picturesDataLanguageChangeDe();
     sliderDataLanguageChangeDe();
@@ -1786,22 +1801,62 @@ if (window.location.hash) {
     characterDataLanguageChangeDe();
     titleLanguageChange();
     tralerLanguageChangeDe();
-  }
-
-  if (window.location.hash == "#ge") {
+    de.classList.add('active');
+    ge.classList.remove('active');
+    en.classList.remove('active');
+})
+ge.addEventListener('click', function(){
     videoDataLanguageChangeGe();
     picturesDataLanguageChangeGe();
     sliderDataLanguageChangeGe();
     radioDataLanguageChangeGe();
     characterDataLanguageChangeGe();
-    tralerLanguageChangeGe()
-  }
-  if (window.location.hash == "#fr") {
-    videoDataLanguageChangeFr();
-    picturesDataLanguageChangeFr();
-    sliderDataLanguageChangeFr();
-    radioDataLanguageChangeFr();
-    characterDataLanguageChangeFr();
-    tralerLanguageChangeFr();
-  }
-}
+    tralerLanguageChangeGe();
+    de.classList.remove('active');
+    ge.classList.add('active');
+    en.classList.remove('active');
+})
+
+
+
+
+// function changeLanguage(lang) {
+//   location.hash = lang;
+//   location.reload();
+// }
+
+// if (window.location.hash) {
+//   if (window.location.hash == "#en") {
+//     characterTitleLanguageChangeEn();
+//     let sliderText = document.getElementById("text");
+//     sliderText.textContent = data[0].text;
+//     traletLanguageChangeEn();
+//   }
+
+//   if (window.location.hash == "#de") {
+//     videoDataLanguageChangeDe();
+//     picturesDataLanguageChangeDe();
+//     sliderDataLanguageChangeDe();
+//     radioDataLanguageChangeDe();
+//     characterDataLanguageChangeDe();
+//     titleLanguageChange();
+//     tralerLanguageChangeDe();
+//   }
+
+//   if (window.location.hash == "#ge") {
+//     videoDataLanguageChangeGe();
+//     picturesDataLanguageChangeGe();
+//     sliderDataLanguageChangeGe();
+//     radioDataLanguageChangeGe();
+//     characterDataLanguageChangeGe();
+//     tralerLanguageChangeGe()
+//   }
+//   if (window.location.hash == "#fr") {
+//     videoDataLanguageChangeFr();
+//     picturesDataLanguageChangeFr();
+//     sliderDataLanguageChangeFr();
+//     radioDataLanguageChangeFr();
+//     characterDataLanguageChangeFr();
+//     tralerLanguageChangeFr();
+//   }
+// }
