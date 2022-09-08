@@ -9,11 +9,13 @@ html {
 body {
     
     font-family: $roboto;
-    font-family: $ninoelite;
     line-height: 1.5;
 }
 .pointerCursor {
     cursor: pointer;
+}
+.font-ge{
+    font-family: $ninoelite;
 }
 .section1 {
     background-color: $color01;
@@ -79,6 +81,9 @@ body {
         transition: 0.3s;
     }
     .hide-menu-div:hover{
+        background-color: $color04;
+    }
+    .menu-color{
         background-color: $color04;
     }
 }
@@ -554,7 +559,7 @@ body {
                 width: 700px;
                 color: $color01;
                 padding: 1.5rem;
-                p {
+                .text-slider {
                     display: none;
                     font-family: $gentium;
                 }

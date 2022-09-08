@@ -10,6 +10,7 @@ let navBar = document.getElementById('navigation-block');
 menuBar.addEventListener('click', toggleMenuFunction);
 // menu show hide toggle function
 function toggleMenuFunction() {
+  menuBar.classList.toggle('menu-color');
     if (navBar.style.display === "none") {
         navBar.style.display = "block";
         navBar.classList.add('nav-show');
@@ -147,6 +148,7 @@ let pictureContent = document.getElementById('pictures');
 let headerVideoItem =document.getElementById('videos-click');
 let arrowIconOne = document.getElementById('previous');
 let arrowIconTwo = document.getElementById('next');
+let mapModal= document.getElementById('volga-map-modal');
 
 
 headerPictureItem.addEventListener('click' , headerPictureClick);
@@ -1964,11 +1966,14 @@ let radioDataFr = [
   },
 ];
 
+let characterModal = document.querySelector('.character-modal');
+
 function videoDataLanguageChangeDe() {
   for (let i = 0; i < videoData.length; i++) {
     const element = videoData[i];
     element.descrb = videoDataDe[i].descrb;
     element.videoUrl = videoDataDe[i].videoUrl;
+    videoContent.classList.remove('font-ge'); 
   }
 }
 
@@ -1977,6 +1982,7 @@ function videoDataLanguageChangeFr() {
     const element = videoData[i];
     element.descrb = videoDataFr[i].descrb;
     element.videoUrl = videoDataFr[i].videoUrl;
+    videoContent.classList.remove('font-ge'); 
   }
 }
 
@@ -1985,6 +1991,7 @@ function videoDataLanguageChangeGe() {
     const element = videoData[i];
     element.descrb = videoDataGe[i].descrb;
     element.videoUrl = videoDataGe[i].videoUrl;
+    videoContent.classList.add('font-ge'); 
   }
 }
 
@@ -1992,6 +1999,7 @@ function picturesDataLanguageChangeDe() {
   for (let i = 0; i < pictureData.length; i++) {
     const element = pictureData[i];
     element.description = pictureDataDe[i].description;
+    pictureContent.classList.remove('font-ge');
   }
 }
 
@@ -1999,6 +2007,7 @@ function picturesDataLanguageChangeFr() {
   for (let i = 0; i < pictureData.length; i++) {
     const element = pictureData[i];
     element.description = pictureDataFr[i].description;
+    pictureContent.classList.remove('font-ge');
   }
 }
 
@@ -2006,6 +2015,7 @@ function picturesDataLanguageChangeGe() {
   for (let i = 0; i < pictureData.length; i++) {
     const element = pictureData[i];
     element.description = pictureDataGe[i].description;
+    pictureContent.classList.add('font-ge');
   }
 }
 
@@ -2015,6 +2025,7 @@ function sliderDataLanguageChangeDe() {
     element.text = dataSliderDe[i].text;
     let sliderText = document.getElementById("text");
     sliderText.textContent = dataSliderDe[0].text;
+    sliderText.classList.remove('font-ge');
   }
 }
 
@@ -2024,6 +2035,7 @@ function sliderDataLanguageChangeFr() {
     element.text = dataSliderFr[i].text;
     let sliderText = document.getElementById("text");
     sliderText.textContent = dataSliderFr[0].text;
+    sliderText.classList.remove('font-ge');
   }
 }
 
@@ -2033,6 +2045,8 @@ function sliderDataLanguageChangeGe() {
     element.text = dataSliderGe[i].text;
     let sliderText = document.getElementById("text");
     sliderText.textContent = dataSliderGe[0].text;
+    sliderText.classList.remove('text-slider');
+    sliderText.classList.add('font-ge');
   }
 }
 
@@ -2042,6 +2056,8 @@ function radioDataLanguageChangeDe() {
     element.text = radioDataDe[i].text;
     let sliderText = document.getElementById("singer-info");
     sliderText.textContent = radioDataDe[0].text;
+    sliderText.classList.remove('font-ge');
+
   }
 }
 
@@ -2051,6 +2067,7 @@ function radioDataLanguageChangeFr() {
     element.text = radioDataFr[i].text;
     let sliderText = document.getElementById("singer-info");
     sliderText.textContent = radioDataFr[0].text;
+    sliderText.classList.remove('font-ge');
   }
 }
 
@@ -2060,6 +2077,7 @@ function radioDataLanguageChangeGe() {
     element.text = radioDataGe[i].text;
     let sliderText = document.getElementById("singer-info");
     sliderText.textContent = radioDataGe[0].text;
+    sliderText.classList.add('font-ge');
   }
 }
 
@@ -2080,9 +2098,11 @@ function characterDataLanguageChangeFr() {
     const element = characterPosition[i];
     element.textContent = characterTextDataFr[i].position;
   }
+  characterModal.classList.remove('font-ge');
 }
 
 function characterDataLanguageChangeGe() {
+  
   for (let i = 0; i < characterTextData.length; i++) {
     const element = characterTextData[i];
     element.textDescription = characterTextDataGe[i].textDescription;
@@ -2092,13 +2112,17 @@ function characterDataLanguageChangeGe() {
   for (let i = 0; i < characterTitle.length; i++) {
     const element = characterTitle[i];
     element.textContent = characterTextDataGe[i].name;
+    characterTitle[i].classList.add('font-ge');
   }
 
   let characterPosition = document.querySelectorAll(".character-p");
   for (let i = 0; i < characterPosition.length; i++) {
     const element = characterPosition[i];
     element.textContent = characterTextDataGe[i].position;
+    characterPosition[i].classList.add('font-ge');
   }
+
+  characterModal.classList.add('font-ge');
 }
 
 function characterDataLanguageChangeDe() {
@@ -2111,13 +2135,17 @@ function characterDataLanguageChangeDe() {
   for (let i = 0; i < characterTitle.length; i++) {
     const element = characterTitle[i];
     element.textContent = characterTextDataDe[i].name;
+    characterTitle[i].classList.remove('font-ge');
   }
 
   let characterPosition = document.querySelectorAll(".character-p");
   for (let i = 0; i < characterPosition.length; i++) {
     const element = characterPosition[i];
     element.textContent = characterTextDataDe[i].position;
+    characterPosition[i].classList.remove('font-ge');
   }
+
+  characterModal.classList.remove('font-ge');
 }
 
 function characterTitleLanguageChangeEn() {
@@ -2125,13 +2153,16 @@ function characterTitleLanguageChangeEn() {
   for (let i = 0; i < characterTitle.length; i++) {
     const element = characterTitle[i];
     element.textContent = characterTextData[i].name;
+    characterPosition[i].classList.remove('font-ge');
   }
 
   let characterPosition = document.querySelectorAll(".character-p");
   for (let i = 0; i < characterPosition.length; i++) {
     const element = characterPosition[i];
     element.textContent = characterTextData[i].position;
+    characterPosition[i].classList.remove('font-ge');
   }
+  characterModal.classList.remove('font-ge');
 }
 
 function titleLanguageChangeDe() {
@@ -2140,9 +2171,10 @@ function titleLanguageChangeDe() {
     const element = texts[i];
     console.log(arrayTextxsDe.length, texts.length);
     element.textContent = arrayTextxsDe[i].title;
+    
   }
 }
-
+let infoBlockOverlay = document.querySelector('.info-block-overlay');
 
 function titleLanguageChangeFr() {
   let texts = document.querySelectorAll(".loop");
@@ -2158,6 +2190,7 @@ function titleLanguageChangeGe() {
     const element = texts[i];
     element.textContent = arrayTextxsGe[i].title;
   }
+  
 }
 
 function tralerLanguageChangeDe() {
@@ -2207,6 +2240,7 @@ fr.addEventListener('click', function(){
         fr.classList.add('active');
       })
     }
+    infoBlockOverlay.classList.remove('font-ge');
 });
 
 de.addEventListener('click', function(){
@@ -2220,6 +2254,7 @@ de.addEventListener('click', function(){
     de.classList.add('active');
     ge.classList.remove('active');
     en.classList.remove('active');
+    infoBlockOverlay.classList.remove('font-ge');
 })
 ge.addEventListener('click', function(){
     videoDataLanguageChangeGe();
@@ -2232,48 +2267,7 @@ ge.addEventListener('click', function(){
     de.classList.remove('active');
     ge.classList.add('active');
     en.classList.remove('active');
+    infoBlockOverlay.classList.add('font-ge');
 })
 
 
-
-
-// function changeLanguage(lang) {
-//   location.hash = lang;
-//   location.reload();
-// }
-
-// if (window.location.hash) {
-//   if (window.location.hash == "#en") {
-//     characterTitleLanguageChangeEn();
-//     let sliderText = document.getElementById("text");
-//     sliderText.textContent = data[0].text;
-//     traletLanguageChangeEn();
-//   }
-
-//   if (window.location.hash == "#de") {
-//     videoDataLanguageChangeDe();
-//     picturesDataLanguageChangeDe();
-//     sliderDataLanguageChangeDe();
-//     radioDataLanguageChangeDe();
-//     characterDataLanguageChangeDe();
-//     titleLanguageChange();
-//     tralerLanguageChangeDe();
-//   }
-
-//   if (window.location.hash == "#ge") {
-//     videoDataLanguageChangeGe();
-//     picturesDataLanguageChangeGe();
-//     sliderDataLanguageChangeGe();
-//     radioDataLanguageChangeGe();
-//     characterDataLanguageChangeGe();
-//     tralerLanguageChangeGe()
-//   }
-//   if (window.location.hash == "#fr") {
-//     videoDataLanguageChangeFr();
-//     picturesDataLanguageChangeFr();
-//     sliderDataLanguageChangeFr();
-//     radioDataLanguageChangeFr();
-//     characterDataLanguageChangeFr();
-//     tralerLanguageChangeFr();
-//   }
-// }
