@@ -63,6 +63,7 @@ html {
 
 body {
   font-family: "Roboto Slab", serif;
+  font-family: "BPG Nino Elite Exp", serif;
   line-height: 1.5;
 }
 
@@ -1569,4 +1570,9 @@ body {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "BPG Nino Elite Exp";
+  src: url("../fonts/bpg-nino-elite-exp-webfont.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/bpg-nino-elite-exp-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bpg-nino-elite-exp-webfont.woff2") format("woff2"), url("../fonts/bpg-nino-elite-exp-webfont.woff") format("woff"), url("../fonts/bpg-nino-elite-exp-webfont.ttf") format("truetype"), url("../fonts/bpg-nino-elite-exp-webfont.svg#bpg_nino_elite_expregular") format("svg"); /* Legacy iOS */
 }
