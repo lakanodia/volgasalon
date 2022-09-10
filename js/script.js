@@ -34,13 +34,13 @@ window.addEventListener("scroll", function() {
     image.style.transform = "rotate(-" + value/9 + "deg)";
     document.getElementById('volga-road-img').style.transform = "translateY(-"+ value*0.7+"px)";
     document.getElementById('volga-salon-container').style.transform = "translateY(-"+ value*0.24 + "px)";
-    document.getElementById('volga-map-wrapper').style.top = `${value*0.4-150}px`;
+    document.getElementById('volga-map-wrapper').style.top = `${value*0.3+30}px`;
   }
   // section-5-parallax:
   const section5Parallax = document.getElementById('section-5-parallax');
   var rate = value/5;
-  if (value > 2700 && value < 3500 ){
-    section5Parallax.style.top = "-18rem";
+  if (value > 2500 && value < 3000 ){
+    section5Parallax.style.top = "-12rem";
     section5Parallax.style.transform = 'translateY('+rate+'px)';
   }
 })
