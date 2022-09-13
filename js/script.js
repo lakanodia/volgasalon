@@ -34,13 +34,13 @@ window.addEventListener("scroll", function() {
     image.style.transform = "rotate(-" + value/9 + "deg)";
     document.getElementById('volga-road-img').style.transform = "translateY(-"+ value*0.7+"px)";
     document.getElementById('volga-salon-container').style.transform = "translateY(-"+ value*0.24 + "px)";
-    document.getElementById('volga-map-wrapper').style.top = `${value*0.4-150}px`;
+    document.getElementById('volga-map-wrapper').style.top = `${value*0.3+30}px`;
   }
   // section-5-parallax:
   const section5Parallax = document.getElementById('section-5-parallax');
   var rate = value/5;
-  if (value > 2700 && value < 3500 ){
-    section5Parallax.style.top = "-18rem";
+  if (value > 2500 && value < 3000 ){
+    section5Parallax.style.top = "-12rem";
     section5Parallax.style.transform = 'translateY('+rate+'px)';
   }
 })
@@ -1209,7 +1209,7 @@ let characterTextDataFr = [
     id: 4,
     name: "DATO IMNAICHVILI",
     position: "Mécanicien auto",
-    videoUrl: "???",
+    videoUrl: "https://player.vimeo.com/video/80776666?h=cd3c2c27f6",
     textDescription:
       "Dato Imnaischwili (né en 1954) est mécanicien automobile, spécialisé dans les réparations des véhicules russes, et vit à Tbilissi depuis plus de trente ans. Né en Russie à Sverdlovsk (Iekaterinbourg), il n’a que 12 ans quand ses parents reviennent s’installer en Géorgie. Dans les années 1970, après son service militaire dans l’armée soviétique à Novossibirsk (Russie), il suit une formation de mécanicien automobile. En 1980, il entre aux ateliers automobiles d’État n° 1 pour les véhicules de fonction et les taxis, dans le district d’Isani. Quand l’Union soviétique s’effondre en 1991, il perd son emploi et décide alors de se mettre à son compte. Depuis une grave explosion de gaz qui a coûté la vie à plusieurs de ses collègues en 2007, il loue un garage dans une zone d’activités voisine. Ivanichvili vit avec sa femme, sa fille et sa belle-sœur dans une arrière-cour de Tbilissi ; c’est aussi un grand-père heureux depuis six ans. ",
   },
@@ -1405,15 +1405,16 @@ let arrayTextxsFr = [
   {title: "Stephen Tolz"},
   {title: "casting et adaption"},
   {title: "Ingrid Terhorst"},
+  {title: "Le site a été restauré"},
+  {title: "Salome Mosiava"},
+  {title: "Laka Nodia"},
+  {title: "Ketevan Tchabukiani"},
+  {title: "Luka Katchkatchishvili"},
   {title: "Web design et la mise en œuvre technique"},
   {title: "Sandro Asatiani (Sandro’s Books)"},
   {title: "Alexi Amniashvili"},
   {title: "Shota Ioramashvili"},
   {title: "Tamar Kapanadze"},
-  {title: "Salome Mosiava"},
-  {title: "Laka Nodia"},
-  {title: "Ketevan Tchabukiani"},
-  {title: "Luka Katchkatchishvili"},
   {title: "Graphisme, animation et conception & de l'affiche"},
   {title: "Irakli Gharibashvili (Studio QuBitz)"},
   {title: "Web Editor"},
@@ -1550,15 +1551,16 @@ let arrayTextxsGe= [
   {title: "სტივენ ტოლცი"},
   {title: "ჩამოსხმა და დამუშავება"},
   {title: "Ingrid Terhorst"},
+  {title: "ვებ-გვერდის აღდგენაზე მუშაობდნენ"},
+  {title: "სალომე მოსიავა"},
+  {title: "ლაკა ნოდია"},
+  {title: "ქეთევან ჭაბუკიანი"},
+  {title: "ლუკა კაჭკაჭიშვილი"},
   {title: "ვებ დიზაინი და ტექნიკური განხორციელება"},
   {title: "სანდრო ასათიანი (სანდროს წიგნები)"},
   {title: "ალექსი ამნიაშვილი"},
   {title: "შოთა იორამაშვილი"},
   {title: "თამარ კაპანაძე"},
-  {title: "სალომე მოსიავა"},
-  {title: "ლაკა ნოდია"},
-  {title: "ქეთევან ჭაბუკიანი"},
-  {title: "ლუკა კაჭკაჭიშვილი"},
   {title: "გრაფიკა, ანიმაცია და ვებ დიზაინი"},
   {title: "ირაკლი ღარიბაშვილი (სტუდია QuBitz)"},
   {title: "ვებ რედაქტორი"},
@@ -1695,15 +1697,16 @@ let arrayTextxsDe = [
   {title: "Stephen Tolz"},
   {title: "Casting und Adaption"},
   {title: "Ingrid Terhorst"},
+  {title: "Die Website wurde wiederhergestellt"},
+  {title: "Salome Mosiava"},
+  {title: "Laka Nodia"},
+  {title: "Ketewan Tschabukiani"},
+  {title: "Luka Katchkatchishvili"},
   {title: "Webdesign et la mise en œuvre technique"},
   {title: "Sandro Asatiani (Sandros Bücher)"},
   {title: "Alexi Amniashvili"},
   {title: "Shota Ioramashvili"},
   {title: "Tamar Kapanadse"},
-  {title: "Salome Mosiava"},
-  {title: "Laka Nodia"},
-  {title: "Ketewan Tschabukiani"},
-  {title: "Luka Katchkatchishvili"},
   {title: "Graphisme, animation et conception & de l'affiche"},
   {title: "Irakli Gharibashvili (Studio QuBitz)"},
   {title: "Web-Editor"},
