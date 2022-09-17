@@ -190,10 +190,10 @@ let pictureData = [
   },
   {
     id: 2,
-    imageUrl1: "images/map/batumi/batumi01.jpg",
-    imageUrl2: "images/map/batumi/batumi02.jpg",
-    imageUrl3: "images/map/batumi/batumi03.jpg",
-    imageUrl4: "images/map/batumi/batumi04.jpg",
+    imageUrl1: "images/map/batumi/batumi01.JPG",
+    imageUrl2: "images/map/batumi/batumi02.JPG",
+    imageUrl3: "images/map/batumi/batumi03.JPG",
+    imageUrl4: "images/map/batumi/batumi04.JPG",
     imageUrl5: "images/map/batumi/batumi05.jpg",
     imageUrl6: "images/map/batumi/batumi06.jpg",
     description:
@@ -215,7 +215,7 @@ let pictureData = [
   {
     id: 4,
     imageUrl1: "images/map/gudauri/gudauri01.jpg",
-    imageUrl2: "images/map/gudauri/gudauri02.jpg",
+    imageUrl2: "images/map/gudauri/gudauri02.JPG",
     imageUrl3: "images/map/gudauri/gudauri03.jpg",
     imageUrl4: "images/map/gudauri/gudauri04.jpg",
     imageUrl5: "images/map/gudauri/gudauri05.jpg",
@@ -238,7 +238,7 @@ let pictureData = [
 
   {
     id: 6,
-    imageUrl1: "images/map/tbilisi/tbilisi01.jpg",
+    imageUrl1: "images/map/tbilisi/tbilisi01.JPG",
     imageUrl2: "images/map/tbilisi/tbilisi02.jpg",
     imageUrl3: "images/map/tbilisi/tbilisi03.jpg",
     imageUrl4: "images/map/tbilisi/tbilisi04.jpg",
